@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auftragsarbeiten — Braxart</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0a0a0a;--bg2:#111;--bg3:#1a1a1a;--white:#f5f0e8;--muted:#888;--muted2:#444;--accent:#e8c547;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.13);--display:'Bebas Neue',sans-serif;--body:'DM Sans',sans-serif;--mono:'Space Mono',monospace;}
+html{scroll-behavior:smooth}body{background:var(--bg);color:var(--white);font-family:var(--body);overflow-x:hidden;cursor:none}a{color:inherit;text-decoration:none}
+#cur{position:fixed;width:10px;height:10px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference}
+#curR{display:none}
+nav{position:sticky;top:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 3rem;background:rgba(10,10,10,0.96);border-bottom:1px solid var(--border);backdrop-filter:blur(12px)}
+.nav-logo{font-family:var(--display);font-size:1.6rem;letter-spacing:0.1em}.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);transition:color 0.2s}
+.nav-links a:hover{color:var(--accent)}
+.burger{display:none;background:none;border:none;cursor:none;flex-direction:column;gap:5px;padding:4px}
+.burger span{width:22px;height:1.5px;background:var(--white);display:block}
+.mmenu{display:none;position:fixed;inset:0;background:var(--bg);z-index:150;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem}
+.mmenu.open{display:flex}
+.mmenu a{font-family:var(--display);font-size:clamp(2rem,7vw,4rem);letter-spacing:0.08em;color:rgba(245,240,232,0.6);transition:color 0.2s}
+.mmenu a:hover{color:var(--accent)}
+.mmenu-close{position:absolute;top:1.5rem;right:2rem;font-family:var(--mono);font-size:11px;color:var(--muted);background:none;border:none;cursor:none;letter-spacing:0.1em;text-transform:uppercase}
+
+.page-hero{min-height:65vh;display:flex;align-items:flex-end;position:relative;overflow:hidden;padding:0 3rem 4rem}
+.ph-bg{position:absolute;inset:0;background-image:url('img_4924.webp');background-size:cover;background-position:center}
+.ph-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,0.97) 0%,rgba(10,10,10,0.5) 60%,rgba(10,10,10,0.2) 100%)}
+.ph-content{position:relative;z-index:2;max-width:700px}
+.ph-label{font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;display:flex;align-items:center;gap:0.6rem}
+.ph-label::before{content:'';width:20px;height:1px;background:var(--accent)}
+h1{font-family:var(--display);font-size:clamp(3rem,9vw,7.5rem);line-height:0.92;letter-spacing:0.04em;margin-bottom:1.25rem}
+h1 em{color:var(--accent);font-style:normal}
+.hsub{font-size:14px;color:rgba(245,240,232,0.6);line-height:1.8;max-width:480px}
+
+.process{padding:5rem 3rem;max-width:1300px;margin:0 auto}
+h2{font-family:var(--display);font-size:clamp(2rem,4vw,3.5rem);line-height:1.05;letter-spacing:0.04em;margin-bottom:2.5rem}
+h2 em{color:var(--accent);font-style:normal}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+.step{background:var(--bg2);padding:2rem 1.5rem}
+.step-n{font-family:var(--display);font-size:3rem;color:rgba(232,197,71,0.2);margin-bottom:1rem}
+.step-title{font-family:var(--display);font-size:1.3rem;letter-spacing:0.06em;margin-bottom:0.5rem}
+.step-text{font-size:13px;color:rgba(245,240,232,0.55);line-height:1.7}
+
+.examples{padding:0 3rem 5rem;max-width:1300px;margin:0 auto}
+.examples-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.ex-card{position:relative;overflow:hidden;cursor:none}
+.ex-card img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;transition:transform 0.6s,filter 0.4s;filter:grayscale(20%)}
+.ex-card:hover img{transform:scale(1.04);filter:grayscale(0%)}
+.ex-card-info{position:absolute;bottom:0;left:0;right:0;padding:1.25rem;background:linear-gradient(to top,rgba(10,10,10,0.9),transparent)}
+.ex-card-title{font-family:var(--display);font-size:1.1rem;letter-spacing:0.06em}
+.ex-card-size{font-family:var(--mono);font-size:9px;letter-spacing:0.12em;color:var(--accent);text-transform:uppercase;margin-top:2px}
+
+.preise{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:4rem 3rem}
+.preise-inner{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.preise-text h2{margin-bottom:1rem}
+.preise-text p{font-size:14px;color:rgba(245,240,232,0.6);line-height:1.85;margin-bottom:1rem}
+.preise-factors{display:flex;flex-direction:column;gap:0.75rem}
+.pf{display:flex;align-items:center;gap:1rem;padding:1rem 1.25rem;background:var(--bg3);border-left:2px solid var(--accent)}
+.pf-icon{font-family:var(--display);font-size:1.5rem;color:var(--accent);flex-shrink:0;width:2rem}
+.pf-text{font-size:13px;color:rgba(245,240,232,0.7)}
+.pf-title{font-weight:500;color:var(--white);margin-bottom:2px}
+
+.cta-contact{background:var(--accent);padding:4rem 3rem;text-align:center}
+.cta-contact h2{font-family:var(--display);font-size:clamp(2.5rem,6vw,5rem);color:#000;margin-bottom:0.75rem;letter-spacing:0.04em}
+.cta-contact p{font-size:13px;color:rgba(0,0,0,0.6);margin-bottom:1.5rem}
+.cta-contact a{font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;padding:0.85rem 2rem;background:#000;color:var(--accent);transition:all 0.2s;display:inline-block}
+.cta-contact a:hover{background:var(--white);color:#000}
+
+footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 3rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.flogo{font-family:var(--display);font-size:1.3rem;letter-spacing:0.1em}.flogo span{color:var(--accent)}
+.flinks{display:flex;gap:1.5rem;flex-wrap:wrap}
+.flinks a{font-family:var(--mono);font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);transition:color 0.2s}
+.flinks a:hover{color:var(--white)}
+
+@media(max-width:900px){
+  nav{padding:1rem 1.25rem}.nav-links{display:none}.burger{display:flex}
+  .page-hero{padding:0 1.25rem 3rem;min-height:50vh}
+  .process{padding:3rem 1.25rem}
+  .steps{grid-template-columns:1fr 1fr}
+  .examples{padding:0 1.25rem 3rem}
+  .examples-grid{grid-template-columns:1fr 1fr}
+  .preise{padding:3rem 1.25rem}
+  .preise-inner{grid-template-columns:1fr;gap:2.5rem}
+  .cta-contact{padding:3rem 1.25rem}
+  footer{padding:1.5rem 1.25rem;flex-direction:column;text-align:center}
+}
+@media(max-width:600px){.steps{grid-template-columns:1fr}.examples-grid{grid-template-columns:1fr}}
+</style>
+<link rel="icon" type="image/jpeg" href="favicon.jpg">
+</head>
+<body>
+<div id="cur"></div><div id="curR"></div>
+<div class="mmenu" id="mmenu">
+  <button class="mmenu-close" onclick="closeMM()">✕</button>
+  <a href="index.html" onclick="closeMM()">Start</a>
+  <a href="galerie.html" onclick="closeMM()">Galerie</a>
+  <a href="ueber.html" onclick="closeMM()">Über mich</a>
+  <a href="auftragsarbeiten.html" onclick="closeMM()">Aufträge</a>
+  <a href="kontakt.html" onclick="closeMM()">Kontakt</a>
+</div>
+<nav>
+  <a href="index.html" class="nav-logo"><img src="Unbenanntes_Projekt.jpg" alt="Braxart" style="height:38px;width:auto;object-fit:contain;display:block"></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Start</a></li><li><a href="galerie.html">Galerie</a></li>
+    <li><a href="ueber.html">Über mich</a></li>
+    <li><a href="auftragsarbeiten.html" style="color:var(--accent)">Aufträge</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+  </ul>
+  <button class="burger" onclick="openMM()"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-hero">
+  <div class="ph-bg"></div>
+  <div class="ph-content">
+    <div class="ph-label">// Individuell & Einmalig</div>
+    <h1>DEINE IDEE.<br><em>MEIN STIL.</em></h1>
+    <p class="hsub">Auftragsarbeiten sind das Herzstück meiner Arbeit. Du bringst die Idee – ich mache daraus ein Unikat, das du nie wieder loslässt.</p>
+  </div>
+</div>
+
+<div class="process">
+  <div class="ph-label">// Ablauf</div>
+  <h2>So läuft eine<br><em>Auftragsarbeit</em> ab</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-n">01</div>
+      <div class="step-title">Anfrage</div>
+      <div class="step-text">Du schreibst mir mit deiner Idee – Motiv, gewünschte Größe, Stil und Verwendungszweck. Je mehr Details, desto besser.</div>
+    </div>
+    <div class="step">
+      <div class="step-n">02</div>
+      <div class="step-title">Absprache</div>
+      <div class="step-text">Wir besprechen Details, ich mache einen Kostenvoranschlag und schicke dir ggf. erste Skizzen oder Referenzbilder.</div>
+    </div>
+    <div class="step">
+      <div class="step-n">03</div>
+      <div class="step-title">Entstehung</div>
+      <div class="step-text">Ich male dein Werk handgemacht auf Leinwand – mit Marker, Spray oder beidem. Du bekommst Updates während des Prozesses.</div>
+    </div>
+    <div class="step">
+      <div class="step-n">04</div>
+      <div class="step-title">Lieferung</div>
+      <div class="step-text">Das fertige, signierte Werk wird sicher verpackt und versandt – oder persönlich übergeben wenn du aus der Region bist.</div>
+    </div>
+  </div>
+</div>
+
+<div class="examples">
+  <div class="ph-label">// Beispiele</div>
+  <h2 style="margin-bottom:1.5rem">Frühere<br><em>Auftragsarbeiten</em></h2>
+  <div class="examples-grid">
+    <div class="ex-card">
+      <img src="img_5532-3.webp" alt="Gambino">
+      <div class="ex-card-info"><div class="ex-card-title">Gambino</div><div class="ex-card-size">50 × 70 cm · Auftragsarbeit</div></div>
+    </div>
+    <div class="ex-card">
+      <img src="img_4924.webp" alt="Auftragsarbeit">
+      <div class="ex-card-info"><div class="ex-card-title">Auftragsarbeit</div><div class="ex-card-size">Individuelles Motiv</div></div>
+    </div>
+    <div class="ex-card">
+      <img src="img_6243.webp" alt="Naomi Campbell">
+      <div class="ex-card-info"><div class="ex-card-title">Naomi Campbell</div><div class="ex-card-size">80 × 80 cm</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="preise">
+  <div class="preise-inner">
+    <div class="preise-text">
+      <div class="ph-label">// Preise</div>
+      <h2>Individuelle<br><em>Preisgestaltung</em></h2>
+      <p>Jedes meiner Bilder ist ein Einzelstück – handgemalt, signiert und mit viel Zeit und Detailarbeit entstanden. Da sich Größe, Material und künstlerischer Aufwand von Werk zu Werk unterscheiden, gibt es keine Einheitspreise.</p>
+      <p>Wenn du Interesse an einem bestimmten Bild oder einer Auftragsarbeit hast, schreib mir einfach. Ich gebe dir gerne alle Infos – inklusive Preis, Versandoptionen und weiterer Details.</p>
+    </div>
+    <div class="preise-factors">
+      <div class="pf">
+        <div class="pf-icon">↔</div>
+        <div class="pf-text"><div class="pf-title">Größe der Leinwand</div>Von 40×40 bis 90×120 cm und darüber hinaus</div>
+      </div>
+      <div class="pf">
+        <div class="pf-icon">🎨</div>
+        <div class="pf-text"><div class="pf-title">Material & Technik</div>Marker, Spraypaint, Acryl oder Kombinationen</div>
+      </div>
+      <div class="pf">
+        <div class="pf-icon">⏱</div>
+        <div class="pf-text"><div class="pf-title">Komplexität des Motivs</div>Detailgrad und künstlerischer Aufwand</div>
+      </div>
+      <div class="pf">
+        <div class="pf-icon">📦</div>
+        <div class="pf-text"><div class="pf-title">Versand & Lieferung</div>Deutschlandweit, auf Wunsch auch persönlich</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-contact">
+  <h2>Bereit für dein Unikat?</h2>
+  <p>Schreib mir deine Idee — ich melde mich schnell zurück.</p>
+  <a href="kontakt.html">Jetzt anfragen →</a>
+</div>
+
+<footer>
+  <div class="flogo"><img src="Unbenanntes_Projekt.jpg" alt="Braxart" style="height:28px;width:auto;object-fit:contain;display:block;filter:brightness(1.1)"></div>
+  <div class="flinks">
+    <a href="index.html">Start</a><a href="galerie.html">Galerie</a><a href="ueber.html">Über mich</a>
+    <a href="auftragsarbeiten.html">Aufträge</a><a href="kontakt.html">Kontakt</a><a href="impressum.html">Impressum</a>
+  </div>
+</footer>
+<script>
+var c=document.getElementById('cur'),r=document.getElementById('curR');
+document.addEventListener('mousemove',function(e){c.style.left=e.clientX+'px';c.style.top=e.clientY+'px';r.style.left=e.clientX+'px';r.style.top=e.clientY+'px';});
+function openMM(){document.getElementById('mmenu').classList.add('open');}
+function closeMM(){document.getElementById('mmenu').classList.remove('open');}
+</script>
+</body>
+</html>
