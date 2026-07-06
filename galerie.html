@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Galerie — Braxart</title>
+<meta name="description" content="Galerie mit handgemalten Pop-Art- und Graffiti-Unikaten von Braxart – Portraits, Ikonen und mehr in verschiedenen Formaten.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Galerie — Braxart">
+<meta property="og:description" content="Handgemalte Pop-Art- und Graffiti-Unikate von Braxart in verschiedenen Formaten.">
+<meta property="og:image" content="https://braxart23.com/img_6243.webp">
+<meta property="og:url" content="https://braxart23.com/galerie.html">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
@@ -79,9 +86,15 @@ h1{font-family:var(--display);font-size:clamp(3rem,8vw,7rem);line-height:0.95;le
 .lb-img{max-width:90vw;max-height:85vh;object-fit:contain;border:1px solid var(--border2)}
 .lb-close{position:fixed;top:1.5rem;right:2rem;font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);background:none;border:none;cursor:pointer}
 .lb-close:hover{color:var(--white)}
-.lb-info{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);text-align:center}
+.lb-info{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);text-align:center;max-width:min(90vw,560px);padding:0 1rem}
 .lb-title{font-family:var(--display);font-size:1.4rem;letter-spacing:0.08em}
 .lb-size{font-family:var(--mono);font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-top:3px}
+.lb-desc{font-size:12.5px;color:rgba(245,240,232,0.6);line-height:1.6;margin-top:0.75rem}
+.lb-nav{position:fixed;top:50%;transform:translateY(-50%);background:none;border:1px solid var(--border2);color:var(--white);width:44px;height:44px;font-family:var(--display);font-size:1.3rem;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;justify-content:center}
+.lb-nav:hover{border-color:var(--accent);color:var(--accent)}
+.lb-prev{left:1.5rem}
+.lb-next{right:1.5rem}
+@media(max-width:700px){.lb-nav{width:38px;height:38px}.lb-prev{left:0.5rem}.lb-next{right:0.5rem}}
 
 /* CONTACT STRIP */
 .contact-strip{background:var(--accent);padding:3rem;text-align:center}
@@ -222,14 +235,14 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 3rem
       </div>
       <div class="works-grid">
         <div class="work-card" onclick="openLB(this)">
-          <img src="img_5194.jpeg" alt="Marilyn Monroe Glam" loading="lazy" data-title="Marilyn Monroe »Glam«" data-size="40 × 40 cm">
+          <img src="img_5194.jpeg" alt="Marilyn Monroe Glam" loading="lazy" data-title="Marilyn Monroe »Glam«" data-size="40 × 40 cm" data-desc="Marilyn Monroe als zeitlose Pop-Art-Ikone – reduziert auf klare Linien und kräftige Kontraste in einem kompakten Format.">
           <div class="work-info">
             <div class="work-title">Marilyn Monroe "Glam"</div>
             <div class="work-meta"><span class="work-date">07.07.2024</span><span class="work-size">40 × 40</span></div>
           </div>
         </div>
         <div class="work-card" onclick="openLB(this)">
-          <img src="img_5214.webp" alt="Muhammad Ali Win" loading="lazy" data-title="Muhammad Ali »Win«" data-size="40 × 40 cm">
+          <img src="img_5214.webp" alt="Muhammad Ali Win" loading="lazy" data-title="Muhammad Ali »Win«" data-size="40 × 40 cm" data-desc="Muhammad Ali im Moment des Triumphs – für mich ein Motiv für Willensstärke, umgesetzt in klaren Konturen und kräftigen Farbflächen.">
           <div class="work-info">
             <div class="work-title">Muhammad Ali "Win"</div>
             <div class="work-meta"><span class="work-date">10.07.2024</span><span class="work-size">40 × 40</span></div>
@@ -246,28 +259,28 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 3rem
       </div>
       <div class="works-grid">
         <div class="work-card" onclick="openLB(this)">
-          <img src="img_2239.webp" alt="Cash Gold" loading="lazy" data-title="Cash Gold" data-size="40 × 50 cm">
+          <img src="img_2239.webp" alt="Cash Gold" loading="lazy" data-title="Cash Gold" data-size="40 × 50 cm" data-desc="Geld als Symbol, reduziert auf Gold-Töne vor dunklem Grund – für mich eher eine Beobachtung als ein Statement.">
           <div class="work-info">
             <div class="work-title">Cash Gold</div>
             <div class="work-meta"><span class="work-date">26.06.2025</span><span class="work-size">40 × 50</span></div>
           </div>
         </div>
         <div class="work-card" onclick="openLB(this)">
-          <img src="img_5942.webp" alt="Rolex" loading="lazy" data-title="Rolex" data-size="40 × 50 cm">
+          <img src="img_5942.webp" alt="Rolex" loading="lazy" data-title="Rolex" data-size="40 × 50 cm" data-desc="Eine Uhr als Statussymbol, in meinem Stil verfremdet – mir geht es dabei weniger um die Marke selbst als um das, wofür sie steht.">
           <div class="work-info">
             <div class="work-title">Rolex</div>
             <div class="work-meta"><span class="work-date">26.08.2024</span><span class="work-size">40 × 50</span></div>
           </div>
         </div>
         <div class="work-card" onclick="openLB(this)">
-          <img src="img_4924.webp" alt="Angelina Jolie" loading="lazy" data-title="Angelina Jolie" data-size="40 × 50 cm">
+          <img src="img_4924.webp" alt="Angelina Jolie" loading="lazy" data-title="Angelina Jolie" data-size="40 × 50 cm" data-desc="Ein Porträt zwischen Popkultur und Hollywood-Glamour, mit klarem Linienspiel und kräftigen Farben.">
           <div class="work-info">
             <div class="work-title">Angelina Jolie</div>
             <div class="work-meta"><span class="work-date">07.11.2025</span><span class="work-size">40 × 50</span></div>
           </div>
         </div>
         <div class="work-card" onclick="openLB(this)">
-          <img src="img_4790.jpeg" alt="Marilyn Monroe V2" loading="lazy" data-title="Marilyn Monroe V2" data-size="40 × 50 cm">
+          <img src="img_4790.jpeg" alt="Marilyn Monroe V2" loading="lazy" data-title="Marilyn Monroe V2" data-size="40 × 50 cm" data-desc="Eine zweite Annäherung an Marilyn Monroe – gleiche Ikone, andere Farbstimmung und anderer Bildausschnitt als bei »Glam«.">
           <div class="work-info">
             <div class="work-title">Marilyn Monroe V2</div>
             <div class="work-meta"><span class="work-date">2025</span><span class="work-size">40 × 50</span></div>
@@ -284,56 +297,56 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 3rem
       </div>
       <div class="works-grid">
         <div class="work-card" onclick="openLB(this)">
-          <img src="img_5532-3.webp" alt="Gambino" loading="lazy" data-title="Gambino" data-size="50 × 70 cm">
+          <img src="img_5532-3.webp" alt="Gambino" loading="lazy" data-title="Gambino" data-size="50 × 70 cm" data-desc="Ein Porträt von Childish Gambino, einem Künstler, dessen visuelle und musikalische Ausdruckskraft mich inspiriert.">
           <div class="work-info">
             <div class="work-title">Gambino</div>
             <div class="work-meta"><span class="work-date">30.07.2024</span><span class="work-size">50 × 70</span></div>
           </div>
         </div>
         <div class="work-card" onclick="openLB(this)">
-          <img src="img_5139.webp" alt="Audrey Hepburn in Vogue" loading="lazy" data-title="Audrey Hepburn in Vogue" data-size="50 × 70 cm">
+          <img src="img_5139.webp" alt="Audrey Hepburn in Vogue" loading="lazy" data-title="Audrey Hepburn in Vogue" data-size="50 × 70 cm" data-desc="Audrey Hepburn im Stil eines Modemagazin-Covers – Eleganz, übersetzt in meine Popart-Ästhetik.">
           <div class="work-info">
             <div class="work-title">Audrey Hepburn in Vogue</div>
             <div class="work-meta"><span class="work-date">04.07.2024</span><span class="work-size">50 × 70</span></div>
           </div>
         </div>
         <div class="work-card" onclick="openLB(this)">
-          <img src="img_7295.webp" alt="Wondering Donald" loading="lazy" data-title="Wondering Donald" data-size="50 × 70 cm">
+          <img src="img_7295.webp" alt="Wondering Donald" loading="lazy" data-title="Wondering Donald" data-size="50 × 70 cm" data-desc="Eine Arbeit, die Popkultur und Politik mit einem Augenzwinkern zusammenbringt.">
           <div class="work-info">
             <div class="work-title">Wondering Donald</div>
             <div class="work-meta"><span class="work-date">09.10.2024</span><span class="work-size">50 × 70</span></div>
           </div>
         </div>
         <div class="work-card" onclick="openLB(this)">
-          <img src="img_2274.webp" alt="Fabulous" loading="lazy" data-title="Fabulous" data-size="50 × 70 cm">
+          <img src="img_2274.webp" alt="Fabulous" loading="lazy" data-title="Fabulous" data-size="50 × 70 cm" data-desc="Eine verspielte, laute Arbeit – Ausdruck und Attitüde stehen hier im Vordergrund.">
           <div class="work-info">
             <div class="work-title">Fabulous</div>
             <div class="work-meta"><span class="work-date">13.09.2024</span><span class="work-size">50 × 70</span></div>
           </div>
         </div>
         <div class="work-card" onclick="openLB(this)">
-          <img src="img_3317.webp" alt="Tyler the Creator" loading="lazy" data-title="Tyler the Creator" data-size="50 × 70 cm">
+          <img src="img_3317.webp" alt="Tyler the Creator" loading="lazy" data-title="Tyler the Creator" data-size="50 × 70 cm" data-desc="Ein Porträt von Tyler, The Creator, der Musik, Mode und visuelle Kunst für mich auf besondere Weise verbindet.">
           <div class="work-info">
             <div class="work-title">Tyler the Creator</div>
             <div class="work-meta"><span class="work-date">10.08.2025</span><span class="work-size">50 × 70</span></div>
           </div>
         </div>
         <div class="work-card" onclick="openLB(this)">
-          <img src="img_7365.jpeg" alt="Dark Eye" loading="lazy" data-title="Dark Eye" data-size="50 × 70 cm">
+          <img src="img_7365.jpeg" alt="Dark Eye" loading="lazy" data-title="Dark Eye" data-size="50 × 70 cm" data-desc="Eine reduzierte, fast grafische Arbeit mit Fokus auf ein einzelnes Auge – ruhiger als viele meiner anderen Werke.">
           <div class="work-info">
             <div class="work-title">Dark Eye</div>
             <div class="work-meta"><span class="work-date">2025</span><span class="work-size">50 × 70</span></div>
           </div>
         </div>
         <div class="work-card" onclick="openLB(this)">
-          <img src="img_5532-3.jpeg" alt="Gambino" loading="lazy" data-title="Gambino" data-size="50 × 70 cm">
+          <img src="img_5532-3.jpeg" alt="Gambino" loading="lazy" data-title="Gambino" data-size="50 × 70 cm" data-desc="Eine weitere Ansicht meines Gambino-Porträts – gleiches Motiv, anderes Licht und andere Bildschärfe.">
           <div class="work-info">
             <div class="work-title">Gambino</div>
             <div class="work-meta"><span class="work-date">2024</span><span class="work-size">50 × 70</span></div>
           </div>
         </div>
         <div class="work-card" onclick="openLB(this)">
-          <img src="img_6874.jpeg" alt="LV" loading="lazy" data-title="LV" data-size="50 × 70 cm">
+          <img src="img_6874.jpeg" alt="LV" loading="lazy" data-title="LV" data-size="50 × 70 cm" data-desc="Eine Arbeit rund um Luxus und Markenkultur, mit typischen Elementen des Labels in meinem Stil neu zusammengesetzt.">
           <div class="work-info">
             <div class="work-title">LV</div>
             <div class="work-meta"><span class="work-date">2025</span><span class="work-size">50 × 70</span></div>
@@ -350,28 +363,28 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 3rem
       </div>
       <div class="works-grid">
         <div class="work-card" onclick="openLB(this)">
-          <img src="img_3331.webp" alt="Marilyn Monroe V1" loading="lazy" data-title="Marilyn Monroe V1" data-size="60 × 60 cm">
+          <img src="img_3331.webp" alt="Marilyn Monroe V1" loading="lazy" data-title="Marilyn Monroe V1" data-size="60 × 60 cm" data-desc="Meine erste Annäherung an Marilyn Monroe in diesem Format – Ausgangspunkt für spätere Varianten desselben Motivs.">
           <div class="work-info">
             <div class="work-title">Marilyn Monroe V1</div>
             <div class="work-meta"><span class="work-date">05.08.2025</span><span class="work-size">60 × 60</span></div>
           </div>
         </div>
         <div class="work-card" onclick="openLB(this)">
-          <img src="img_3399-edited-2.jpeg" alt="Audrey Hepburn" loading="lazy" data-title="Audrey Hepburn" data-size="60 × 60 cm">
+          <img src="img_3399-edited-2.jpeg" alt="Audrey Hepburn" loading="lazy" data-title="Audrey Hepburn" data-size="60 × 60 cm" data-desc="Ein weiteres Porträt von Audrey Hepburn, diesmal quadratisch und mit stärkerem Fokus auf Kontrast statt Farbe.">
           <div class="work-info">
             <div class="work-title">Audrey Hepburn</div>
             <div class="work-meta"><span class="work-date">31.08.2025</span><span class="work-size">60 × 60</span></div>
           </div>
         </div>
         <div class="work-card" onclick="openLB(this)">
-          <img src="img_4757.webp" alt="Kate Moss" loading="lazy" data-title="Kate Moss" data-size="60 × 60 cm">
+          <img src="img_4757.webp" alt="Kate Moss" loading="lazy" data-title="Kate Moss" data-size="60 × 60 cm" data-desc="Kate Moss als Ikone der 90er-Mode-Welt – reduziert auf Linien, Kontrast und wenige gezielt eingesetzte Farbflächen.">
           <div class="work-info">
             <div class="work-title">Kate Moss</div>
             <div class="work-meta"><span class="work-date">19.10.2025</span><span class="work-size">60 × 60</span></div>
           </div>
         </div>
         <div class="work-card" onclick="openLB(this)">
-          <img src="img_madelyn.png" alt="Madelyn Cline" loading="lazy" data-title="Madelyn Cline" data-size="60 × 60 cm">
+          <img src="img_madelyn.png" alt="Madelyn Cline" loading="lazy" data-title="Madelyn Cline" data-size="60 × 60 cm" data-desc="Eines meiner neueren Porträts, entstanden mit dem inzwischen geschärften Stil zwischen Popart und Graffiti.">
           <div class="work-info">
             <div class="work-title">Madelyn Cline</div>
             <div class="work-meta"><span class="work-date">2026</span><span class="work-size">60 × 60</span></div>
@@ -388,7 +401,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 3rem
       </div>
       <div class="works-grid">
         <div class="work-card" onclick="openLB(this)">
-          <img src="img_6243.webp" alt="Naomi Campbell" loading="lazy" data-title="Naomi Campbell" data-size="80 × 80 cm">
+          <img src="img_6243.webp" alt="Naomi Campbell" loading="lazy" data-title="Naomi Campbell" data-size="80 × 80 cm" data-desc="Naomi Campbell in einem meiner größeren Formate – genug Fläche, um Details und Kontraste voll auszuspielen.">
           <div class="work-info">
             <div class="work-title">Naomi Campbell</div>
             <div class="work-meta"><span class="work-date">11.02.2026</span><span class="work-size">80 × 80</span></div>
@@ -405,35 +418,35 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 3rem
       </div>
       <div class="works-grid">
         <div class="work-card" onclick="openLB(this)">
-          <img src="img_0576-1.jpg" alt="Stocks" loading="lazy" data-title="Stocks" data-size="70 × 100 cm">
+          <img src="img_0576-1.jpg" alt="Stocks" loading="lazy" data-title="Stocks" data-size="70 × 100 cm" data-desc="Eine Arbeit über Finanzmärkte und Spekulation – Charts und Zahlen als visuelles Motiv, in meinem Stil verfremdet.">
           <div class="work-info">
             <div class="work-title">Stocks</div>
             <div class="work-meta"><span class="work-date">29.01.2025</span><span class="work-size">70 × 100</span></div>
           </div>
         </div>
         <div class="work-card" onclick="openLB(this)">
-          <img src="img_1696-1.jpg" alt="Gold Brax" loading="lazy" data-title="Gold Brax" data-size="70 × 100 cm">
+          <img src="img_1696-1.jpg" alt="Gold Brax" loading="lazy" data-title="Gold Brax" data-size="70 × 100 cm" data-desc="Der Titel spielt auf meinen Künstlernamen an – Gold steht hier für Anspruch und Ambition.">
           <div class="work-info">
             <div class="work-title">Gold Brax</div>
             <div class="work-meta"><span class="work-date">03.05.2025</span><span class="work-size">70 × 100</span></div>
           </div>
         </div>
         <div class="work-card" onclick="openLB(this)">
-          <img src="img_7152.webp" alt="Panzerknacker" loading="lazy" data-title="Panzerknacker" data-size="70 × 100 cm">
+          <img src="img_7152.webp" alt="Panzerknacker" loading="lazy" data-title="Panzerknacker" data-size="70 × 100 cm" data-desc="Eine comichafte, augenzwinkernde Arbeit – Diebe und Beute als Motiv, umgesetzt in kräftigen Farben.">
           <div class="work-info">
             <div class="work-title">Panzerknacker</div>
             <div class="work-meta"><span class="work-date">03.10.2024</span><span class="work-size">70 × 100</span></div>
           </div>
         </div>
         <div class="work-card" onclick="openLB(this)">
-          <img src="img_5031.webp" alt="MMN" loading="lazy" data-title="MMN" data-size="70 × 100 cm">
+          <img src="img_5031.webp" alt="MMN" loading="lazy" data-title="MMN" data-size="70 × 100 cm" data-desc="Eine abstraktere Arbeit mit reduzierter Symbolik – bewusst offener für eigene Interpretation als meine porträtlastigen Werke.">
           <div class="work-info">
             <div class="work-title">MMN</div>
             <div class="work-meta"><span class="work-date">26.06.2024</span><span class="work-size">70 × 100</span></div>
           </div>
         </div>
         <div class="work-card" onclick="openLB(this)">
-          <img src="img_1720.jpeg" alt="Anton" loading="lazy" data-title="Anton" data-size="70 × 100 cm">
+          <img src="img_1720.jpeg" alt="Anton" loading="lazy" data-title="Anton" data-size="70 × 100 cm" data-desc="Ein Porträt mit reduzierten Linien und kräftigem Kontrast, entstanden 2025.">
           <div class="work-info">
             <div class="work-title">Anton</div>
             <div class="work-meta"><span class="work-date">2025</span><span class="work-size">70 × 100</span></div>
@@ -450,7 +463,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 3rem
       </div>
       <div class="works-grid">
         <div class="work-card" onclick="openLB(this)">
-          <img src="img_1721.webp" alt="Money Boom" loading="lazy" data-title="Money Boom" data-size="90 × 120 cm">
+          <img src="img_1721.webp" alt="Money Boom" loading="lazy" data-title="Money Boom" data-size="90 × 120 cm" data-desc="Eines meiner größten Formate – Geld und Wachstum als Motiv, großflächig und in kräftigen Farben umgesetzt.">
           <div class="work-info">
             <div class="work-title">Money Boom</div>
             <div class="work-meta"><span class="work-date">02.04.2024</span><span class="work-size">90 × 120</span></div>
@@ -463,7 +476,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 3rem
       <div class="size-heading"><h2>100 × 100 cm</h2><span>1 Werk</span></div>
       <div class="works-grid">
         <div class="work-card" onclick="openLB(this)">
-          <img src="img_5203.jpeg" alt="Freedom" loading="lazy" data-title="Freedom" data-size="100 × 100 cm">
+          <img src="img_5203.jpeg" alt="Freedom" loading="lazy" data-title="Freedom" data-size="100 × 100 cm" data-desc="Ein Werk über Freiheit als Idee – bewusst offen gehalten, damit jede*r seine eigene Bedeutung hineinlegen kann.">
           <div class="work-info"><div class="work-title">Freedom</div><div class="work-meta"><span class="work-date">2025</span><span class="work-size">100 × 100</span></div></div>
         </div>
       </div>
@@ -476,10 +489,13 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 3rem
 <!-- LIGHTBOX -->
 <div class="lb" id="lb" onclick="closeLB()">
   <button class="lb-close">✕ Schließen</button>
+  <button class="lb-nav lb-prev" onclick="event.stopPropagation();navLB(-1)">‹</button>
   <img class="lb-img" id="lbImg" src="" alt="">
+  <button class="lb-nav lb-next" onclick="event.stopPropagation();navLB(1)">›</button>
   <div class="lb-info">
     <div class="lb-title" id="lbTitle"></div>
     <div class="lb-size" id="lbSize"></div>
+    <div class="lb-desc" id="lbDesc"></div>
   </div>
 </div>
 
@@ -503,19 +519,37 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 3rem
 </footer>
 
 <script>
-function openLB(card){
+var lbIndex=-1;
+function allCards(){return Array.prototype.slice.call(document.querySelectorAll('.work-card'));}
+function showLB(card){
   var img=card.querySelector('img');
   document.getElementById('lbImg').src=img.src;
   document.getElementById('lbTitle').textContent=img.dataset.title||img.alt;
   document.getElementById('lbSize').textContent=img.dataset.size||'';
+  document.getElementById('lbDesc').textContent=img.dataset.desc||'';
+}
+function openLB(card){
+  lbIndex=allCards().indexOf(card);
+  showLB(card);
   document.getElementById('lb').classList.add('open');
   document.body.style.overflow='hidden';
+}
+function navLB(dir){
+  var cards=allCards();
+  if(!cards.length)return;
+  lbIndex=(lbIndex+dir+cards.length)%cards.length;
+  showLB(cards[lbIndex]);
 }
 function closeLB(){
   document.getElementById('lb').classList.remove('open');
   document.body.style.overflow='';
 }
-document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLB();});
+document.addEventListener('keydown',function(e){
+  if(!document.getElementById('lb').classList.contains('open'))return;
+  if(e.key==='Escape')closeLB();
+  if(e.key==='ArrowRight')navLB(1);
+  if(e.key==='ArrowLeft')navLB(-1);
+});
 
 function toggleFilter(){
   document.getElementById('filterBar').classList.toggle('open');

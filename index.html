@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Braxart — Pop Art & Graffiti</title>
+<meta name="description" content="Pop Art & Graffiti von Braxart aus Frankfurt/Kriftel. Handgemalte, signierte Unikate – von Ikonen wie Marilyn Monroe bis individuelle Auftragsarbeiten.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Braxart — Pop Art & Graffiti">
+<meta property="og:description" content="Handgemalte, signierte Unikate zwischen Pop Art und Graffiti. Jedes Werk ein Original.">
+<meta property="og:image" content="https://braxart23.com/img_6243.webp">
+<meta property="og:url" content="https://braxart23.com/">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
@@ -59,6 +66,12 @@ h1 em{color:var(--accent);font-style:normal}
 .hdot{width:20px;height:2px;background:rgba(245,240,232,0.2);transition:all 0.35s;cursor:pointer}
 .hdot.on{width:36px;background:var(--accent)}
 .hnum{position:absolute;top:50%;right:3rem;z-index:2;transform:translateY(-50%);font-family:var(--display);font-size:5rem;color:rgba(245,240,232,0.04);letter-spacing:0.1em;pointer-events:none;transition:opacity 0.5s}
+.scroll-cue{position:absolute;bottom:2rem;left:3rem;z-index:2;display:flex;flex-direction:column;align-items:center;gap:0.6rem}
+.scroll-cue span{font-family:var(--mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(245,240,232,0.45);writing-mode:vertical-rl}
+.scroll-cue-line{width:1px;height:36px;background:linear-gradient(to bottom,var(--accent),transparent);position:relative;overflow:hidden}
+.scroll-cue-line::after{content:'';position:absolute;left:0;top:-100%;width:100%;height:100%;background:var(--white);animation:scrolldrop 2.2s ease-in-out infinite}
+@keyframes scrolldrop{0%{top:-100%}60%{top:100%}100%{top:100%}}
+@media(max-width:900px){.scroll-cue{display:none}}
 
 /* TICKER */
 .ticker{background:var(--accent);padding:0.6rem 0;overflow:hidden;white-space:nowrap}
@@ -252,6 +265,10 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2.5rem 3r
       <a href="galerie.html" class="btn btn-y">Galerie entdecken</a>
       <a href="kontakt.html" class="btn btn-o">Auftragsarbeit anfragen</a>
     </div>
+  </div>
+  <div class="scroll-cue">
+    <span>Scroll</span>
+    <div class="scroll-cue-line"></div>
   </div>
   <div class="hdots" id="hdots">
     <div class="hdot on"></div>

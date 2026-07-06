@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://braxart23.com/sitemap.xml
