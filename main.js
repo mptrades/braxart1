@@ -3,6 +3,16 @@
   var doc=document.documentElement;
   doc.classList.add('js');
 
+  // Materialien: Symbol, Name, Kurzinfo, hervorgehoben?
+  var I='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">';
+  var MAT={
+    spray:[I+'<rect x="7" y="8" width="10" height="13" rx="2"/><path d="M9 8V6h6v2M11 6V4h2v2M19 5h.01M21 3h.01M21 7h.01"/></svg>','Montana-Sprühdosen','Farbflächen, Verläufe und Graffiti'],
+    posca:[I+'<path d="M15 4l5 5-10 10H5v-5L15 4z"/><path d="M13 6l5 5"/></svg>','Posca-Marker','Linien, Konturen und Details'],
+    collage:[I+'<circle cx="6" cy="7" r="2.5"/><circle cx="6" cy="17" r="2.5"/><path d="M8 8.5L20 16M8 15.5L20 8"/></svg>','Magazin-Collage','ausgeschnitten und aufgeklebt',1],
+    money:[I+'<rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6.5 9.5h.01M17.5 14.5h.01"/></svg>','Echte Dollarnoten','im Hintergrund eingearbeitet',1]
+  };
+
+
   // Navigation: Rahmen beim Scrollen, Mobilmenü
   var nav=document.querySelector('.nav');
   function onScroll(){if(nav)nav.classList.toggle('scrolled',window.scrollY>8);}
@@ -27,6 +37,12 @@
     reveals.forEach(function(el){io.observe(el);});
   }else{reveals.forEach(function(el){el.classList.add('in');});}
 
+  // Bilder: Platzhalter entfernen, sobald geladen (auch bei Fehler, damit nichts hängen bleibt)
+  document.querySelectorAll('.art img').forEach(function(img){
+    var a=img.closest('.art');function done(){a.classList.add('ld');}
+    if(img.complete&&img.naturalWidth)done();else{img.addEventListener('load',done);img.addEventListener('error',done);}
+  });
+
   // Lightbox für alle Elemente mit .art[data-title]
   var arts=[].slice.call(document.querySelectorAll('.art[data-title]'));
   if(arts.length){buildLightbox(arts);}
@@ -46,6 +62,7 @@
         '<div class="lb-meta"></div>'+
         '<p class="lb-desc"></p>'+
         '<a class="btn btn-dark lb-ask" href="kontakt.html">Dieses Werk anfragen</a>'+
+        '<div class="lb-mat"><small>Material</small><ul></ul><p class="note"></p></div>'+
         '<div class="lb-scale"><small>Größenvergleich (Person 1,75 m)</small><div class="lb-svg"></div></div>'+
       '</aside>'+
       '<button class="lb-btn lb-close" aria-label="Schließen">✕</button>';
@@ -69,6 +86,13 @@
       lb.querySelector('.lb-desc').textContent=a.dataset.desc||'';
       lb.querySelector('.lb-ask').href='kontakt.html?werk='+encodeURIComponent(a.dataset.title+(a.dataset.size?' ('+a.dataset.size+')':''));
       lb.querySelector('.lb-svg').innerHTML=scaleSVG(+a.dataset.w,+a.dataset.h);
+      var mat=lb.querySelector('.lb-mat'),html='';
+      (a.dataset.mat||'spray,posca').split(',').forEach(function(k,i){
+        var d=MAT[k];if(d)html+='<li class="'+(d[3]?'hi':'')+'" style="transition-delay:'+(.12+i*.09)+'s">'+d[0]+'<div><b>'+d[1]+'</b><span>'+d[2]+'</span></div></li>';
+      });
+      mat.querySelector('ul').innerHTML=html;
+      mat.querySelector('.note').textContent=a.dataset.note||'';
+      mat.classList.remove('in');void mat.offsetWidth;mat.classList.add('in');
       lb.querySelector('.lb-count').textContent=(idx+1)+' / '+arts.length;
     }
     function open(i){lastFocus=document.activeElement;show(i);lb.classList.add('open');doc.style.overflow='hidden';lb.querySelector('.lb-close').focus();}
