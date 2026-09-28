@@ -152,7 +152,7 @@
   document.querySelectorAll('[data-age]').forEach(function(el){el.textContent=age;});
 
   if(!matchMedia('(hover:hover) and (pointer:fine)').matches||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
-  document.querySelectorAll('[data-tilt],.rail-item .art,.work .art,.ex .art').forEach(function(el){
+  document.querySelectorAll('[data-tilt],.rail-item .art,.work .art,.ex .art,.ex-row .art').forEach(function(el){
     var max=+el.dataset.tilt||8,glare=document.createElement('span');
     glare.className='glare';el.classList.add('tilt');el.appendChild(glare);
     el.addEventListener('pointermove',function(e){
