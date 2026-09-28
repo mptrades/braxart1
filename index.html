@@ -111,6 +111,14 @@
 }
 @media(min-width:821px){.obj-dots{display:none}}
 
+/* AUSSTELLUNG-TEASER */
+.expo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,72px);align-items:center}
+.expo-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.expo-row span{aspect-ratio:1;background:#111 center/cover;box-shadow:0 0 0 3px #1b1b1b,0 20px 40px rgba(0,0,0,.15);transition:transform .6s var(--ease)}
+.expo-row span:nth-child(2n){transform:translateY(18px)}
+.expo-row:hover span{transform:translateY(-6px)}
+@media(max-width:820px){.expo{grid-template-columns:1fr}}
+
 /* KAUFEN + ÜBER */
 .buy{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px}
 .buy div{border-top:1px solid var(--line-2);padding-top:18px}
@@ -155,6 +163,7 @@
     <a href="index.html" class="logo" aria-label="Braxart Startseite"></a>
     <ul class="nav-links">
       <li><a href="galerie.html">Galerie</a></li>
+      <li><a href="ausstellung.html">Ausstellung</a></li>
       <li><a href="ueber.html">Über mich</a></li>
       <li><a href="auftragsarbeiten.html">Auftragsarbeiten</a></li>
       <li><a href="kontakt.html">Kontakt</a></li>
@@ -166,6 +175,7 @@
 <nav class="mmenu" aria-label="Mobile Navigation">
   <a href="index.html">Start</a>
   <a href="galerie.html">Galerie</a>
+  <a href="ausstellung.html">Ausstellung</a>
   <a href="ueber.html">Über mich</a>
   <a href="auftragsarbeiten.html">Auftragsarbeiten</a>
   <a href="kontakt.html">Kontakt</a>
@@ -189,8 +199,8 @@
 </section>
 <nav class="wrap index reveal" aria-label="Bereiche">
   <a href="galerie.html"><small>01</small><b>Galerie</b><span>25 Werke</span></a>
-  <a href="auftragsarbeiten.html"><small>02</small><b>Auftragsarbeiten</b><span>ab 40 × 40 cm</span></a>
-  <a href="ueber.html"><small>03</small><b>Über mich</b><span>Kriftel</span></a>
+  <a href="ausstellung.html"><small>02</small><b>Ausstellung</b><span>Bad Soden</span></a>
+  <a href="auftragsarbeiten.html"><small>03</small><b>Auftragsarbeiten</b><span>ab 40 × 40 cm</span></a>
 </nav>
 
 <!-- NEUESTE WERKE -->
@@ -265,10 +275,25 @@
   </div>
 </section>
 
+<!-- AUSSTELLUNG -->
+<section class="section section-soft">
+  <div class="wrap expo">
+    <div>
+      <div class="eyebrow reveal"><b>04</b> Aktuell ausgestellt</div>
+      <h2 class="h2 reveal reveal-d1">Vier Porträts in Bad Soden.</h2>
+      <p class="lead reveal reveal-d2" style="margin:16px 0 28px">Marilyn Monroe, Kate Moss, Audrey Hepburn und Madelyn Cline hängen dauerhaft bei Ästhetik MainTaunus – und sind dort erwerbbar.</p>
+      <a href="ausstellung.html" class="btn btn-dark reveal reveal-d3">Rundgang starten</a>
+    </div>
+    <a href="ausstellung.html" class="expo-row reveal reveal-d1" aria-label="Zur Ausstellung">
+      <span style="background-image:url('braxart-marilyn-monroe-leinwand.jpg')"></span><span style="background-image:url('braxart-kate-moss-leinwand.jpg')"></span><span style="background-image:url('braxart-audrey-hepburn-leinwand.jpg')"></span><span style="background-image:url('braxart-madelyn-cline-leinwand.jpg')"></span>
+    </a>
+  </div>
+</section>
+
 <!-- KAUFEN -->
 <section class="section">
   <div class="wrap">
-    <div class="eyebrow reveal"><b>04</b> Ein Bild kaufen</div>
+    <div class="eyebrow reveal"><b>05</b> Ein Bild kaufen</div>
     <h2 class="h2 reveal reveal-d1">So einfach geht’s.</h2>
     <div class="buy">
       <div class="reveal"><small>01</small><h3>Werk auswählen</h3><p>In der Galerie auf ein Bild tippen und „Dieses Werk anfragen“ wählen – das Formular ist dann schon ausgefüllt.</p></div>
@@ -283,7 +308,7 @@
   <div class="wrap me">
     <img class="reveal" src="braxart-max-poertner-kuenstler.jpeg" alt="Max Pörtner alias Braxart" loading="lazy">
     <div>
-      <div class="eyebrow reveal"><b>05</b> Über mich</div>
+      <div class="eyebrow reveal"><b>06</b> Über mich</div>
       <h2 class="h2 reveal reveal-d1">Max Pörtner.</h2>
       <p class="reveal reveal-d2">Angefangen mit Skizzenblock und Spraydose, heute zwischen Pop Art und Graffiti. Ich male Ikonen der Popkultur und Auftragsarbeiten – in Kriftel, direkt bei Frankfurt.</p>
       <div class="btns reveal reveal-d3"><a href="ueber.html" class="btn btn-ghost">Meine Geschichte</a><a href="https://www.instagram.com/_braxart_" target="_blank" rel="noopener" class="link-more">Instagram</a></div>
@@ -296,7 +321,7 @@
   <div class="wrap split">
     <div class="split-img reveal"><img src="braxart-freedom-pop-art-100x100.jpeg" alt="Freedom – Auftragsarbeit von Braxart, 100 × 100 cm" loading="lazy" width="1358" height="1600"></div>
     <div class="card reveal reveal-d1">
-      <div class="eyebrow"><b>06</b> Auftragsarbeiten</div>
+      <div class="eyebrow"><b>07</b> Auftragsarbeiten</div>
       <h2 class="h2">Deine Idee.<br>Mein Pinsel.</h2>
       <p class="lead" style="margin:20px 0 32px">Du bringst das Motiv – ich mache daraus ein Unikat. Ob Porträt, Ikone oder etwas ganz Eigenes: echte Zusammenarbeit von der ersten Skizze bis zur Übergabe.</p>
       <div class="btns">
@@ -316,7 +341,7 @@
         <p style="margin-top:12px;max-width:280px">Handgemalte Pop Art &amp; Graffiti aus Kriftel bei Frankfurt.</p>
       </div>
       <div class="footer-cols">
-        <div><h4>Entdecken</h4><ul><li><a href="galerie.html">Galerie</a></li><li><a href="auftragsarbeiten.html">Auftragsarbeiten</a></li><li><a href="ueber.html">Über mich</a></li></ul></div>
+        <div><h4>Entdecken</h4><ul><li><a href="galerie.html">Galerie</a></li><li><a href="ausstellung.html">Ausstellung</a></li><li><a href="auftragsarbeiten.html">Auftragsarbeiten</a></li><li><a href="ueber.html">Über mich</a></li></ul></div>
         <div><h4>Kontakt</h4><ul><li><a href="kontakt.html">Anfrage senden</a></li><li><a href="https://www.instagram.com/_braxart_" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.tiktok.com/@_braxart" target="_blank" rel="noopener">TikTok</a></li></ul></div>
         <div><h4>Rechtliches</h4><ul><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li></ul></div>
       </div>
