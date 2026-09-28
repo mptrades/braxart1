@@ -82,6 +82,7 @@
       if(a.dataset.size)meta+='<span class="chip chip-accent">'+a.dataset.size+'</span>';
       if(a.dataset.year)meta+='<span class="chip">'+a.dataset.year+'</span>';
       meta+='<span class="chip">Handgemalt · Unikat</span>';
+      if(a.dataset.expo)meta+='<a class="chip" style="background:#e8f7ec;color:#1d7a35;font-weight:600" href="ausstellung.html">Ausgestellt in Bad Soden ›</a>';
       lb.querySelector('.lb-meta').innerHTML=meta;
       lb.querySelector('.lb-desc').textContent=a.dataset.desc||'';
       lb.querySelector('.lb-ask').href='kontakt.html?werk='+encodeURIComponent(a.dataset.title+(a.dataset.size?' ('+a.dataset.size+')':''));
