@@ -191,7 +191,7 @@ a.vo-item:hover img{transform:scale(1.03)}
     <div class="floor" aria-hidden="true"></div>
     <div class="doorway" aria-hidden="true">
       <span class="door-sign">Kunst im Haus: Braxart</span>
-      <video class="door-vid" src="braxart-ausstellung-bad-soden-video-tuer.mp4" poster="braxart-ausstellung-bad-soden-video-tuer.jpg" muted loop playsinline autoplay preload="auto"></video>
+      <video class="door-vid" src="braxart-ausstellung-bad-soden-video-tuer.mp4" poster="braxart-ausstellung-bad-soden-video-tuer.jpg" muted playsinline preload="auto"></video>
       <span class="zarge"></span>
       <div class="leaf l"><i class="fr"></i><i class="gl"></i><i class="hd"></i><i class="sh"></i></div>
       <div class="leaf r"><i class="fr"></i><i class="gl"></i><i class="hd"></i><i class="sh"></i></div>
@@ -335,10 +335,17 @@ a.vo-item:hover img{transform:scale(1.03)}
       else{v.pause();f.classList.remove('playing');}
     });
   });
-  // Tür-Video: pausieren, wenn nicht sichtbar
-  var dv=document.querySelector('.door-vid');
-  if(dv&&'IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var pr=dv.play();if(pr&&pr.catch)pr.catch(function(){});}else dv.pause();});}).observe(dv);}
-  if(reduce&&dv){dv.removeAttribute('autoplay');dv.pause();}
+  // Tür-Video: startet erst, wenn sich die Tür öffnet, läuft einmal und bleibt auf dem letzten Bild stehen
+  var dv=document.querySelector('.door-vid'),started=false;
+  function doorVideo(){
+    if(!dv)return;
+    var p=prog(door);
+    if(!started&&p>.04){started=true;dv.currentTime=0;var pr=dv.play();if(pr&&pr.catch)pr.catch(function(){});}
+    if(started&&p<=.005){started=false;dv.pause();dv.currentTime=0;}   // ganz oben: zurück auf Anfang
+  }
+  window.addEventListener('scroll',doorVideo,{passive:true});
+  document.getElementById('enter').addEventListener('click',function(){if(dv&&!started){started=true;var pr=dv.play();if(pr&&pr.catch)pr.catch(function(){});}});
+  doorVideo();
 })();
 </script>
 </body>
