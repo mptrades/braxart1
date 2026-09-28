@@ -3,568 +3,1069 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Galerie — Braxart</title>
-<meta name="description" content="Galerie mit handgemalten Pop-Art- und Graffiti-Unikaten von Braxart – Portraits, Ikonen und mehr in verschiedenen Formaten.">
+<title>Galerie — Braxart | Pop-Art- & Graffiti-Gemälde</title>
+<meta name="description" content="Galerie von Braxart: 26 handgemalte Pop-Art- und Graffiti-Unikate – Marilyn Monroe, Naomi Campbell, Audrey Hepburn, Muhammad Ali, Money Boom u. v. m. in Formaten von 40 × 40 bis 100 × 100 cm.">
+<link rel="canonical" href="https://braxart23.com/galerie.html">
+<meta name="theme-color" content="#ffffff">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Braxart">
 <meta property="og:title" content="Galerie — Braxart">
 <meta property="og:description" content="Handgemalte Pop-Art- und Graffiti-Unikate von Braxart in verschiedenen Formaten.">
-<meta property="og:image" content="https://braxart23.com/img_6243.webp">
+<meta property="og:image" content="https://braxart23.com/braxart-naomi-campbell-pop-art-80x80.webp">
 <meta property="og:url" content="https://braxart23.com/galerie.html">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --bg:#0a0a0a;--bg2:#111;--bg3:#1a1a1a;
-  --white:#f5f0e8;--muted:#888;--muted2:#444;
-  --accent:#e8c547;
-  --border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.13);
-  --display:'Bebas Neue',sans-serif;--body:'DM Sans',sans-serif;--mono:'Space Mono',monospace;
-}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--white);font-family:var(--body);overflow-x:hidden;cursor:auto}
-a{color:inherit;text-decoration:none}
-nav{position:sticky;top:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 3rem;background:rgba(10,10,10,0.96);border-bottom:1px solid var(--border);backdrop-filter:blur(12px)}
-.nav-logo{font-family:var(--display);font-size:1.6rem;letter-spacing:0.1em}
-.nav-logo span{color:var(--accent)}
-.nav-back{font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);transition:color 0.2s}
-.nav-back:hover{color:var(--accent)}
-.nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);transition:color 0.2s}
-.nav-links a:hover{color:var(--accent)}
-.burger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:4px}
-.burger span{width:22px;height:1.5px;background:var(--white);display:block}
-.mmenu{display:none;position:fixed;inset:0;background:var(--bg);z-index:500;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem}
-.mmenu.open{display:flex}
-.mmenu a{font-family:var(--display);font-size:clamp(2rem,7vw,4rem);letter-spacing:0.08em;color:rgba(245,240,232,0.6);transition:color 0.2s}
-.mmenu a:hover{color:var(--accent)}
-.mmenu-close{position:absolute;top:1.5rem;right:2rem;font-family:var(--mono);font-size:11px;color:var(--muted);background:none;border:none;cursor:pointer;letter-spacing:0.1em;text-transform:uppercase}
-
-/* PAGE HEADER */
-.page-header{padding:4rem 3rem 3rem;border-bottom:1px solid var(--border)}
-.page-header-inner{max-width:1300px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem}
-.ph-label{font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:0.75rem;display:flex;align-items:center;gap:0.6rem}
-.ph-label::before{content:'';width:20px;height:1px;background:var(--accent)}
-h1{font-family:var(--display);font-size:clamp(3rem,8vw,7rem);line-height:0.95;letter-spacing:0.04em}
-.ph-count{font-family:var(--mono);font-size:10px;letter-spacing:0.14em;color:var(--muted);text-transform:uppercase}
-
-/* FILTER - Slideout */
-.filter-bar{position:static;background:rgba(10,10,10,0.97);border-bottom:1px solid var(--border);backdrop-filter:blur(12px)}
-.filter-toggle{display:flex;align-items:center;justify-content:space-between;padding:0.85rem 3rem;cursor:pointer;user-select:none}
-.filter-toggle-label{font-family:var(--mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:0.5rem}
-.filter-active{color:var(--accent)}
-.filter-arrow{font-family:var(--mono);font-size:11px;color:var(--muted);transition:transform 0.3s}
-.filter-bar.open .filter-arrow{transform:rotate(180deg)}
-.filter-dropdown{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
-.filter-bar.open .filter-dropdown{max-height:300px}
-.filter-inner{padding:0.5rem 3rem 1rem;display:flex;gap:0.5rem;flex-wrap:wrap}
-.filter-btn{font-family:var(--mono);font-size:9px;letter-spacing:0.14em;text-transform:uppercase;padding:0.55rem 1.1rem;background:var(--bg3);border:1px solid var(--border2);color:var(--muted);cursor:pointer;white-space:nowrap;transition:all 0.2s;border-radius:2px}
-.filter-btn:hover{color:var(--white);border-color:rgba(255,255,255,0.25)}
-.filter-btn.active{color:#000;background:var(--accent);border-color:var(--accent);font-weight:700}
-
-/* GALLERY GRID */
-.gallery{padding:2rem 3rem 5rem}
-.gallery-inner{max-width:1300px;margin:0 auto}
-.size-group{margin-bottom:4rem}
-.size-heading{display:flex;align-items:center;gap:1.5rem;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--border)}
-.size-heading h2{font-family:var(--display);font-size:2rem;letter-spacing:0.08em}
-.size-heading span{font-family:var(--mono);font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent)}
-.works-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:2px}
-.work-card{position:relative;overflow:hidden;cursor:pointer;background:var(--bg2);display:flex;flex-direction:column}
-.work-card img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center center;display:block;transition:transform 0.6s ease,filter 0.4s;filter:grayscale(15%)}
-.work-card:hover img{transform:scale(1.04);filter:grayscale(0%)}
-.work-info{padding:0.85rem 1.1rem 0.9rem;background:var(--bg2);height:68px;display:flex;flex-direction:column;justify-content:space-between;flex-shrink:0}
-.work-title{font-family:var(--display);font-size:1.05rem;letter-spacing:0.06em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.2}
-.work-meta{display:flex;justify-content:space-between;align-items:center}
-.work-date{font-family:var(--mono);font-size:9px;letter-spacing:0.1em;color:var(--muted);text-transform:uppercase}
-.work-size{font-family:var(--mono);font-size:9px;letter-spacing:0.1em;color:var(--accent);text-transform:uppercase}
-
-/* LIGHTBOX */
-.lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.95);z-index:500;align-items:center;justify-content:center;padding:2rem}
-.lb.open{display:flex}
-.lb-img{max-width:90vw;max-height:85vh;object-fit:contain;border:1px solid var(--border2)}
-.lb-close{position:fixed;top:1.5rem;right:2rem;font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);background:none;border:none;cursor:pointer}
-.lb-close:hover{color:var(--white)}
-.lb-info{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);text-align:center;max-width:min(90vw,560px);padding:0 1rem}
-.lb-title{font-family:var(--display);font-size:1.4rem;letter-spacing:0.08em}
-.lb-size{font-family:var(--mono);font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-top:3px}
-.lb-desc{font-size:12.5px;color:rgba(245,240,232,0.6);line-height:1.6;margin-top:0.75rem}
-.lb-nav{position:fixed;top:50%;transform:translateY(-50%);background:none;border:1px solid var(--border2);color:var(--white);width:44px;height:44px;font-family:var(--display);font-size:1.3rem;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;justify-content:center}
-.lb-nav:hover{border-color:var(--accent);color:var(--accent)}
-.lb-prev{left:1.5rem}
-.lb-next{right:1.5rem}
-@media(max-width:700px){.lb-nav{width:38px;height:38px}.lb-prev{left:0.5rem}.lb-next{right:0.5rem}}
-
-/* CONTACT STRIP */
-.contact-strip{background:var(--accent);padding:3rem;text-align:center}
-.contact-strip h2{font-family:var(--display);font-size:clamp(2rem,5vw,4rem);color:#000;margin-bottom:0.75rem;letter-spacing:0.04em}
-.contact-strip p{font-size:13px;color:rgba(0,0,0,0.6);margin-bottom:1.5rem}
-.contact-strip a{font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;padding:0.85rem 2rem;background:#000;color:var(--accent);transition:all 0.2s}
-.contact-strip a:hover{background:var(--white);color:#000}
-
-footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 3rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
-.flogo{font-family:var(--display);font-size:1.3rem;letter-spacing:0.1em}.flogo span{color:var(--accent)}
-.flinks{display:flex;gap:1.5rem;flex-wrap:wrap}
-.flinks a{font-family:var(--mono);font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);transition:color 0.2s}
-.flinks a:hover{color:var(--white)}
-
-@media(max-width:900px){
-  nav{padding:1rem 1.25rem}
-  .nav-links{display:none}
-  .burger{display:flex}
-  .page-header{padding:2.5rem 1.25rem 2rem}
-  .gallery{padding:1.5rem 1.25rem 4rem}
-  .works-grid{grid-template-columns:1fr 1fr}
-  .contact-strip{padding:2.5rem 1.25rem}
-  footer{padding:1.5rem 1.25rem;flex-direction:column;text-align:center}
-}
-@media(max-width:500px){.works-grid{grid-template-columns:1fr}}
-
-@media(max-width:768px){
-  /* Hide custom cursor completely on touch devices */
-  #cur,  body{cursor:auto!important}
-  /* Nav */
-  nav{padding:0.9rem 1rem!important}
-  /* Hero text sizing */
-  h1{font-size:clamp(2.2rem,10vw,3.5rem)!important}
-  /* Galerie grid */
-  .grid{grid-template-columns:1fr!important}
-  /* Contact grid */
-  .contact-grid{grid-template-columns:1fr!important}
-  /* Page padding */
-  .page{padding:6rem 1.2rem 3rem!important}
-  /* Footer */
-  footer{flex-direction:column!important;text-align:center!important;padding:1.5rem 1rem!important;gap:1rem!important}
-  .footer-links,.flinks{justify-content:center!important;flex-wrap:wrap!important;gap:0.75rem!important}
-  /* Form grid */
-  [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important}
-  /* Strip images */
-  .strip-imgs{height:150px!important}
-  /* Facts */
-  .facts{grid-template-columns:1fr 1fr!important}
-  /* Bio */
-  .bio{grid-template-columns:1fr!important;padding:2.5rem 1rem!important;gap:1.5rem!important}
-  .bio-sticky{position:static!important}
-  /* About hero */
-  .about-hero{grid-template-columns:1fr!important}
-  .ah-text{padding:2rem 1rem!important}
-  .ah-img{min-height:300px!important;order:-1!important}
-  /* Steps */
-  .steps{grid-template-columns:1fr!important}
-  /* Examples */
-  .examples-grid{grid-template-columns:1fr!important}
-  /* Preise */
-  .preise-inner{grid-template-columns:1fr!important;gap:2rem!important}
-  /* CTA */
-  .cta,.cta-contact{padding:2.5rem 1rem!important}
-  /* Process */
-  .process,.examples{padding:2.5rem 1rem!important}
-  /* Page hero */
-  .page-hero{padding:0 1rem 2.5rem!important;min-height:55vh!important}
-  /* Logo size */
-  .nav-logo img{height:30px!important}
-}
-</style>
 <link rel="icon" type="image/jpeg" href="favicon.jpg">
+<link rel="apple-touch-icon" href="favicon.jpg">
+<link rel="stylesheet" href="style.css">
+<style>
+.g-head{padding-top:clamp(56px,8vw,104px);padding-bottom:28px}
+.g-head .lead{margin-top:18px}
+.seg-wrap{position:sticky;top:64px;z-index:50;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line)}
+.seg{display:flex;gap:6px;overflow-x:auto;padding-top:12px;padding-bottom:12px;scrollbar-width:none}
+.seg::-webkit-scrollbar{display:none}
+.seg button{flex:0 0 auto;height:36px;padding:0 16px;border-radius:999px;border:0;background:var(--bg-soft);font-size:14px;color:var(--ink-2);cursor:pointer;transition:background .25s,color .25s,transform .3s var(--ease)}
+.seg button:hover{background:#e8e8ed}
+.seg button:active{transform:scale(.96)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.seg button small{opacity:.55;margin-left:4px}
+.group{padding-top:56px;scroll-margin-top:130px}
+.group[hidden]{display:none}
+.group-head{display:flex;align-items:baseline;gap:14px;margin-bottom:24px}
+.group-head h2{font-size:clamp(26px,3vw,34px);font-weight:700;letter-spacing:-.02em}
+.group-head span{color:var(--muted);font-size:15px}
+.masonry{columns:3 280px;column-gap:24px}
+.work{break-inside:avoid;margin:0 0 32px;display:block}
+.work .art{box-shadow:var(--shadow)}
+.work .art img{height:auto}
+.work figcaption{display:flex;justify-content:space-between;gap:12px;margin-top:12px;font-size:15px}
+.work figcaption b{font-weight:600}
+.work figcaption span{color:var(--muted);white-space:nowrap}
+.cta-band{margin-top:64px}
+</style>
 </head>
 <body>
 
-<div class="mmenu" id="mmenu">
-  <button class="mmenu-close" onclick="closeMM()">✕</button>
-  <a href="index.html" onclick="closeMM()">Start</a>
-  <a href="galerie.html" onclick="closeMM()">Galerie</a>
-  <a href="ueber.html" onclick="closeMM()">Über mich</a>
-  <a href="auftragsarbeiten.html" onclick="closeMM()">Aufträge</a>
-  <a href="kontakt.html" onclick="closeMM()">Kontakt</a>
-  <a href="impressum.html" onclick="closeMM()">Impressum</a>
-</div>
-
-<nav>
-  <a href="index.html" class="nav-logo"><img src="Unbenanntes_Projekt.jpg" alt="Braxart" style="height:38px;width:auto;object-fit:contain;display:block"></a>
-  <ul class="nav-links">
-    <li><a href="index.html">Start</a></li>
-    <li><a href="galerie.html" style="color:var(--accent)">Galerie</a></li>
-    <li><a href="ueber.html">Über mich</a></li>
-    <li><a href="auftragsarbeiten.html">Aufträge</a></li>
-    <li><a href="kontakt.html">Kontakt</a></li>
-  </ul>
-  <button class="burger" onclick="openMM()"><span></span><span></span><span></span></button>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="index.html" class="logo" aria-label="Braxart Startseite"></a>
+    <ul class="nav-links">
+      <li><a href="galerie.html" aria-current="page">Galerie</a></li>
+      <li><a href="ueber.html">Über mich</a></li>
+      <li><a href="auftragsarbeiten.html">Auftragsarbeiten</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+    <a href="kontakt.html" class="btn btn-dark">Anfragen</a>
+    <button class="burger" aria-label="Menü" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mmenu" aria-label="Mobile Navigation">
+  <a href="index.html">Start</a>
+  <a href="galerie.html">Galerie</a>
+  <a href="ueber.html">Über mich</a>
+  <a href="auftragsarbeiten.html">Auftragsarbeiten</a>
+  <a href="kontakt.html">Kontakt</a>
 </nav>
 
-<div class="page-header">
-  <div class="page-header-inner">
-    <div>
-      <div class="ph-label">// Alle Werke</div>
-      <h1>MEINE<br>GALERIE</h1>
-    </div>
-    <div class="ph-count" id="workCount">26 Werke · 8 Formate</div>
+<main>
+<section class="wrap g-head">
+  <div class="eyebrow reveal">Alle Werke</div>
+  <h1 class="h1 reveal reveal-d1">Galerie.</h1>
+  <p class="lead reveal reveal-d2">26 handgemalte Unikate in 8 Formaten. Tippe auf ein Werk für Details, Größenvergleich und Anfrage.</p>
+</section>
+
+<div class="seg-wrap">
+  <div class="wrap seg" role="toolbar" aria-label="Nach Format filtern">
+    <button data-f="all" aria-pressed="true">Alle<small>26</small></button>
+    <button data-f="40x40" aria-pressed="false">40 × 40<small>2</small></button>
+    <button data-f="40x50" aria-pressed="false">40 × 50<small>4</small></button>
+    <button data-f="50x70" aria-pressed="false">50 × 70<small>8</small></button>
+    <button data-f="60x60" aria-pressed="false">60 × 60<small>4</small></button>
+    <button data-f="70x100" aria-pressed="false">70 × 100<small>5</small></button>
+    <button data-f="80x80" aria-pressed="false">80 × 80<small>1</small></button>
+    <button data-f="90x120" aria-pressed="false">90 × 120<small>1</small></button>
+    <button data-f="100x100" aria-pressed="false">100 × 100<small>1</small></button>
   </div>
 </div>
 
-<!-- FILTER BAR -->
-<div class="filter-bar" id="filterBar">
-  <div class="filter-toggle" onclick="toggleFilter()">
-    <div class="filter-toggle-label">Größe auswählen — <span class="filter-active" id="activeFilterLabel">Alle</span></div>
-    <div class="filter-arrow">▼</div>
-  </div>
-  <div class="filter-dropdown">
-    <div class="filter-inner">
-      <button class="filter-btn active" data-filter="all" onclick="setFilter('all',this)">Alle</button>
-      <button class="filter-btn" data-filter="40x40" onclick="setFilter('40x40',this)">40 × 40 cm</button>
-      <button class="filter-btn" data-filter="40x50" onclick="setFilter('40x50',this)">40 × 50 cm</button>
-      <button class="filter-btn" data-filter="50x70" onclick="setFilter('50x70',this)">50 × 70 cm</button>
-      <button class="filter-btn" data-filter="60x60" onclick="setFilter('60x60',this)">60 × 60 cm</button>
-      <button class="filter-btn" data-filter="80x80" onclick="setFilter('80x80',this)">80 × 80 cm</button>
-      <button class="filter-btn" data-filter="70x100" onclick="setFilter('70x100',this)">70 × 100 cm</button>
-      <button class="filter-btn" data-filter="90x120" onclick="setFilter('90x120',this)">90 × 120 cm</button>
-      <button class="filter-btn" data-filter="100x100" onclick="setFilter('100x100',this)">100 × 100 cm</button>
+<div class="wrap" id="gallery">
+
+  <section class="group" data-size="40x40" id="format-40x40">
+    <div class="group-head"><h2>40 × 40 cm</h2><span>Klein · 2 Werke</span></div>
+    <div class="masonry">
+      <figure class="work reveal"><a class="art" id="marilyn-monroe-glam" href="braxart-marilyn-monroe-glam-pop-art-40x40.jpeg" data-title="Marilyn Monroe »Glam«" data-size="40 × 40 cm" data-w="40" data-h="40" data-year="2024" data-desc="Marilyn Monroe als zeitlose Pop-Art-Ikone – reduziert auf klare Linien und kräftige Kontraste in einem kompakten Format."><img src="braxart-marilyn-monroe-glam-pop-art-40x40.jpeg" alt="Marilyn Monroe »Glam« – handgemaltes Pop-Art-Gemälde von Braxart, 40 × 40 cm" loading="lazy" width="1358" height="1600"></a><figcaption><b>Marilyn Monroe »Glam«</b><span>2024</span></figcaption></figure>
+      <figure class="work reveal"><a class="art" id="muhammad-ali-win" href="braxart-muhammad-ali-win-pop-art-40x40.webp" data-title="Muhammad Ali »Win«" data-size="40 × 40 cm" data-w="40" data-h="40" data-year="2024" data-desc="Muhammad Ali im Moment des Triumphs – für mich ein Motiv für Willensstärke, umgesetzt in klaren Konturen und kräftigen Farbflächen."><img src="braxart-muhammad-ali-win-pop-art-40x40.webp" alt="Muhammad Ali »Win« – handgemaltes Pop-Art-Gemälde von Braxart, 40 × 40 cm" loading="lazy" width="1358" height="1600"></a><figcaption><b>Muhammad Ali »Win«</b><span>2024</span></figcaption></figure>
     </div>
-  </div>
-</div>
+  </section>
 
-<!-- GALLERY -->
-<div class="gallery">
-  <div class="gallery-inner">
-
-    <!-- 40x40 -->
-    <div class="size-group" data-size="40x40">
-      <div class="size-heading">
-        <h2>40 × 40 cm</h2>
-        <span>2 Werke</span>
-      </div>
-      <div class="works-grid">
-        <div class="work-card" onclick="openLB(this)">
-          <img src="img_5194.jpeg" alt="Marilyn Monroe Glam" loading="lazy" data-title="Marilyn Monroe »Glam«" data-size="40 × 40 cm" data-desc="Marilyn Monroe als zeitlose Pop-Art-Ikone – reduziert auf klare Linien und kräftige Kontraste in einem kompakten Format.">
-          <div class="work-info">
-            <div class="work-title">Marilyn Monroe "Glam"</div>
-            <div class="work-meta"><span class="work-date">07.07.2024</span><span class="work-size">40 × 40</span></div>
-          </div>
-        </div>
-        <div class="work-card" onclick="openLB(this)">
-          <img src="img_5214.webp" alt="Muhammad Ali Win" loading="lazy" data-title="Muhammad Ali »Win«" data-size="40 × 40 cm" data-desc="Muhammad Ali im Moment des Triumphs – für mich ein Motiv für Willensstärke, umgesetzt in klaren Konturen und kräftigen Farbflächen.">
-          <div class="work-info">
-            <div class="work-title">Muhammad Ali "Win"</div>
-            <div class="work-meta"><span class="work-date">10.07.2024</span><span class="work-size">40 × 40</span></div>
-          </div>
-        </div>
-      </div>
+  <section class="group" data-size="40x50" id="format-40x50">
+    <div class="group-head"><h2>40 × 50 cm</h2><span>Kompakt · 4 Werke</span></div>
+    <div class="masonry">
+      <figure class="work reveal"><a class="art" id="cash-gold" href="braxart-cash-gold-pop-art-40x50.webp" data-title="Cash Gold" data-size="40 × 50 cm" data-w="40" data-h="50" data-year="2025" data-desc="Geld als Symbol, reduziert auf Gold-Töne vor dunklem Grund – für mich eher eine Beobachtung als ein Statement."><img src="braxart-cash-gold-pop-art-40x50.webp" alt="Cash Gold – handgemaltes Pop-Art-Gemälde von Braxart, 40 × 50 cm" loading="lazy" width="1224" height="1600"></a><figcaption><b>Cash Gold</b><span>2025</span></figcaption></figure>
+      <figure class="work reveal"><a class="art" id="rolex" href="braxart-rolex-pop-art-40x50.webp" data-title="Rolex" data-size="40 × 50 cm" data-w="40" data-h="50" data-year="2024" data-desc="Eine Uhr als Statussymbol, in meinem Stil verfremdet – mir geht es dabei weniger um die Marke selbst als um das, wofür sie steht."><img src="braxart-rolex-pop-art-40x50.webp" alt="Rolex – handgemaltes Pop-Art-Gemälde von Braxart, 40 × 50 cm" loading="lazy" width="1358" height="1600"></a><figcaption><b>Rolex</b><span>2024</span></figcaption></figure>
+      <figure class="work reveal"><a class="art" id="angelina-jolie" href="braxart-angelina-jolie-pop-art-40x50.webp" data-title="Angelina Jolie" data-size="40 × 50 cm" data-w="40" data-h="50" data-year="2025" data-desc="Ein Porträt zwischen Popkultur und Hollywood-Glamour, mit klarem Linienspiel und kräftigen Farben."><img src="braxart-angelina-jolie-pop-art-40x50.webp" alt="Angelina Jolie – handgemaltes Pop-Art-Porträt von Braxart, 40 × 50 cm" loading="lazy" width="1600" height="1176"></a><figcaption><b>Angelina Jolie</b><span>2025</span></figcaption></figure>
+      <figure class="work reveal"><a class="art" id="marilyn-monroe-v2" href="braxart-marilyn-monroe-v2-pop-art-40x50.jpeg" data-title="Marilyn Monroe V2" data-size="40 × 50 cm" data-w="40" data-h="50" data-year="2025" data-desc="Eine zweite Annäherung an Marilyn Monroe – gleiche Ikone, andere Farbstimmung und anderer Bildausschnitt als bei »Glam«."><img src="braxart-marilyn-monroe-v2-pop-art-40x50.jpeg" alt="Marilyn Monroe V2 – handgemaltes Pop-Art-Gemälde von Braxart, 40 × 50 cm" loading="lazy" width="1575" height="1600"></a><figcaption><b>Marilyn Monroe V2</b><span>2025</span></figcaption></figure>
     </div>
+  </section>
 
-    <!-- 40x50 -->
-    <div class="size-group" data-size="40x50">
-      <div class="size-heading">
-        <h2>40 × 50 cm</h2>
-        <span>4 Werke</span>
-      </div>
-      <div class="works-grid">
-        <div class="work-card" onclick="openLB(this)">
-          <img src="img_2239.webp" alt="Cash Gold" loading="lazy" data-title="Cash Gold" data-size="40 × 50 cm" data-desc="Geld als Symbol, reduziert auf Gold-Töne vor dunklem Grund – für mich eher eine Beobachtung als ein Statement.">
-          <div class="work-info">
-            <div class="work-title">Cash Gold</div>
-            <div class="work-meta"><span class="work-date">26.06.2025</span><span class="work-size">40 × 50</span></div>
-          </div>
-        </div>
-        <div class="work-card" onclick="openLB(this)">
-          <img src="img_5942.webp" alt="Rolex" loading="lazy" data-title="Rolex" data-size="40 × 50 cm" data-desc="Eine Uhr als Statussymbol, in meinem Stil verfremdet – mir geht es dabei weniger um die Marke selbst als um das, wofür sie steht.">
-          <div class="work-info">
-            <div class="work-title">Rolex</div>
-            <div class="work-meta"><span class="work-date">26.08.2024</span><span class="work-size">40 × 50</span></div>
-          </div>
-        </div>
-        <div class="work-card" onclick="openLB(this)">
-          <img src="img_4924.webp" alt="Angelina Jolie" loading="lazy" data-title="Angelina Jolie" data-size="40 × 50 cm" data-desc="Ein Porträt zwischen Popkultur und Hollywood-Glamour, mit klarem Linienspiel und kräftigen Farben.">
-          <div class="work-info">
-            <div class="work-title">Angelina Jolie</div>
-            <div class="work-meta"><span class="work-date">07.11.2025</span><span class="work-size">40 × 50</span></div>
-          </div>
-        </div>
-        <div class="work-card" onclick="openLB(this)">
-          <img src="img_4790.jpeg" alt="Marilyn Monroe V2" loading="lazy" data-title="Marilyn Monroe V2" data-size="40 × 50 cm" data-desc="Eine zweite Annäherung an Marilyn Monroe – gleiche Ikone, andere Farbstimmung und anderer Bildausschnitt als bei »Glam«.">
-          <div class="work-info">
-            <div class="work-title">Marilyn Monroe V2</div>
-            <div class="work-meta"><span class="work-date">2025</span><span class="work-size">40 × 50</span></div>
-          </div>
-        </div>
-      </div>
+  <section class="group" data-size="50x70" id="format-50x70">
+    <div class="group-head"><h2>50 × 70 cm</h2><span>Mittel · 8 Werke</span></div>
+    <div class="masonry">
+      <figure class="work reveal"><a class="art" id="gambino" href="braxart-gambino-pop-art-50x70.webp" data-title="Gambino" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2024" data-desc="Ein Porträt von Childish Gambino, einem Künstler, dessen visuelle und musikalische Ausdruckskraft mich inspiriert."><img src="braxart-gambino-pop-art-50x70.webp" alt="Gambino (Childish Gambino) – handgemaltes Pop-Art-Porträt von Braxart, 50 × 70 cm" loading="lazy" width="1358" height="1600"></a><figcaption><b>Gambino</b><span>2024</span></figcaption></figure>
+      <figure class="work reveal"><a class="art" id="audrey-hepburn-vogue" href="braxart-audrey-hepburn-vogue-pop-art-50x70.webp" data-title="Audrey Hepburn in Vogue" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2024" data-desc="Audrey Hepburn im Stil eines Modemagazin-Covers – Eleganz, übersetzt in meine Pop-Art-Ästhetik."><img src="braxart-audrey-hepburn-vogue-pop-art-50x70.webp" alt="Audrey Hepburn in Vogue – handgemaltes Pop-Art-Gemälde von Braxart, 50 × 70 cm" loading="lazy" width="1600" height="1517"></a><figcaption><b>Audrey Hepburn in Vogue</b><span>2024</span></figcaption></figure>
+      <figure class="work reveal"><a class="art" id="wondering-donald" href="braxart-wondering-donald-pop-art-50x70.webp" data-title="Wondering Donald" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2024" data-desc="Eine Arbeit, die Popkultur und Politik mit einem Augenzwinkern zusammenbringt."><img src="braxart-wondering-donald-pop-art-50x70.webp" alt="Wondering Donald – handgemaltes Pop-Art-Gemälde von Braxart, 50 × 70 cm" loading="lazy" width="1570" height="1600"></a><figcaption><b>Wondering Donald</b><span>2024</span></figcaption></figure>
+      <figure class="work reveal"><a class="art" id="fabulous" href="braxart-fabulous-pop-art-50x70.webp" data-title="Fabulous" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2024" data-desc="Eine verspielte, laute Arbeit – Ausdruck und Attitüde stehen hier im Vordergrund."><img src="braxart-fabulous-pop-art-50x70.webp" alt="Fabulous – handgemaltes Pop-Art-Gemälde von Braxart, 50 × 70 cm" loading="lazy" width="1224" height="1600"></a><figcaption><b>Fabulous</b><span>2024</span></figcaption></figure>
+      <figure class="work reveal"><a class="art" id="tyler-the-creator" href="braxart-tyler-the-creator-pop-art-50x70.webp" data-title="Tyler the Creator" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2025" data-desc="Ein Porträt von Tyler, The Creator, der Musik, Mode und visuelle Kunst für mich auf besondere Weise verbindet."><img src="braxart-tyler-the-creator-pop-art-50x70.webp" alt="Tyler the Creator – handgemaltes Pop-Art-Porträt von Braxart, 50 × 70 cm" loading="lazy" width="1360" height="1600"></a><figcaption><b>Tyler the Creator</b><span>2025</span></figcaption></figure>
+      <figure class="work reveal"><a class="art" id="dark-eye" href="braxart-dark-eye-pop-art-50x70.jpeg" data-title="Dark Eye" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2025" data-desc="Eine reduzierte, fast grafische Arbeit mit Fokus auf ein einzelnes Auge – ruhiger als viele meiner anderen Werke."><img src="braxart-dark-eye-pop-art-50x70.jpeg" alt="Dark Eye – handgemaltes Gemälde von Braxart, 50 × 70 cm" loading="lazy" width="1269" height="1600"></a><figcaption><b>Dark Eye</b><span>2025</span></figcaption></figure>
+      <figure class="work reveal"><a class="art" id="gambino-detail" href="braxart-gambino-detail-pop-art-50x70.jpeg" data-title="Gambino (Detailansicht)" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2024" data-desc="Eine weitere Ansicht meines Gambino-Porträts – gleiches Motiv, anderes Licht und andere Bildschärfe."><img src="braxart-gambino-detail-pop-art-50x70.jpeg" alt="Gambino Detailansicht – Pop-Art-Porträt von Braxart, 50 × 70 cm" loading="lazy" width="1358" height="1600"></a><figcaption><b>Gambino (Detail)</b><span>2024</span></figcaption></figure>
+      <figure class="work reveal"><a class="art" id="lv" href="braxart-lv-pop-art-50x70.jpeg" data-title="LV" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2025" data-desc="Eine Arbeit rund um Luxus und Markenkultur, mit typischen Elementen des Labels in meinem Stil neu zusammengesetzt."><img src="braxart-lv-pop-art-50x70.jpeg" alt="LV – handgemaltes Pop-Art-Gemälde von Braxart, 50 × 70 cm" loading="lazy" width="1570" height="1600"></a><figcaption><b>LV</b><span>2025</span></figcaption></figure>
     </div>
+  </section>
 
-    <!-- 50x70 -->
-    <div class="size-group" data-size="50x70">
-      <div class="size-heading">
-        <h2>50 × 70 cm</h2>
-        <span>8 Werke</span>
-      </div>
-      <div class="works-grid">
-        <div class="work-card" onclick="openLB(this)">
-          <img src="img_5532-3.webp" alt="Gambino" loading="lazy" data-title="Gambino" data-size="50 × 70 cm" data-desc="Ein Porträt von Childish Gambino, einem Künstler, dessen visuelle und musikalische Ausdruckskraft mich inspiriert.">
-          <div class="work-info">
-            <div class="work-title">Gambino</div>
-            <div class="work-meta"><span class="work-date">30.07.2024</span><span class="work-size">50 × 70</span></div>
-          </div>
-        </div>
-        <div class="work-card" onclick="openLB(this)">
-          <img src="img_5139.webp" alt="Audrey Hepburn in Vogue" loading="lazy" data-title="Audrey Hepburn in Vogue" data-size="50 × 70 cm" data-desc="Audrey Hepburn im Stil eines Modemagazin-Covers – Eleganz, übersetzt in meine Popart-Ästhetik.">
-          <div class="work-info">
-            <div class="work-title">Audrey Hepburn in Vogue</div>
-            <div class="work-meta"><span class="work-date">04.07.2024</span><span class="work-size">50 × 70</span></div>
-          </div>
-        </div>
-        <div class="work-card" onclick="openLB(this)">
-          <img src="img_7295.webp" alt="Wondering Donald" loading="lazy" data-title="Wondering Donald" data-size="50 × 70 cm" data-desc="Eine Arbeit, die Popkultur und Politik mit einem Augenzwinkern zusammenbringt.">
-          <div class="work-info">
-            <div class="work-title">Wondering Donald</div>
-            <div class="work-meta"><span class="work-date">09.10.2024</span><span class="work-size">50 × 70</span></div>
-          </div>
-        </div>
-        <div class="work-card" onclick="openLB(this)">
-          <img src="img_2274.webp" alt="Fabulous" loading="lazy" data-title="Fabulous" data-size="50 × 70 cm" data-desc="Eine verspielte, laute Arbeit – Ausdruck und Attitüde stehen hier im Vordergrund.">
-          <div class="work-info">
-            <div class="work-title">Fabulous</div>
-            <div class="work-meta"><span class="work-date">13.09.2024</span><span class="work-size">50 × 70</span></div>
-          </div>
-        </div>
-        <div class="work-card" onclick="openLB(this)">
-          <img src="img_3317.webp" alt="Tyler the Creator" loading="lazy" data-title="Tyler the Creator" data-size="50 × 70 cm" data-desc="Ein Porträt von Tyler, The Creator, der Musik, Mode und visuelle Kunst für mich auf besondere Weise verbindet.">
-          <div class="work-info">
-            <div class="work-title">Tyler the Creator</div>
-            <div class="work-meta"><span class="work-date">10.08.2025</span><span class="work-size">50 × 70</span></div>
-          </div>
-        </div>
-        <div class="work-card" onclick="openLB(this)">
-          <img src="img_7365.jpeg" alt="Dark Eye" loading="lazy" data-title="Dark Eye" data-size="50 × 70 cm" data-desc="Eine reduzierte, fast grafische Arbeit mit Fokus auf ein einzelnes Auge – ruhiger als viele meiner anderen Werke.">
-          <div class="work-info">
-            <div class="work-title">Dark Eye</div>
-            <div class="work-meta"><span class="work-date">2025</span><span class="work-size">50 × 70</span></div>
-          </div>
-        </div>
-        <div class="work-card" onclick="openLB(this)">
-          <img src="img_5532-3.jpeg" alt="Gambino" loading="lazy" data-title="Gambino" data-size="50 × 70 cm" data-desc="Eine weitere Ansicht meines Gambino-Porträts – gleiches Motiv, anderes Licht und andere Bildschärfe.">
-          <div class="work-info">
-            <div class="work-title">Gambino</div>
-            <div class="work-meta"><span class="work-date">2024</span><span class="work-size">50 × 70</span></div>
-          </div>
-        </div>
-        <div class="work-card" onclick="openLB(this)">
-          <img src="img_6874.jpeg" alt="LV" loading="lazy" data-title="LV" data-size="50 × 70 cm" data-desc="Eine Arbeit rund um Luxus und Markenkultur, mit typischen Elementen des Labels in meinem Stil neu zusammengesetzt.">
-          <div class="work-info">
-            <div class="work-title">LV</div>
-            <div class="work-meta"><span class="work-date">2025</span><span class="work-size">50 × 70</span></div>
-          </div>
-        </div>
-      </div>
+  <section class="group" data-size="60x60" id="format-60x60">
+    <div class="group-head"><h2>60 × 60 cm</h2><span>Quadrat · 4 Werke</span></div>
+    <div class="masonry">
+      <figure class="work reveal"><a class="art" id="marilyn-monroe-v1" href="braxart-marilyn-monroe-v1-pop-art-60x60.webp" data-title="Marilyn Monroe V1" data-size="60 × 60 cm" data-w="60" data-h="60" data-year="2025" data-desc="Meine erste Annäherung an Marilyn Monroe in diesem Format – Ausgangspunkt für spätere Varianten desselben Motivs."><img src="braxart-marilyn-monroe-v1-pop-art-60x60.webp" alt="Marilyn Monroe V1 – handgemaltes Pop-Art-Gemälde von Braxart, 60 × 60 cm" loading="lazy" width="1360" height="1600"></a><figcaption><b>Marilyn Monroe V1</b><span>2025</span></figcaption></figure>
+      <figure class="work reveal"><a class="art" id="audrey-hepburn" href="braxart-audrey-hepburn-pop-art-60x60.jpeg" data-title="Audrey Hepburn" data-size="60 × 60 cm" data-w="60" data-h="60" data-year="2025" data-desc="Ein weiteres Porträt von Audrey Hepburn, diesmal quadratisch und mit stärkerem Fokus auf Kontrast statt Farbe."><img src="braxart-audrey-hepburn-pop-art-60x60.jpeg" alt="Audrey Hepburn – handgemaltes Pop-Art-Porträt von Braxart, 60 × 60 cm" loading="lazy" width="1572" height="1600"></a><figcaption><b>Audrey Hepburn</b><span>2025</span></figcaption></figure>
+      <figure class="work reveal"><a class="art" id="kate-moss" href="braxart-kate-moss-pop-art-60x60.webp" data-title="Kate Moss" data-size="60 × 60 cm" data-w="60" data-h="60" data-year="2025" data-desc="Kate Moss als Ikone der 90er-Mode-Welt – reduziert auf Linien, Kontrast und wenige gezielt eingesetzte Farbflächen."><img src="braxart-kate-moss-pop-art-60x60.webp" alt="Kate Moss – handgemaltes Pop-Art-Porträt von Braxart, 60 × 60 cm" loading="lazy" width="1270" height="1600"></a><figcaption><b>Kate Moss</b><span>2025</span></figcaption></figure>
+      <figure class="work reveal"><a class="art" id="madelyn-cline" href="braxart-madelyn-cline-pop-art-60x60.png" data-title="Madelyn Cline" data-size="60 × 60 cm" data-w="60" data-h="60" data-year="2026" data-desc="Eines meiner neueren Porträts, entstanden mit dem inzwischen geschärften Stil zwischen Pop Art und Graffiti."><img src="braxart-madelyn-cline-pop-art-60x60.png" alt="Madelyn Cline – handgemaltes Pop-Art-Porträt von Braxart, 60 × 60 cm" loading="lazy" width="1600" height="1120"></a><figcaption><b>Madelyn Cline</b><span>2026</span></figcaption></figure>
     </div>
+  </section>
 
-    <!-- 60x60 -->
-    <div class="size-group" data-size="60x60">
-      <div class="size-heading">
-        <h2>60 × 60 cm</h2>
-        <span>4 Werke</span>
-      </div>
-      <div class="works-grid">
-        <div class="work-card" onclick="openLB(this)">
-          <img src="img_3331.webp" alt="Marilyn Monroe V1" loading="lazy" data-title="Marilyn Monroe V1" data-size="60 × 60 cm" data-desc="Meine erste Annäherung an Marilyn Monroe in diesem Format – Ausgangspunkt für spätere Varianten desselben Motivs.">
-          <div class="work-info">
-            <div class="work-title">Marilyn Monroe V1</div>
-            <div class="work-meta"><span class="work-date">05.08.2025</span><span class="work-size">60 × 60</span></div>
-          </div>
-        </div>
-        <div class="work-card" onclick="openLB(this)">
-          <img src="img_3399-edited-2.jpeg" alt="Audrey Hepburn" loading="lazy" data-title="Audrey Hepburn" data-size="60 × 60 cm" data-desc="Ein weiteres Porträt von Audrey Hepburn, diesmal quadratisch und mit stärkerem Fokus auf Kontrast statt Farbe.">
-          <div class="work-info">
-            <div class="work-title">Audrey Hepburn</div>
-            <div class="work-meta"><span class="work-date">31.08.2025</span><span class="work-size">60 × 60</span></div>
-          </div>
-        </div>
-        <div class="work-card" onclick="openLB(this)">
-          <img src="img_4757.webp" alt="Kate Moss" loading="lazy" data-title="Kate Moss" data-size="60 × 60 cm" data-desc="Kate Moss als Ikone der 90er-Mode-Welt – reduziert auf Linien, Kontrast und wenige gezielt eingesetzte Farbflächen.">
-          <div class="work-info">
-            <div class="work-title">Kate Moss</div>
-            <div class="work-meta"><span class="work-date">19.10.2025</span><span class="work-size">60 × 60</span></div>
-          </div>
-        </div>
-        <div class="work-card" onclick="openLB(this)">
-          <img src="img_madelyn.png" alt="Madelyn Cline" loading="lazy" data-title="Madelyn Cline" data-size="60 × 60 cm" data-desc="Eines meiner neueren Porträts, entstanden mit dem inzwischen geschärften Stil zwischen Popart und Graffiti.">
-          <div class="work-info">
-            <div class="work-title">Madelyn Cline</div>
-            <div class="work-meta"><span class="work-date">2026</span><span class="work-size">60 × 60</span></div>
-          </div>
-        </div>
-      </div>
+  <section class="group" data-size="70x100" id="format-70x100">
+    <div class="group-head"><h2>70 × 100 cm</h2><span>Groß · 5 Werke</span></div>
+    <div class="masonry">
+      <figure class="work reveal"><a class="art" id="stocks" href="braxart-stocks-pop-art-70x100.jpg" data-title="Stocks" data-size="70 × 100 cm" data-w="70" data-h="100" data-year="2025" data-desc="Eine Arbeit über Finanzmärkte und Spekulation – Charts und Zahlen als visuelles Motiv, in meinem Stil verfremdet."><img src="braxart-stocks-pop-art-70x100.jpg" alt="Stocks – handgemaltes Pop-Art-Gemälde von Braxart, 70 × 100 cm" loading="lazy" width="1270" height="1600"></a><figcaption><b>Stocks</b><span>2025</span></figcaption></figure>
+      <figure class="work reveal"><a class="art" id="gold-brax" href="braxart-gold-brax-pop-art-70x100.jpg" data-title="Gold Brax" data-size="70 × 100 cm" data-w="70" data-h="100" data-year="2025" data-desc="Der Titel spielt auf meinen Künstlernamen an – Gold steht hier für Anspruch und Ambition."><img src="braxart-gold-brax-pop-art-70x100.jpg" alt="Gold Brax – handgemaltes Graffiti-Pop-Art-Gemälde von Braxart, 70 × 100 cm" loading="lazy" width="1270" height="1600"></a><figcaption><b>Gold Brax</b><span>2025</span></figcaption></figure>
+      <figure class="work reveal"><a class="art" id="panzerknacker" href="braxart-panzerknacker-pop-art-70x100.webp" data-title="Panzerknacker" data-size="70 × 100 cm" data-w="70" data-h="100" data-year="2024" data-desc="Eine comichafte, augenzwinkernde Arbeit – Diebe und Beute als Motiv, umgesetzt in kräftigen Farben."><img src="braxart-panzerknacker-pop-art-70x100.webp" alt="Panzerknacker – handgemaltes Pop-Art-Gemälde von Braxart, 70 × 100 cm" loading="lazy" width="1269" height="1600"></a><figcaption><b>Panzerknacker</b><span>2024</span></figcaption></figure>
+      <figure class="work reveal"><a class="art" id="mmn" href="braxart-mmn-pop-art-70x100.webp" data-title="MMN" data-size="70 × 100 cm" data-w="70" data-h="100" data-year="2024" data-desc="Eine abstraktere Arbeit mit reduzierter Symbolik – bewusst offener für eigene Interpretation als meine porträtlastigen Werke."><img src="braxart-mmn-pop-art-70x100.webp" alt="MMN – handgemaltes Gemälde von Braxart, 70 × 100 cm" loading="lazy" width="1269" height="1600"></a><figcaption><b>MMN</b><span>2024</span></figcaption></figure>
+      <figure class="work reveal"><a class="art" id="anton" href="braxart-anton-portrait-pop-art-70x100.jpeg" data-title="Anton" data-size="70 × 100 cm" data-w="70" data-h="100" data-year="2025" data-desc="Ein Porträt mit reduzierten Linien und kräftigem Kontrast, entstanden 2025 als Auftragsarbeit."><img src="braxart-anton-portrait-pop-art-70x100.jpeg" alt="Anton – Porträt als Auftragsarbeit von Braxart, 70 × 100 cm" loading="lazy" width="1360" height="1600"></a><figcaption><b>Anton</b><span>2025</span></figcaption></figure>
     </div>
+  </section>
 
-    <!-- 80x80 -->
-    <div class="size-group" data-size="80x80">
-      <div class="size-heading">
-        <h2>80 × 80 cm</h2>
-        <span>1 Werk</span>
-      </div>
-      <div class="works-grid">
-        <div class="work-card" onclick="openLB(this)">
-          <img src="img_6243.webp" alt="Naomi Campbell" loading="lazy" data-title="Naomi Campbell" data-size="80 × 80 cm" data-desc="Naomi Campbell in einem meiner größeren Formate – genug Fläche, um Details und Kontraste voll auszuspielen.">
-          <div class="work-info">
-            <div class="work-title">Naomi Campbell</div>
-            <div class="work-meta"><span class="work-date">11.02.2026</span><span class="work-size">80 × 80</span></div>
-          </div>
-        </div>
-      </div>
+  <section class="group" data-size="80x80" id="format-80x80">
+    <div class="group-head"><h2>80 × 80 cm</h2><span>Quadrat XL · 1 Werk</span></div>
+    <div class="masonry">
+      <figure class="work reveal"><a class="art" id="naomi-campbell" href="braxart-naomi-campbell-pop-art-80x80.webp" data-title="Naomi Campbell" data-size="80 × 80 cm" data-w="80" data-h="80" data-year="2026" data-desc="Naomi Campbell in einem meiner größeren Formate – genug Fläche, um Details und Kontraste voll auszuspielen."><img src="braxart-naomi-campbell-pop-art-80x80.webp" alt="Naomi Campbell – handgemaltes Pop-Art-Porträt von Braxart, 80 × 80 cm" loading="lazy" width="1600" height="1517"></a><figcaption><b>Naomi Campbell</b><span>2026</span></figcaption></figure>
     </div>
+  </section>
 
-    <!-- 70x100 -->
-    <div class="size-group" data-size="70x100">
-      <div class="size-heading">
-        <h2>70 × 100 cm</h2>
-        <span>5 Werke</span>
-      </div>
-      <div class="works-grid">
-        <div class="work-card" onclick="openLB(this)">
-          <img src="img_0576-1.jpg" alt="Stocks" loading="lazy" data-title="Stocks" data-size="70 × 100 cm" data-desc="Eine Arbeit über Finanzmärkte und Spekulation – Charts und Zahlen als visuelles Motiv, in meinem Stil verfremdet.">
-          <div class="work-info">
-            <div class="work-title">Stocks</div>
-            <div class="work-meta"><span class="work-date">29.01.2025</span><span class="work-size">70 × 100</span></div>
-          </div>
-        </div>
-        <div class="work-card" onclick="openLB(this)">
-          <img src="img_1696-1.jpg" alt="Gold Brax" loading="lazy" data-title="Gold Brax" data-size="70 × 100 cm" data-desc="Der Titel spielt auf meinen Künstlernamen an – Gold steht hier für Anspruch und Ambition.">
-          <div class="work-info">
-            <div class="work-title">Gold Brax</div>
-            <div class="work-meta"><span class="work-date">03.05.2025</span><span class="work-size">70 × 100</span></div>
-          </div>
-        </div>
-        <div class="work-card" onclick="openLB(this)">
-          <img src="img_7152.webp" alt="Panzerknacker" loading="lazy" data-title="Panzerknacker" data-size="70 × 100 cm" data-desc="Eine comichafte, augenzwinkernde Arbeit – Diebe und Beute als Motiv, umgesetzt in kräftigen Farben.">
-          <div class="work-info">
-            <div class="work-title">Panzerknacker</div>
-            <div class="work-meta"><span class="work-date">03.10.2024</span><span class="work-size">70 × 100</span></div>
-          </div>
-        </div>
-        <div class="work-card" onclick="openLB(this)">
-          <img src="img_5031.webp" alt="MMN" loading="lazy" data-title="MMN" data-size="70 × 100 cm" data-desc="Eine abstraktere Arbeit mit reduzierter Symbolik – bewusst offener für eigene Interpretation als meine porträtlastigen Werke.">
-          <div class="work-info">
-            <div class="work-title">MMN</div>
-            <div class="work-meta"><span class="work-date">26.06.2024</span><span class="work-size">70 × 100</span></div>
-          </div>
-        </div>
-        <div class="work-card" onclick="openLB(this)">
-          <img src="img_1720.jpeg" alt="Anton" loading="lazy" data-title="Anton" data-size="70 × 100 cm" data-desc="Ein Porträt mit reduzierten Linien und kräftigem Kontrast, entstanden 2025.">
-          <div class="work-info">
-            <div class="work-title">Anton</div>
-            <div class="work-meta"><span class="work-date">2025</span><span class="work-size">70 × 100</span></div>
-          </div>
-        </div>
-      </div>
+  <section class="group" data-size="90x120" id="format-90x120">
+    <div class="group-head"><h2>90 × 120 cm</h2><span>XXL · 1 Werk</span></div>
+    <div class="masonry">
+      <figure class="work reveal"><a class="art" id="money-boom" href="braxart-money-boom-pop-art-90x120.webp" data-title="Money Boom" data-size="90 × 120 cm" data-w="90" data-h="120" data-year="2024" data-desc="Eines meiner größten Formate – Geld und Wachstum als Motiv, großflächig und in kräftigen Farben umgesetzt."><img src="braxart-money-boom-pop-art-90x120.webp" alt="Money Boom – großformatiges Pop-Art-Gemälde von Braxart, 90 × 120 cm" loading="lazy" width="1270" height="1600"></a><figcaption><b>Money Boom</b><span>2024</span></figcaption></figure>
     </div>
+  </section>
 
-    <!-- 90x120 -->
-    <div class="size-group" data-size="90x120">
-      <div class="size-heading">
-        <h2>90 × 120 cm</h2>
-        <span>1 Werk</span>
-      </div>
-      <div class="works-grid">
-        <div class="work-card" onclick="openLB(this)">
-          <img src="img_1721.webp" alt="Money Boom" loading="lazy" data-title="Money Boom" data-size="90 × 120 cm" data-desc="Eines meiner größten Formate – Geld und Wachstum als Motiv, großflächig und in kräftigen Farben umgesetzt.">
-          <div class="work-info">
-            <div class="work-title">Money Boom</div>
-            <div class="work-meta"><span class="work-date">02.04.2024</span><span class="work-size">90 × 120</span></div>
-          </div>
-        </div>
-      </div>
+  <section class="group" data-size="100x100" id="format-100x100">
+    <div class="group-head"><h2>100 × 100 cm</h2><span>Maxi · 1 Werk</span></div>
+    <div class="masonry">
+      <figure class="work reveal"><a class="art" id="freedom" href="braxart-freedom-pop-art-100x100.jpeg" data-title="Freedom" data-size="100 × 100 cm" data-w="100" data-h="100" data-year="2025" data-desc="Ein Werk über Freiheit als Idee – bewusst offen gehalten, damit jede*r die eigene Bedeutung hineinlegen kann."><img src="braxart-freedom-pop-art-100x100.jpeg" alt="Freedom – großformatiges Gemälde von Braxart, 100 × 100 cm" loading="lazy" width="1358" height="1600"></a><figcaption><b>Freedom</b><span>2025</span></figcaption></figure>
     </div>
+  </section>
 
-    <div class="size-group" data-size="100x100">
-      <div class="size-heading"><h2>100 × 100 cm</h2><span>1 Werk</span></div>
-      <div class="works-grid">
-        <div class="work-card" onclick="openLB(this)">
-          <img src="img_5203.jpeg" alt="Freedom" loading="lazy" data-title="Freedom" data-size="100 × 100 cm" data-desc="Ein Werk über Freiheit als Idee – bewusst offen gehalten, damit jede*r seine eigene Bedeutung hineinlegen kann.">
-          <div class="work-info"><div class="work-title">Freedom</div><div class="work-meta"><span class="work-date">2025</span><span class="work-size">100 × 100</span></div></div>
-        </div>
-      </div>
-    </div>
-
-
+  <div class="card cta-band center reveal" style="margin-bottom:clamp(56px,8vw,104px)">
+    <h2 class="h2">Interesse an einem Werk?</h2>
+    <p class="lead" style="margin:14px auto 28px">Preis, Verfügbarkeit, Versand – ich melde mich schnell bei dir.</p>
+    <div class="btns" style="justify-content:center"><a href="kontakt.html" class="btn btn-dark">Anfrage stellen</a><a href="auftragsarbeiten.html" class="btn btn-ghost">Eigenes Motiv</a></div>
   </div>
 </div>
+</main>
 
-<!-- LIGHTBOX -->
-<div class="lb" id="lb" onclick="closeLB()">
-  <button class="lb-close">✕ Schließen</button>
-  <button class="lb-nav lb-prev" onclick="event.stopPropagation();navLB(-1)">‹</button>
-  <img class="lb-img" id="lbImg" src="" alt="">
-  <button class="lb-nav lb-next" onclick="event.stopPropagation();navLB(1)">›</button>
-  <div class="lb-info">
-    <div class="lb-title" id="lbTitle"></div>
-    <div class="lb-size" id="lbSize"></div>
-    <div class="lb-desc" id="lbDesc"></div>
-  </div>
-</div>
-
-<!-- CONTACT STRIP -->
-<div class="contact-strip">
-  <h2>Interesse an einem Werk?</h2>
-  <p>Preis, Verfügbarkeit, Versand — ich melde mich schnell.</p>
-  <a href="kontakt.html">Anfrage stellen →</a>
-</div>
-
-<footer>
-  <div class="flogo"><img src="Unbenanntes_Projekt.jpg" alt="Braxart" style="height:28px;width:auto;object-fit:contain;display:block;filter:brightness(1.1)"></div>
-  <div class="flinks">
-    <a href="index.html">Start</a>
-    <a href="galerie.html">Galerie</a>
-    <a href="ueber.html">Über mich</a>
-    <a href="auftragsarbeiten.html">Aufträge</a>
-    <a href="kontakt.html">Kontakt</a>
-    <a href="impressum.html">Impressum</a>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="logo" aria-label="Braxart"></a>
+        <p style="margin-top:12px;max-width:280px">Handgemalte Pop Art &amp; Graffiti aus Kriftel bei Frankfurt.</p>
+      </div>
+      <div class="footer-cols">
+        <div><h4>Entdecken</h4><ul><li><a href="galerie.html">Galerie</a></li><li><a href="auftragsarbeiten.html">Auftragsarbeiten</a></li><li><a href="ueber.html">Über mich</a></li></ul></div>
+        <div><h4>Kontakt</h4><ul><li><a href="kontakt.html">Anfrage senden</a></li><li><a href="https://www.instagram.com/_braxart_" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.tiktok.com/@_braxart" target="_blank" rel="noopener">TikTok</a></li></ul></div>
+        <div><h4>Rechtliches</h4><ul><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li></ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Max Pörtner · Braxart</span><span>Kriftel, Deutschland</span></div>
   </div>
 </footer>
 
+<script src="main.js"></script>
 <script>
-var lbIndex=-1;
-function allCards(){return Array.prototype.slice.call(document.querySelectorAll('.work-card'));}
-function showLB(card){
-  var img=card.querySelector('img');
-  document.getElementById('lbImg').src=img.src;
-  document.getElementById('lbTitle').textContent=img.dataset.title||img.alt;
-  document.getElementById('lbSize').textContent=img.dataset.size||'';
-  document.getElementById('lbDesc').textContent=img.dataset.desc||'';
+// Format-Filter (auch per ?format=50x70 verlinkbar)
+(function(){
+  var btns=document.querySelectorAll('.seg button'),groups=document.querySelectorAll('.group');
+  function apply(f){
+    btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.f===f);});
+    groups.forEach(function(g){
+      g.hidden=!(f==='all'||g.dataset.size===f);
+      if(!g.hidden)g.querySelectorAll('.reveal').forEach(function(r){r.classList.add('in');});
+    });
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){
+    apply(b.dataset.f);
+    var url=new URL(location);if(b.dataset.f==='all')url.searchParams.delete('format');else url.searchParams.set('format',b.dataset.f);
+    history.replaceState(null,'',url);
+    document.getElementById('gallery').scrollIntoView({behavior:'smooth'});
+  });});
+  var f=new URLSearchParams(location.search).get('format');
+  if(f&&document.querySelector('.group[data-size="'+f+'"]'))apply(f);
+})();
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Person",
+   "@id": "https://braxart23.com/#artist",
+   "name": "Max Pörtner",
+   "alternateName": "Braxart",
+   "url": "https://braxart23.com/"
+  },
+  {
+   "@type": "CollectionPage",
+   "name": "Galerie — Braxart",
+   "url": "https://braxart23.com/galerie.html",
+   "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": 26,
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#marilyn-monroe-glam",
+       "name": "Marilyn Monroe »Glam«",
+       "url": "https://braxart23.com/galerie.html#marilyn-monroe-glam",
+       "image": "https://braxart23.com/braxart-marilyn-monroe-glam-pop-art-40x40.jpeg",
+       "description": "Marilyn Monroe als zeitlose Pop-Art-Ikone – reduziert auf klare Linien und kräftige Kontraste in einem kompakten Format.",
+       "artform": "Malerei",
+       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "40 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "40 cm"
+       },
+       "dateCreated": "2024",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#muhammad-ali-win",
+       "name": "Muhammad Ali »Win«",
+       "url": "https://braxart23.com/galerie.html#muhammad-ali-win",
+       "image": "https://braxart23.com/braxart-muhammad-ali-win-pop-art-40x40.webp",
+       "description": "Muhammad Ali im Moment des Triumphs – für mich ein Motiv für Willensstärke, umgesetzt in klaren Konturen und kräftigen Farbflächen.",
+       "artform": "Malerei",
+       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "40 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "40 cm"
+       },
+       "dateCreated": "2024",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#cash-gold",
+       "name": "Cash Gold",
+       "url": "https://braxart23.com/galerie.html#cash-gold",
+       "image": "https://braxart23.com/braxart-cash-gold-pop-art-40x50.webp",
+       "description": "Geld als Symbol, reduziert auf Gold-Töne vor dunklem Grund – für mich eher eine Beobachtung als ein Statement.",
+       "artform": "Malerei",
+       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "40 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "50 cm"
+       },
+       "dateCreated": "2025",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#rolex",
+       "name": "Rolex",
+       "url": "https://braxart23.com/galerie.html#rolex",
+       "image": "https://braxart23.com/braxart-rolex-pop-art-40x50.webp",
+       "description": "Eine Uhr als Statussymbol, in meinem Stil verfremdet – mir geht es dabei weniger um die Marke selbst als um das, wofür sie steht.",
+       "artform": "Malerei",
+       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "40 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "50 cm"
+       },
+       "dateCreated": "2024",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#angelina-jolie",
+       "name": "Angelina Jolie",
+       "url": "https://braxart23.com/galerie.html#angelina-jolie",
+       "image": "https://braxart23.com/braxart-angelina-jolie-pop-art-40x50.webp",
+       "description": "Ein Porträt zwischen Popkultur und Hollywood-Glamour, mit klarem Linienspiel und kräftigen Farben.",
+       "artform": "Malerei",
+       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "40 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "50 cm"
+       },
+       "dateCreated": "2025",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#marilyn-monroe-v2",
+       "name": "Marilyn Monroe V2",
+       "url": "https://braxart23.com/galerie.html#marilyn-monroe-v2",
+       "image": "https://braxart23.com/braxart-marilyn-monroe-v2-pop-art-40x50.jpeg",
+       "description": "Eine zweite Annäherung an Marilyn Monroe – gleiche Ikone, andere Farbstimmung und anderer Bildausschnitt als bei »Glam«.",
+       "artform": "Malerei",
+       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "40 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "50 cm"
+       },
+       "dateCreated": "2025",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#gambino",
+       "name": "Gambino",
+       "url": "https://braxart23.com/galerie.html#gambino",
+       "image": "https://braxart23.com/braxart-gambino-pop-art-50x70.webp",
+       "description": "Ein Porträt von Childish Gambino, einem Künstler, dessen visuelle und musikalische Ausdruckskraft mich inspiriert.",
+       "artform": "Malerei",
+       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "50 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "70 cm"
+       },
+       "dateCreated": "2024",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 8,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#audrey-hepburn-vogue",
+       "name": "Audrey Hepburn in Vogue",
+       "url": "https://braxart23.com/galerie.html#audrey-hepburn-vogue",
+       "image": "https://braxart23.com/braxart-audrey-hepburn-vogue-pop-art-50x70.webp",
+       "description": "Audrey Hepburn im Stil eines Modemagazin-Covers – Eleganz, übersetzt in meine Pop-Art-Ästhetik.",
+       "artform": "Malerei",
+       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "50 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "70 cm"
+       },
+       "dateCreated": "2024",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 9,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#wondering-donald",
+       "name": "Wondering Donald",
+       "url": "https://braxart23.com/galerie.html#wondering-donald",
+       "image": "https://braxart23.com/braxart-wondering-donald-pop-art-50x70.webp",
+       "description": "Eine Arbeit, die Popkultur und Politik mit einem Augenzwinkern zusammenbringt.",
+       "artform": "Malerei",
+       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "50 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "70 cm"
+       },
+       "dateCreated": "2024",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 10,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#fabulous",
+       "name": "Fabulous",
+       "url": "https://braxart23.com/galerie.html#fabulous",
+       "image": "https://braxart23.com/braxart-fabulous-pop-art-50x70.webp",
+       "description": "Eine verspielte, laute Arbeit – Ausdruck und Attitüde stehen hier im Vordergrund.",
+       "artform": "Malerei",
+       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "50 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "70 cm"
+       },
+       "dateCreated": "2024",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 11,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#tyler-the-creator",
+       "name": "Tyler the Creator",
+       "url": "https://braxart23.com/galerie.html#tyler-the-creator",
+       "image": "https://braxart23.com/braxart-tyler-the-creator-pop-art-50x70.webp",
+       "description": "Ein Porträt von Tyler, The Creator, der Musik, Mode und visuelle Kunst für mich auf besondere Weise verbindet.",
+       "artform": "Malerei",
+       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "50 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "70 cm"
+       },
+       "dateCreated": "2025",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 12,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#dark-eye",
+       "name": "Dark Eye",
+       "url": "https://braxart23.com/galerie.html#dark-eye",
+       "image": "https://braxart23.com/braxart-dark-eye-pop-art-50x70.jpeg",
+       "description": "Eine reduzierte, fast grafische Arbeit mit Fokus auf ein einzelnes Auge – ruhiger als viele meiner anderen Werke.",
+       "artform": "Malerei",
+       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "50 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "70 cm"
+       },
+       "dateCreated": "2025",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 13,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#gambino-detail",
+       "name": "Gambino (Detailansicht)",
+       "url": "https://braxart23.com/galerie.html#gambino-detail",
+       "image": "https://braxart23.com/braxart-gambino-detail-pop-art-50x70.jpeg",
+       "description": "Eine weitere Ansicht meines Gambino-Porträts – gleiches Motiv, anderes Licht und andere Bildschärfe.",
+       "artform": "Malerei",
+       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "50 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "70 cm"
+       },
+       "dateCreated": "2024",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 14,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#lv",
+       "name": "LV",
+       "url": "https://braxart23.com/galerie.html#lv",
+       "image": "https://braxart23.com/braxart-lv-pop-art-50x70.jpeg",
+       "description": "Eine Arbeit rund um Luxus und Markenkultur, mit typischen Elementen des Labels in meinem Stil neu zusammengesetzt.",
+       "artform": "Malerei",
+       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "50 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "70 cm"
+       },
+       "dateCreated": "2025",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 15,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#marilyn-monroe-v1",
+       "name": "Marilyn Monroe V1",
+       "url": "https://braxart23.com/galerie.html#marilyn-monroe-v1",
+       "image": "https://braxart23.com/braxart-marilyn-monroe-v1-pop-art-60x60.webp",
+       "description": "Meine erste Annäherung an Marilyn Monroe in diesem Format – Ausgangspunkt für spätere Varianten desselben Motivs.",
+       "artform": "Malerei",
+       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "60 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "60 cm"
+       },
+       "dateCreated": "2025",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 16,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#audrey-hepburn",
+       "name": "Audrey Hepburn",
+       "url": "https://braxart23.com/galerie.html#audrey-hepburn",
+       "image": "https://braxart23.com/braxart-audrey-hepburn-pop-art-60x60.jpeg",
+       "description": "Ein weiteres Porträt von Audrey Hepburn, diesmal quadratisch und mit stärkerem Fokus auf Kontrast statt Farbe.",
+       "artform": "Malerei",
+       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "60 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "60 cm"
+       },
+       "dateCreated": "2025",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 17,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#kate-moss",
+       "name": "Kate Moss",
+       "url": "https://braxart23.com/galerie.html#kate-moss",
+       "image": "https://braxart23.com/braxart-kate-moss-pop-art-60x60.webp",
+       "description": "Kate Moss als Ikone der 90er-Mode-Welt – reduziert auf Linien, Kontrast und wenige gezielt eingesetzte Farbflächen.",
+       "artform": "Malerei",
+       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "60 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "60 cm"
+       },
+       "dateCreated": "2025",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 18,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#madelyn-cline",
+       "name": "Madelyn Cline",
+       "url": "https://braxart23.com/galerie.html#madelyn-cline",
+       "image": "https://braxart23.com/braxart-madelyn-cline-pop-art-60x60.png",
+       "description": "Eines meiner neueren Porträts, entstanden mit dem inzwischen geschärften Stil zwischen Pop Art und Graffiti.",
+       "artform": "Malerei",
+       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "60 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "60 cm"
+       },
+       "dateCreated": "2026",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 19,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#stocks",
+       "name": "Stocks",
+       "url": "https://braxart23.com/galerie.html#stocks",
+       "image": "https://braxart23.com/braxart-stocks-pop-art-70x100.jpg",
+       "description": "Eine Arbeit über Finanzmärkte und Spekulation – Charts und Zahlen als visuelles Motiv, in meinem Stil verfremdet.",
+       "artform": "Malerei",
+       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "70 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "100 cm"
+       },
+       "dateCreated": "2025",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 20,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#gold-brax",
+       "name": "Gold Brax",
+       "url": "https://braxart23.com/galerie.html#gold-brax",
+       "image": "https://braxart23.com/braxart-gold-brax-pop-art-70x100.jpg",
+       "description": "Der Titel spielt auf meinen Künstlernamen an – Gold steht hier für Anspruch und Ambition.",
+       "artform": "Malerei",
+       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "70 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "100 cm"
+       },
+       "dateCreated": "2025",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 21,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#panzerknacker",
+       "name": "Panzerknacker",
+       "url": "https://braxart23.com/galerie.html#panzerknacker",
+       "image": "https://braxart23.com/braxart-panzerknacker-pop-art-70x100.webp",
+       "description": "Eine comichafte, augenzwinkernde Arbeit – Diebe und Beute als Motiv, umgesetzt in kräftigen Farben.",
+       "artform": "Malerei",
+       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "70 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "100 cm"
+       },
+       "dateCreated": "2024",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 22,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#mmn",
+       "name": "MMN",
+       "url": "https://braxart23.com/galerie.html#mmn",
+       "image": "https://braxart23.com/braxart-mmn-pop-art-70x100.webp",
+       "description": "Eine abstraktere Arbeit mit reduzierter Symbolik – bewusst offener für eigene Interpretation als meine porträtlastigen Werke.",
+       "artform": "Malerei",
+       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "70 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "100 cm"
+       },
+       "dateCreated": "2024",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 23,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#anton",
+       "name": "Anton",
+       "url": "https://braxart23.com/galerie.html#anton",
+       "image": "https://braxart23.com/braxart-anton-portrait-pop-art-70x100.jpeg",
+       "description": "Ein Porträt mit reduzierten Linien und kräftigem Kontrast, entstanden 2025 als Auftragsarbeit.",
+       "artform": "Malerei",
+       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "70 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "100 cm"
+       },
+       "dateCreated": "2025",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 24,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#naomi-campbell",
+       "name": "Naomi Campbell",
+       "url": "https://braxart23.com/galerie.html#naomi-campbell",
+       "image": "https://braxart23.com/braxart-naomi-campbell-pop-art-80x80.webp",
+       "description": "Naomi Campbell in einem meiner größeren Formate – genug Fläche, um Details und Kontraste voll auszuspielen.",
+       "artform": "Malerei",
+       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "80 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "80 cm"
+       },
+       "dateCreated": "2026",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 25,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#money-boom",
+       "name": "Money Boom",
+       "url": "https://braxart23.com/galerie.html#money-boom",
+       "image": "https://braxart23.com/braxart-money-boom-pop-art-90x120.webp",
+       "description": "Eines meiner größten Formate – Geld und Wachstum als Motiv, großflächig und in kräftigen Farben umgesetzt.",
+       "artform": "Malerei",
+       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "90 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "120 cm"
+       },
+       "dateCreated": "2024",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 26,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#freedom",
+       "name": "Freedom",
+       "url": "https://braxart23.com/galerie.html#freedom",
+       "image": "https://braxart23.com/braxart-freedom-pop-art-100x100.jpeg",
+       "description": "Ein Werk über Freiheit als Idee – bewusst offen gehalten, damit jede*r die eigene Bedeutung hineinlegen kann.",
+       "artform": "Malerei",
+       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "100 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "100 cm"
+       },
+       "dateCreated": "2025",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     }
+    ]
+   }
+  }
+ ]
 }
-function openLB(card){
-  lbIndex=allCards().indexOf(card);
-  showLB(card);
-  document.getElementById('lb').classList.add('open');
-  document.body.style.overflow='hidden';
-}
-function navLB(dir){
-  var cards=allCards();
-  if(!cards.length)return;
-  lbIndex=(lbIndex+dir+cards.length)%cards.length;
-  showLB(cards[lbIndex]);
-}
-function closeLB(){
-  document.getElementById('lb').classList.remove('open');
-  document.body.style.overflow='';
-}
-document.addEventListener('keydown',function(e){
-  if(!document.getElementById('lb').classList.contains('open'))return;
-  if(e.key==='Escape')closeLB();
-  if(e.key==='ArrowRight')navLB(1);
-  if(e.key==='ArrowLeft')navLB(-1);
-});
-
-function toggleFilter(){
-  document.getElementById('filterBar').classList.toggle('open');
-}
-function setFilter(f,btn){
-  document.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active');});
-  btn.classList.add('active');
-  document.getElementById('activeFilterLabel').textContent=btn.textContent;
-  document.querySelectorAll('.size-group').forEach(function(g){
-    g.style.display=(f==='all'||g.dataset.size===f)?'block':'none';
-  });
-  document.getElementById('filterBar').classList.remove('open');
-}
-function openMM(){document.getElementById('mmenu').classList.add('open');}
-function closeMM(){document.getElementById('mmenu').classList.remove('open');}
 </script>
 </body>
 </html>
