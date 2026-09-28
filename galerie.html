@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Galerie — Braxart | Pop-Art- & Graffiti-Gemälde</title>
-<meta name="description" content="Galerie von Braxart: 26 handgemalte Pop-Art- und Graffiti-Unikate – Marilyn Monroe, Naomi Campbell, Audrey Hepburn, Muhammad Ali, Money Boom u. v. m. in Formaten von 40 × 40 bis 100 × 100 cm.">
+<meta name="description" content="Galerie von Braxart: 25 handgemalte Pop-Art- und Graffiti-Unikate – Marilyn Monroe, Naomi Campbell, Audrey Hepburn, Muhammad Ali, Money Boom u. v. m. in Formaten von 40 × 40 bis 100 × 100 cm.">
 <link rel="canonical" href="https://braxart23.com/galerie.html">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:type" content="website">
@@ -33,8 +33,8 @@
 .group-head{display:flex;align-items:baseline;gap:14px;margin-bottom:24px}
 .group-head h2{font-size:clamp(26px,3vw,34px);font-weight:700;letter-spacing:-.02em}
 .group-head span{color:var(--muted);font-size:15px}
-.masonry{columns:3 280px;column-gap:24px}
-.work{break-inside:avoid;margin:0 0 32px;display:block}
+.masonry{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:36px 24px;align-items:start}
+.work{margin:0;display:block;min-width:0}
 .work .art{box-shadow:var(--shadow)}
 .work .art img{height:auto}
 .work figcaption{display:flex;justify-content:space-between;gap:12px;margin-top:12px;font-size:15px}
@@ -69,15 +69,15 @@
 <main>
 <section class="wrap g-head">
   <h1 class="h1 reveal reveal-d1">Galerie.</h1>
-  <p class="lead reveal reveal-d2">26 handgemalte Unikate in 8 Formaten. Tippe auf ein Werk für Details, Größenvergleich und Anfrage.</p>
+  <p class="lead reveal reveal-d2">25 handgemalte Unikate in 8 Formaten. Tippe auf ein Werk für Details, Größenvergleich und Anfrage.</p>
 </section>
 
 <div class="seg-wrap">
   <div class="wrap seg" role="toolbar" aria-label="Nach Format filtern">
-    <button data-f="all" aria-pressed="true">Alle<small>26</small></button>
+    <button data-f="all" aria-pressed="true">Alle<small>25</small></button>
     <button data-f="40x40" aria-pressed="false">40 × 40<small>2</small></button>
     <button data-f="40x50" aria-pressed="false">40 × 50<small>4</small></button>
-    <button data-f="50x70" aria-pressed="false">50 × 70<small>8</small></button>
+    <button data-f="50x70" aria-pressed="false">50 × 70<small>7</small></button>
     <button data-f="60x60" aria-pressed="false">60 × 60<small>4</small></button>
     <button data-f="70x100" aria-pressed="false">70 × 100<small>5</small></button>
     <button data-f="80x80" aria-pressed="false">80 × 80<small>1</small></button>
@@ -91,74 +91,73 @@
   <section class="group" data-size="40x40" id="format-40x40">
     <div class="group-head"><h2>40 × 40 cm</h2><span>Klein · 2 Werke</span></div>
     <div class="masonry">
-      <figure class="work reveal"><a class="art" id="marilyn-monroe-glam" href="braxart-marilyn-monroe-glam-pop-art-40x40.jpeg" data-title="Marilyn Monroe »Glam«" data-size="40 × 40 cm" data-w="40" data-h="40" data-year="2024" data-desc="Marilyn Monroe als zeitlose Pop-Art-Ikone – reduziert auf klare Linien und kräftige Kontraste in einem kompakten Format."><img src="braxart-marilyn-monroe-glam-pop-art-40x40.jpeg" alt="Marilyn Monroe »Glam« – handgemaltes Pop-Art-Gemälde von Braxart, 40 × 40 cm" loading="lazy" width="1358" height="1600"></a><figcaption><b>Marilyn Monroe »Glam«</b><span>2024</span></figcaption></figure>
-      <figure class="work reveal"><a class="art" id="muhammad-ali-win" href="braxart-muhammad-ali-win-pop-art-40x40.webp" data-title="Muhammad Ali »Win«" data-size="40 × 40 cm" data-w="40" data-h="40" data-year="2024" data-desc="Muhammad Ali im Moment des Triumphs – für mich ein Motiv für Willensstärke, umgesetzt in klaren Konturen und kräftigen Farbflächen."><img src="braxart-muhammad-ali-win-pop-art-40x40.webp" alt="Muhammad Ali »Win« – handgemaltes Pop-Art-Gemälde von Braxart, 40 × 40 cm" loading="lazy" width="1358" height="1600"></a><figcaption><b>Muhammad Ali »Win«</b><span>2024</span></figcaption></figure>
+      <figure class="work"><a class="art" id="marilyn-monroe-glam" href="braxart-marilyn-monroe-glam-pop-art-40x40.jpeg" data-title="Marilyn Monroe »Glam«" data-size="40 × 40 cm" data-w="40" data-h="40" data-year="2024" data-desc="Marilyn Monroe als zeitlose Pop-Art-Ikone – reduziert auf klare Linien und kräftige Kontraste in einem kompakten Format."><img src="braxart-marilyn-monroe-glam-pop-art-40x40.jpeg" alt="Marilyn Monroe »Glam« – handgemaltes Pop-Art-Gemälde von Braxart, 40 × 40 cm" loading="lazy" width="1358" height="1600"></a><figcaption><b>Marilyn Monroe »Glam«</b><span>2024</span></figcaption></figure>
+      <figure class="work"><a class="art" id="muhammad-ali-win" href="braxart-muhammad-ali-win-pop-art-40x40.webp" data-title="Muhammad Ali »Win«" data-size="40 × 40 cm" data-w="40" data-h="40" data-year="2024" data-desc="Muhammad Ali im Moment des Triumphs – für mich ein Motiv für Willensstärke, umgesetzt in klaren Konturen und kräftigen Farbflächen."><img src="braxart-muhammad-ali-win-pop-art-40x40.webp" alt="Muhammad Ali »Win« – handgemaltes Pop-Art-Gemälde von Braxart, 40 × 40 cm" loading="lazy" width="1358" height="1600"></a><figcaption><b>Muhammad Ali »Win«</b><span>2024</span></figcaption></figure>
     </div>
   </section>
 
   <section class="group" data-size="40x50" id="format-40x50">
     <div class="group-head"><h2>40 × 50 cm</h2><span>Kompakt · 4 Werke</span></div>
     <div class="masonry">
-      <figure class="work reveal"><a class="art" id="cash-gold" href="braxart-cash-gold-pop-art-40x50.webp" data-title="Cash Gold" data-size="40 × 50 cm" data-w="40" data-h="50" data-year="2025" data-desc="Geld als Symbol, reduziert auf Gold-Töne vor dunklem Grund – für mich eher eine Beobachtung als ein Statement."><img src="braxart-cash-gold-pop-art-40x50.webp" alt="Cash Gold – handgemaltes Pop-Art-Gemälde von Braxart, 40 × 50 cm" loading="lazy" width="1224" height="1600"></a><figcaption><b>Cash Gold</b><span>2025</span></figcaption></figure>
-      <figure class="work reveal"><a class="art" id="rolex" href="braxart-rolex-pop-art-40x50.webp" data-title="Rolex" data-size="40 × 50 cm" data-w="40" data-h="50" data-year="2024" data-desc="Eine Uhr als Statussymbol, in meinem Stil verfremdet – mir geht es dabei weniger um die Marke selbst als um das, wofür sie steht."><img src="braxart-rolex-pop-art-40x50.webp" alt="Rolex – handgemaltes Pop-Art-Gemälde von Braxart, 40 × 50 cm" loading="lazy" width="1358" height="1600"></a><figcaption><b>Rolex</b><span>2024</span></figcaption></figure>
-      <figure class="work reveal"><a class="art" id="angelina-jolie" href="braxart-angelina-jolie-pop-art-40x50.webp" data-title="Angelina Jolie" data-size="40 × 50 cm" data-w="40" data-h="50" data-year="2025" data-desc="Ein Porträt zwischen Popkultur und Hollywood-Glamour, mit klarem Linienspiel und kräftigen Farben."><img src="braxart-angelina-jolie-pop-art-40x50.webp" alt="Angelina Jolie – handgemaltes Pop-Art-Porträt von Braxart, 40 × 50 cm" loading="lazy" width="1600" height="1176"></a><figcaption><b>Angelina Jolie</b><span>2025</span></figcaption></figure>
-      <figure class="work reveal"><a class="art" id="marilyn-monroe-v2" href="braxart-marilyn-monroe-v2-pop-art-40x50.jpeg" data-title="Marilyn Monroe V2" data-size="40 × 50 cm" data-w="40" data-h="50" data-year="2025" data-desc="Eine zweite Annäherung an Marilyn Monroe – gleiche Ikone, andere Farbstimmung und anderer Bildausschnitt als bei »Glam«."><img src="braxart-marilyn-monroe-v2-pop-art-40x50.jpeg" alt="Marilyn Monroe V2 – handgemaltes Pop-Art-Gemälde von Braxart, 40 × 50 cm" loading="lazy" width="1575" height="1600"></a><figcaption><b>Marilyn Monroe V2</b><span>2025</span></figcaption></figure>
+      <figure class="work"><a class="art" id="cash-gold" href="braxart-cash-gold-pop-art-40x50.webp" data-title="Cash Gold" data-size="40 × 50 cm" data-w="40" data-h="50" data-year="2025" data-desc="Geld als Symbol, reduziert auf Gold-Töne vor dunklem Grund – für mich eher eine Beobachtung als ein Statement."><img src="braxart-cash-gold-pop-art-40x50.webp" alt="Cash Gold – handgemaltes Pop-Art-Gemälde von Braxart, 40 × 50 cm" loading="lazy" width="1224" height="1600"></a><figcaption><b>Cash Gold</b><span>2025</span></figcaption></figure>
+      <figure class="work"><a class="art" id="rolex" href="braxart-rolex-pop-art-40x50.webp" data-title="Rolex" data-size="40 × 50 cm" data-w="40" data-h="50" data-year="2024" data-desc="Eine Uhr als Statussymbol, in meinem Stil verfremdet – mir geht es dabei weniger um die Marke selbst als um das, wofür sie steht."><img src="braxart-rolex-pop-art-40x50.webp" alt="Rolex – handgemaltes Pop-Art-Gemälde von Braxart, 40 × 50 cm" loading="lazy" width="1358" height="1600"></a><figcaption><b>Rolex</b><span>2024</span></figcaption></figure>
+      <figure class="work"><a class="art" id="angelina-jolie" data-mat="spray,posca,money" data-note="Im Hintergrund sind echte Dollarnoten eingearbeitet." href="braxart-angelina-jolie-pop-art-40x50.webp" data-title="Angelina Jolie" data-size="40 × 50 cm" data-w="40" data-h="50" data-year="2025" data-desc="Ein Porträt zwischen Popkultur und Hollywood-Glamour – im Hintergrund echte Dollarnoten, darüber Posca und Spray."><img src="braxart-angelina-jolie-pop-art-40x50.webp" alt="Angelina Jolie – handgemaltes Pop-Art-Porträt von Braxart, 40 × 50 cm" loading="lazy" width="1600" height="1176"></a><figcaption><b>Angelina Jolie</b><span>2025</span></figcaption></figure>
+      <figure class="work"><a class="art" id="marilyn-monroe-v2" href="braxart-marilyn-monroe-v2-pop-art-40x50.jpeg" data-title="Marilyn Monroe V2" data-size="40 × 50 cm" data-w="40" data-h="50" data-year="2025" data-desc="Eine zweite Annäherung an Marilyn Monroe – gleiche Ikone, andere Farbstimmung und anderer Bildausschnitt als bei »Glam«."><img src="braxart-marilyn-monroe-v2-pop-art-40x50.jpeg" alt="Marilyn Monroe V2 – handgemaltes Pop-Art-Gemälde von Braxart, 40 × 50 cm" loading="lazy" width="1575" height="1600"></a><figcaption><b>Marilyn Monroe V2</b><span>2025</span></figcaption></figure>
     </div>
   </section>
 
   <section class="group" data-size="50x70" id="format-50x70">
-    <div class="group-head"><h2>50 × 70 cm</h2><span>Mittel · 8 Werke</span></div>
+    <div class="group-head"><h2>50 × 70 cm</h2><span>Mittel · 7 Werke</span></div>
     <div class="masonry">
-      <figure class="work reveal"><a class="art" id="gambino" href="braxart-gambino-pop-art-50x70.webp" data-title="Gambino" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2024" data-desc="Ein Porträt von Childish Gambino, einem Künstler, dessen visuelle und musikalische Ausdruckskraft mich inspiriert."><img src="braxart-gambino-pop-art-50x70.webp" alt="Gambino (Childish Gambino) – handgemaltes Pop-Art-Porträt von Braxart, 50 × 70 cm" loading="lazy" width="1358" height="1600"></a><figcaption><b>Gambino</b><span>2024</span></figcaption></figure>
-      <figure class="work reveal"><a class="art" id="audrey-hepburn-vogue" href="braxart-audrey-hepburn-vogue-pop-art-50x70.webp" data-title="Audrey Hepburn in Vogue" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2024" data-desc="Audrey Hepburn im Stil eines Modemagazin-Covers – Eleganz, übersetzt in meine Pop-Art-Ästhetik."><img src="braxart-audrey-hepburn-vogue-pop-art-50x70.webp" alt="Audrey Hepburn in Vogue – handgemaltes Pop-Art-Gemälde von Braxart, 50 × 70 cm" loading="lazy" width="1600" height="1517"></a><figcaption><b>Audrey Hepburn in Vogue</b><span>2024</span></figcaption></figure>
-      <figure class="work reveal"><a class="art" id="wondering-donald" href="braxart-wondering-donald-pop-art-50x70.webp" data-title="Wondering Donald" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2024" data-desc="Eine Arbeit, die Popkultur und Politik mit einem Augenzwinkern zusammenbringt."><img src="braxart-wondering-donald-pop-art-50x70.webp" alt="Wondering Donald – handgemaltes Pop-Art-Gemälde von Braxart, 50 × 70 cm" loading="lazy" width="1570" height="1600"></a><figcaption><b>Wondering Donald</b><span>2024</span></figcaption></figure>
-      <figure class="work reveal"><a class="art" id="fabulous" href="braxart-fabulous-pop-art-50x70.webp" data-title="Fabulous" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2024" data-desc="Eine verspielte, laute Arbeit – Ausdruck und Attitüde stehen hier im Vordergrund."><img src="braxart-fabulous-pop-art-50x70.webp" alt="Fabulous – handgemaltes Pop-Art-Gemälde von Braxart, 50 × 70 cm" loading="lazy" width="1224" height="1600"></a><figcaption><b>Fabulous</b><span>2024</span></figcaption></figure>
-      <figure class="work reveal"><a class="art" id="tyler-the-creator" href="braxart-tyler-the-creator-pop-art-50x70.webp" data-title="Tyler the Creator" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2025" data-desc="Ein Porträt von Tyler, The Creator, der Musik, Mode und visuelle Kunst für mich auf besondere Weise verbindet."><img src="braxart-tyler-the-creator-pop-art-50x70.webp" alt="Tyler the Creator – handgemaltes Pop-Art-Porträt von Braxart, 50 × 70 cm" loading="lazy" width="1360" height="1600"></a><figcaption><b>Tyler the Creator</b><span>2025</span></figcaption></figure>
-      <figure class="work reveal"><a class="art" id="dark-eye" href="braxart-dark-eye-pop-art-50x70.jpeg" data-title="Dark Eye" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2025" data-desc="Eine reduzierte, fast grafische Arbeit mit Fokus auf ein einzelnes Auge – ruhiger als viele meiner anderen Werke."><img src="braxart-dark-eye-pop-art-50x70.jpeg" alt="Dark Eye – handgemaltes Gemälde von Braxart, 50 × 70 cm" loading="lazy" width="1269" height="1600"></a><figcaption><b>Dark Eye</b><span>2025</span></figcaption></figure>
-      <figure class="work reveal"><a class="art" id="gambino-detail" href="braxart-gambino-detail-pop-art-50x70.jpeg" data-title="Gambino (Detailansicht)" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2024" data-desc="Eine weitere Ansicht meines Gambino-Porträts – gleiches Motiv, anderes Licht und andere Bildschärfe."><img src="braxart-gambino-detail-pop-art-50x70.jpeg" alt="Gambino Detailansicht – Pop-Art-Porträt von Braxart, 50 × 70 cm" loading="lazy" width="1358" height="1600"></a><figcaption><b>Gambino (Detail)</b><span>2024</span></figcaption></figure>
-      <figure class="work reveal"><a class="art" id="lv" href="braxart-lv-pop-art-50x70.jpeg" data-title="LV" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2025" data-desc="Eine Arbeit rund um Luxus und Markenkultur, mit typischen Elementen des Labels in meinem Stil neu zusammengesetzt."><img src="braxart-lv-pop-art-50x70.jpeg" alt="LV – handgemaltes Pop-Art-Gemälde von Braxart, 50 × 70 cm" loading="lazy" width="1570" height="1600"></a><figcaption><b>LV</b><span>2025</span></figcaption></figure>
+      <figure class="work"><a class="art" id="gambino" href="braxart-gambino-pop-art-50x70.webp" data-title="Gambino" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2024" data-desc="Ein Porträt von Childish Gambino, einem Künstler, dessen visuelle und musikalische Ausdruckskraft mich inspiriert."><img src="braxart-gambino-pop-art-50x70.webp" alt="Gambino (Childish Gambino) – handgemaltes Pop-Art-Porträt von Braxart, 50 × 70 cm" loading="lazy" width="1358" height="1600"></a><figcaption><b>Gambino</b><span>2024</span></figcaption></figure>
+      <figure class="work"><a class="art" id="audrey-hepburn-vogue" href="braxart-audrey-hepburn-vogue-pop-art-50x70.webp" data-title="Audrey Hepburn in Vogue" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2024" data-desc="Audrey Hepburn im Stil eines Modemagazin-Covers – Eleganz, übersetzt in meine Pop-Art-Ästhetik."><img src="braxart-audrey-hepburn-vogue-pop-art-50x70.webp" alt="Audrey Hepburn in Vogue – handgemaltes Pop-Art-Gemälde von Braxart, 50 × 70 cm" loading="lazy" width="1600" height="1517"></a><figcaption><b>Audrey Hepburn in Vogue</b><span>2024</span></figcaption></figure>
+      <figure class="work"><a class="art" id="wondering-donald" href="braxart-wondering-donald-pop-art-50x70.webp" data-title="Wondering Donald" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2024" data-desc="Eine Arbeit, die Popkultur und Politik mit einem Augenzwinkern zusammenbringt."><img src="braxart-wondering-donald-pop-art-50x70.webp" alt="Wondering Donald – handgemaltes Pop-Art-Gemälde von Braxart, 50 × 70 cm" loading="lazy" width="1570" height="1600"></a><figcaption><b>Wondering Donald</b><span>2024</span></figcaption></figure>
+      <figure class="work"><a class="art" id="fabulous" href="braxart-fabulous-pop-art-50x70.webp" data-title="Fabulous" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2024" data-desc="Eine verspielte, laute Arbeit – Ausdruck und Attitüde stehen hier im Vordergrund."><img src="braxart-fabulous-pop-art-50x70.webp" alt="Fabulous – handgemaltes Pop-Art-Gemälde von Braxart, 50 × 70 cm" loading="lazy" width="1224" height="1600"></a><figcaption><b>Fabulous</b><span>2024</span></figcaption></figure>
+      <figure class="work"><a class="art" id="tyler-the-creator" href="braxart-tyler-the-creator-pop-art-50x70.webp" data-title="Tyler the Creator" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2025" data-desc="Ein Porträt von Tyler, The Creator, der Musik, Mode und visuelle Kunst für mich auf besondere Weise verbindet."><img src="braxart-tyler-the-creator-pop-art-50x70.webp" alt="Tyler the Creator – handgemaltes Pop-Art-Porträt von Braxart, 50 × 70 cm" loading="lazy" width="1360" height="1600"></a><figcaption><b>Tyler the Creator</b><span>2025</span></figcaption></figure>
+      <figure class="work"><a class="art" id="dark-eye" href="braxart-dark-eye-pop-art-50x70.jpeg" data-title="Dark Eye" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2025" data-desc="Eine reduzierte, fast grafische Arbeit mit Fokus auf ein einzelnes Auge – ruhiger als viele meiner anderen Werke."><img src="braxart-dark-eye-pop-art-50x70.jpeg" alt="Dark Eye – handgemaltes Gemälde von Braxart, 50 × 70 cm" loading="lazy" width="1269" height="1600"></a><figcaption><b>Dark Eye</b><span>2025</span></figcaption></figure>
+      <figure class="work"><a class="art" id="lv" data-mat="spray,posca,collage" data-note="Collage aus Magazin-Ausschnitten, darüber Dagobert mit Posca und Spray gemalt." href="braxart-lv-pop-art-50x70.jpeg" data-title="LV" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2025" data-desc="Eine Arbeit rund um Luxus und Markenkultur, mit typischen Elementen des Labels in meinem Stil neu zusammengesetzt."><img src="braxart-lv-pop-art-50x70.jpeg" alt="LV – handgemaltes Pop-Art-Gemälde von Braxart, 50 × 70 cm" loading="lazy" width="1570" height="1600"></a><figcaption><b>LV</b><span>2025</span></figcaption></figure>
     </div>
   </section>
 
   <section class="group" data-size="60x60" id="format-60x60">
     <div class="group-head"><h2>60 × 60 cm</h2><span>Quadrat · 4 Werke</span></div>
     <div class="masonry">
-      <figure class="work reveal"><a class="art" id="marilyn-monroe-v1" href="braxart-marilyn-monroe-v1-pop-art-60x60.webp" data-title="Marilyn Monroe V1" data-size="60 × 60 cm" data-w="60" data-h="60" data-year="2025" data-desc="Meine erste Annäherung an Marilyn Monroe in diesem Format – Ausgangspunkt für spätere Varianten desselben Motivs."><img src="braxart-marilyn-monroe-v1-pop-art-60x60.webp" alt="Marilyn Monroe V1 – handgemaltes Pop-Art-Gemälde von Braxart, 60 × 60 cm" loading="lazy" width="1360" height="1600"></a><figcaption><b>Marilyn Monroe V1</b><span>2025</span></figcaption></figure>
-      <figure class="work reveal"><a class="art" id="audrey-hepburn" href="braxart-audrey-hepburn-pop-art-60x60.jpeg" data-title="Audrey Hepburn" data-size="60 × 60 cm" data-w="60" data-h="60" data-year="2025" data-desc="Ein weiteres Porträt von Audrey Hepburn, diesmal quadratisch und mit stärkerem Fokus auf Kontrast statt Farbe."><img src="braxart-audrey-hepburn-pop-art-60x60.jpeg" alt="Audrey Hepburn – handgemaltes Pop-Art-Porträt von Braxart, 60 × 60 cm" loading="lazy" width="1572" height="1600"></a><figcaption><b>Audrey Hepburn</b><span>2025</span></figcaption></figure>
-      <figure class="work reveal"><a class="art" id="kate-moss" href="braxart-kate-moss-pop-art-60x60.webp" data-title="Kate Moss" data-size="60 × 60 cm" data-w="60" data-h="60" data-year="2025" data-desc="Kate Moss als Ikone der 90er-Mode-Welt – reduziert auf Linien, Kontrast und wenige gezielt eingesetzte Farbflächen."><img src="braxart-kate-moss-pop-art-60x60.webp" alt="Kate Moss – handgemaltes Pop-Art-Porträt von Braxart, 60 × 60 cm" loading="lazy" width="1270" height="1600"></a><figcaption><b>Kate Moss</b><span>2025</span></figcaption></figure>
-      <figure class="work reveal"><a class="art" id="madelyn-cline" href="braxart-madelyn-cline-pop-art-60x60.png" data-title="Madelyn Cline" data-size="60 × 60 cm" data-w="60" data-h="60" data-year="2026" data-desc="Eines meiner neueren Porträts, entstanden mit dem inzwischen geschärften Stil zwischen Pop Art und Graffiti."><img src="braxart-madelyn-cline-pop-art-60x60.png" alt="Madelyn Cline – handgemaltes Pop-Art-Porträt von Braxart, 60 × 60 cm" loading="lazy" width="1600" height="1120"></a><figcaption><b>Madelyn Cline</b><span>2026</span></figcaption></figure>
+      <figure class="work"><a class="art" id="marilyn-monroe-v1" href="braxart-marilyn-monroe-v1-pop-art-60x60.webp" data-title="Marilyn Monroe V1" data-size="60 × 60 cm" data-w="60" data-h="60" data-year="2025" data-desc="Meine erste Annäherung an Marilyn Monroe in diesem Format – Ausgangspunkt für spätere Varianten desselben Motivs."><img src="braxart-marilyn-monroe-v1-pop-art-60x60.webp" alt="Marilyn Monroe V1 – handgemaltes Pop-Art-Gemälde von Braxart, 60 × 60 cm" loading="lazy" width="1360" height="1600"></a><figcaption><b>Marilyn Monroe V1</b><span>2025</span></figcaption></figure>
+      <figure class="work"><a class="art" id="audrey-hepburn" href="braxart-audrey-hepburn-pop-art-60x60.jpeg" data-title="Audrey Hepburn" data-size="60 × 60 cm" data-w="60" data-h="60" data-year="2025" data-desc="Ein weiteres Porträt von Audrey Hepburn, diesmal quadratisch und mit stärkerem Fokus auf Kontrast statt Farbe."><img src="braxart-audrey-hepburn-pop-art-60x60.jpeg" alt="Audrey Hepburn – handgemaltes Pop-Art-Porträt von Braxart, 60 × 60 cm" loading="lazy" width="1572" height="1600"></a><figcaption><b>Audrey Hepburn</b><span>2025</span></figcaption></figure>
+      <figure class="work"><a class="art" id="kate-moss" href="braxart-kate-moss-pop-art-60x60.webp" data-title="Kate Moss" data-size="60 × 60 cm" data-w="60" data-h="60" data-year="2025" data-desc="Kate Moss als Ikone der 90er-Mode-Welt – reduziert auf Linien, Kontrast und wenige gezielt eingesetzte Farbflächen."><img src="braxart-kate-moss-pop-art-60x60.webp" alt="Kate Moss – handgemaltes Pop-Art-Porträt von Braxart, 60 × 60 cm" loading="lazy" width="1270" height="1600"></a><figcaption><b>Kate Moss</b><span>2025</span></figcaption></figure>
+      <figure class="work"><a class="art" id="madelyn-cline" href="braxart-madelyn-cline-pop-art-60x60.png" data-title="Madelyn Cline" data-size="60 × 60 cm" data-w="60" data-h="60" data-year="2026" data-desc="Eines meiner neueren Porträts, entstanden mit dem inzwischen geschärften Stil zwischen Pop Art und Graffiti."><img src="braxart-madelyn-cline-pop-art-60x60.png" alt="Madelyn Cline – handgemaltes Pop-Art-Porträt von Braxart, 60 × 60 cm" loading="lazy" width="1600" height="1120"></a><figcaption><b>Madelyn Cline</b><span>2026</span></figcaption></figure>
     </div>
   </section>
 
   <section class="group" data-size="70x100" id="format-70x100">
     <div class="group-head"><h2>70 × 100 cm</h2><span>Groß · 5 Werke</span></div>
     <div class="masonry">
-      <figure class="work reveal"><a class="art" id="stocks" href="braxart-stocks-pop-art-70x100.jpg" data-title="Stocks" data-size="70 × 100 cm" data-w="70" data-h="100" data-year="2025" data-desc="Eine Arbeit über Finanzmärkte und Spekulation – Charts und Zahlen als visuelles Motiv, in meinem Stil verfremdet."><img src="braxart-stocks-pop-art-70x100.jpg" alt="Stocks – handgemaltes Pop-Art-Gemälde von Braxart, 70 × 100 cm" loading="lazy" width="1270" height="1600"></a><figcaption><b>Stocks</b><span>2025</span></figcaption></figure>
-      <figure class="work reveal"><a class="art" id="gold-brax" href="braxart-gold-brax-pop-art-70x100.jpg" data-title="Gold Brax" data-size="70 × 100 cm" data-w="70" data-h="100" data-year="2025" data-desc="Der Titel spielt auf meinen Künstlernamen an – Gold steht hier für Anspruch und Ambition."><img src="braxart-gold-brax-pop-art-70x100.jpg" alt="Gold Brax – handgemaltes Graffiti-Pop-Art-Gemälde von Braxart, 70 × 100 cm" loading="lazy" width="1270" height="1600"></a><figcaption><b>Gold Brax</b><span>2025</span></figcaption></figure>
-      <figure class="work reveal"><a class="art" id="panzerknacker" href="braxart-panzerknacker-pop-art-70x100.webp" data-title="Panzerknacker" data-size="70 × 100 cm" data-w="70" data-h="100" data-year="2024" data-desc="Eine comichafte, augenzwinkernde Arbeit – Diebe und Beute als Motiv, umgesetzt in kräftigen Farben."><img src="braxart-panzerknacker-pop-art-70x100.webp" alt="Panzerknacker – handgemaltes Pop-Art-Gemälde von Braxart, 70 × 100 cm" loading="lazy" width="1269" height="1600"></a><figcaption><b>Panzerknacker</b><span>2024</span></figcaption></figure>
-      <figure class="work reveal"><a class="art" id="mmn" href="braxart-mmn-pop-art-70x100.webp" data-title="MMN" data-size="70 × 100 cm" data-w="70" data-h="100" data-year="2024" data-desc="Eine abstraktere Arbeit mit reduzierter Symbolik – bewusst offener für eigene Interpretation als meine porträtlastigen Werke."><img src="braxart-mmn-pop-art-70x100.webp" alt="MMN – handgemaltes Gemälde von Braxart, 70 × 100 cm" loading="lazy" width="1269" height="1600"></a><figcaption><b>MMN</b><span>2024</span></figcaption></figure>
-      <figure class="work reveal"><a class="art" id="anton" href="braxart-anton-portrait-pop-art-70x100.jpeg" data-title="Anton" data-size="70 × 100 cm" data-w="70" data-h="100" data-year="2025" data-desc="Ein Schriftzug-Porträt im Graffiti-Stil, entstanden 2025 als Auftragsarbeit."><img src="braxart-anton-portrait-pop-art-70x100.jpeg" alt="Anton – Porträt als Auftragsarbeit von Braxart, 70 × 100 cm" loading="lazy" width="1360" height="1600"></a><figcaption><b>Anton</b><span>2025</span></figcaption></figure>
+      <figure class="work"><a class="art" id="stocks" href="braxart-stocks-pop-art-70x100.jpg" data-title="Stocks" data-size="70 × 100 cm" data-w="70" data-h="100" data-year="2025" data-desc="Eine Arbeit über Finanzmärkte und Spekulation – Charts und Zahlen als visuelles Motiv, in meinem Stil verfremdet."><img src="braxart-stocks-pop-art-70x100.jpg" alt="Stocks – handgemaltes Pop-Art-Gemälde von Braxart, 70 × 100 cm" loading="lazy" width="1270" height="1600"></a><figcaption><b>Stocks</b><span>2025</span></figcaption></figure>
+      <figure class="work"><a class="art" id="gold-brax" href="braxart-gold-brax-pop-art-70x100.jpg" data-title="Gold Brax" data-size="70 × 100 cm" data-w="70" data-h="100" data-year="2025" data-desc="Der Titel spielt auf meinen Künstlernamen an – Gold steht hier für Anspruch und Ambition."><img src="braxart-gold-brax-pop-art-70x100.jpg" alt="Gold Brax – handgemaltes Graffiti-Pop-Art-Gemälde von Braxart, 70 × 100 cm" loading="lazy" width="1270" height="1600"></a><figcaption><b>Gold Brax</b><span>2025</span></figcaption></figure>
+      <figure class="work"><a class="art" id="panzerknacker" data-mat="spray,posca,collage" data-note="Panzer, Stuhl und Gebäude sind aus Magazinen ausgeschnitten und aufgeklebt." href="braxart-panzerknacker-pop-art-70x100.webp" data-title="Panzerknacker" data-size="70 × 100 cm" data-w="70" data-h="100" data-year="2024" data-desc="Eine comichafte, augenzwinkernde Arbeit – Diebe und Beute als Motiv, umgesetzt in kräftigen Farben."><img src="braxart-panzerknacker-pop-art-70x100.webp" alt="Panzerknacker – handgemaltes Pop-Art-Gemälde von Braxart, 70 × 100 cm" loading="lazy" width="1269" height="1600"></a><figcaption><b>Panzerknacker</b><span>2024</span></figcaption></figure>
+      <figure class="work"><a class="art" id="mmn" href="braxart-mmn-pop-art-70x100.webp" data-title="MMN" data-size="70 × 100 cm" data-w="70" data-h="100" data-year="2024" data-desc="Eine abstraktere Arbeit mit reduzierter Symbolik – bewusst offener für eigene Interpretation als meine porträtlastigen Werke."><img src="braxart-mmn-pop-art-70x100.webp" alt="MMN – handgemaltes Gemälde von Braxart, 70 × 100 cm" loading="lazy" width="1269" height="1600"></a><figcaption><b>MMN</b><span>2024</span></figcaption></figure>
+      <figure class="work"><a class="art" id="anton" href="braxart-anton-portrait-pop-art-70x100.jpeg" data-title="Anton" data-size="70 × 100 cm" data-w="70" data-h="100" data-year="2025" data-desc="Ein Schriftzug-Porträt im Graffiti-Stil, entstanden 2025 als Auftragsarbeit."><img src="braxart-anton-portrait-pop-art-70x100.jpeg" alt="Anton – Porträt als Auftragsarbeit von Braxart, 70 × 100 cm" loading="lazy" width="1360" height="1600"></a><figcaption><b>Anton</b><span>2025</span></figcaption></figure>
     </div>
   </section>
 
   <section class="group" data-size="80x80" id="format-80x80">
     <div class="group-head"><h2>80 × 80 cm</h2><span>Quadrat XL · 1 Werk</span></div>
     <div class="masonry">
-      <figure class="work reveal"><a class="art" id="naomi-campbell" href="braxart-naomi-campbell-pop-art-80x80.webp" data-title="Naomi Campbell" data-size="80 × 80 cm" data-w="80" data-h="80" data-year="2026" data-desc="Naomi Campbell in einem meiner größeren Formate – genug Fläche, um Details und Kontraste voll auszuspielen."><img src="braxart-naomi-campbell-pop-art-80x80.webp" alt="Naomi Campbell – handgemaltes Pop-Art-Porträt von Braxart, 80 × 80 cm" loading="lazy" width="1600" height="1517"></a><figcaption><b>Naomi Campbell</b><span>2026</span></figcaption></figure>
+      <figure class="work"><a class="art" id="naomi-campbell" href="braxart-naomi-campbell-pop-art-80x80.webp" data-title="Naomi Campbell" data-size="80 × 80 cm" data-w="80" data-h="80" data-year="2026" data-desc="Naomi Campbell in einem meiner größeren Formate – genug Fläche, um Details und Kontraste voll auszuspielen."><img src="braxart-naomi-campbell-pop-art-80x80.webp" alt="Naomi Campbell – handgemaltes Pop-Art-Porträt von Braxart, 80 × 80 cm" loading="lazy" width="1600" height="1517"></a><figcaption><b>Naomi Campbell</b><span>2026</span></figcaption></figure>
     </div>
   </section>
 
   <section class="group" data-size="90x120" id="format-90x120">
     <div class="group-head"><h2>90 × 120 cm</h2><span>XXL · 1 Werk</span></div>
     <div class="masonry">
-      <figure class="work reveal"><a class="art" id="money-boom" href="braxart-money-boom-pop-art-90x120.webp" data-title="Money Boom" data-size="90 × 120 cm" data-w="90" data-h="120" data-year="2024" data-desc="Eines meiner größten Formate – Geld und Wachstum als Motiv, großflächig und in kräftigen Farben umgesetzt."><img src="braxart-money-boom-pop-art-90x120.webp" alt="Money Boom – großformatiges Pop-Art-Gemälde von Braxart, 90 × 120 cm" loading="lazy" width="1270" height="1600"></a><figcaption><b>Money Boom</b><span>2024</span></figcaption></figure>
+      <figure class="work"><a class="art" id="money-boom" href="braxart-money-boom-pop-art-90x120.webp" data-title="Money Boom" data-size="90 × 120 cm" data-w="90" data-h="120" data-year="2024" data-desc="Eines meiner größten Formate – Geld und Wachstum als Motiv, großflächig und in kräftigen Farben umgesetzt."><img src="braxart-money-boom-pop-art-90x120.webp" alt="Money Boom – großformatiges Pop-Art-Gemälde von Braxart, 90 × 120 cm" loading="lazy" width="1270" height="1600"></a><figcaption><b>Money Boom</b><span>2024</span></figcaption></figure>
     </div>
   </section>
 
   <section class="group" data-size="100x100" id="format-100x100">
     <div class="group-head"><h2>100 × 100 cm</h2><span>Maxi · 1 Werk</span></div>
     <div class="masonry">
-      <figure class="work reveal"><a class="art" id="freedom" href="braxart-freedom-pop-art-100x100.jpeg" data-title="Freedom" data-size="100 × 100 cm" data-w="100" data-h="100" data-year="2025" data-desc="Ein Werk über Freiheit als Idee – bewusst offen gehalten, damit jede*r die eigene Bedeutung hineinlegen kann."><img src="braxart-freedom-pop-art-100x100.jpeg" alt="Freedom – großformatiges Gemälde von Braxart, 100 × 100 cm" loading="lazy" width="1358" height="1600"></a><figcaption><b>Freedom</b><span>2025</span></figcaption></figure>
+      <figure class="work"><a class="art" id="freedom" href="braxart-freedom-pop-art-100x100.jpeg" data-title="Freedom" data-size="100 × 100 cm" data-w="100" data-h="100" data-year="2025" data-desc="Ein Werk über Freiheit als Idee – bewusst offen gehalten, damit jede*r die eigene Bedeutung hineinlegen kann."><img src="braxart-freedom-pop-art-100x100.jpeg" alt="Freedom – großformatiges Gemälde von Braxart, 100 × 100 cm" loading="lazy" width="1358" height="1600"></a><figcaption><b>Freedom</b><span>2025</span></figcaption></figure>
     </div>
   </section>
 
@@ -184,6 +183,7 @@
       </div>
     </div>
     <div class="footer-bottom"><span>© 2026 Max Pörtner · Braxart</span><span>Kriftel, Deutschland</span></div>
+    <div class="footer-mark" aria-hidden="true">Braxart</div>
   </div>
 </footer>
 
@@ -226,7 +226,7 @@
    "url": "https://braxart23.com/galerie.html",
    "mainEntity": {
     "@type": "ItemList",
-    "numberOfItems": 26,
+    "numberOfItems": 25,
     "itemListElement": [
      {
       "@type": "ListItem",
@@ -239,7 +239,7 @@
        "image": "https://braxart23.com/braxart-marilyn-monroe-glam-pop-art-40x40.jpeg",
        "description": "Marilyn Monroe als zeitlose Pop-Art-Ikone – reduziert auf klare Linien und kräftige Kontraste in einem kompakten Format.",
        "artform": "Malerei",
-       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artMedium": "Montana-Sprühfarbe und Posca-Marker auf Leinwand",
        "artworkSurface": "Leinwand",
        "genre": "Pop Art",
        "width": {
@@ -271,7 +271,7 @@
        "image": "https://braxart23.com/braxart-muhammad-ali-win-pop-art-40x40.webp",
        "description": "Muhammad Ali im Moment des Triumphs – für mich ein Motiv für Willensstärke, umgesetzt in klaren Konturen und kräftigen Farbflächen.",
        "artform": "Malerei",
-       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artMedium": "Montana-Sprühfarbe und Posca-Marker auf Leinwand",
        "artworkSurface": "Leinwand",
        "genre": "Pop Art",
        "width": {
@@ -303,7 +303,7 @@
        "image": "https://braxart23.com/braxart-cash-gold-pop-art-40x50.webp",
        "description": "Geld als Symbol, reduziert auf Gold-Töne vor dunklem Grund – für mich eher eine Beobachtung als ein Statement.",
        "artform": "Malerei",
-       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artMedium": "Montana-Sprühfarbe und Posca-Marker auf Leinwand",
        "artworkSurface": "Leinwand",
        "genre": "Pop Art",
        "width": {
@@ -335,7 +335,7 @@
        "image": "https://braxart23.com/braxart-rolex-pop-art-40x50.webp",
        "description": "Eine Uhr als Statussymbol, in meinem Stil verfremdet – mir geht es dabei weniger um die Marke selbst als um das, wofür sie steht.",
        "artform": "Malerei",
-       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artMedium": "Montana-Sprühfarbe und Posca-Marker auf Leinwand",
        "artworkSurface": "Leinwand",
        "genre": "Pop Art",
        "width": {
@@ -365,9 +365,9 @@
        "name": "Angelina Jolie",
        "url": "https://braxart23.com/galerie.html#angelina-jolie",
        "image": "https://braxart23.com/braxart-angelina-jolie-pop-art-40x50.webp",
-       "description": "Ein Porträt zwischen Popkultur und Hollywood-Glamour, mit klarem Linienspiel und kräftigen Farben.",
+       "description": "Ein Porträt zwischen Popkultur und Hollywood-Glamour – im Hintergrund echte Dollarnoten, darüber Posca und Spray.",
        "artform": "Malerei",
-       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artMedium": "Montana-Sprühfarbe, Posca-Marker und echte Dollarnoten auf Leinwand",
        "artworkSurface": "Leinwand",
        "genre": "Pop Art",
        "width": {
@@ -399,7 +399,7 @@
        "image": "https://braxart23.com/braxart-marilyn-monroe-v2-pop-art-40x50.jpeg",
        "description": "Eine zweite Annäherung an Marilyn Monroe – gleiche Ikone, andere Farbstimmung und anderer Bildausschnitt als bei »Glam«.",
        "artform": "Malerei",
-       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artMedium": "Montana-Sprühfarbe und Posca-Marker auf Leinwand",
        "artworkSurface": "Leinwand",
        "genre": "Pop Art",
        "width": {
@@ -431,7 +431,7 @@
        "image": "https://braxart23.com/braxart-gambino-pop-art-50x70.webp",
        "description": "Ein Porträt von Childish Gambino, einem Künstler, dessen visuelle und musikalische Ausdruckskraft mich inspiriert.",
        "artform": "Malerei",
-       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artMedium": "Montana-Sprühfarbe und Posca-Marker auf Leinwand",
        "artworkSurface": "Leinwand",
        "genre": "Pop Art",
        "width": {
@@ -463,7 +463,7 @@
        "image": "https://braxart23.com/braxart-audrey-hepburn-vogue-pop-art-50x70.webp",
        "description": "Audrey Hepburn im Stil eines Modemagazin-Covers – Eleganz, übersetzt in meine Pop-Art-Ästhetik.",
        "artform": "Malerei",
-       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artMedium": "Montana-Sprühfarbe und Posca-Marker auf Leinwand",
        "artworkSurface": "Leinwand",
        "genre": "Pop Art",
        "width": {
@@ -495,7 +495,7 @@
        "image": "https://braxart23.com/braxart-wondering-donald-pop-art-50x70.webp",
        "description": "Eine Arbeit, die Popkultur und Politik mit einem Augenzwinkern zusammenbringt.",
        "artform": "Malerei",
-       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artMedium": "Montana-Sprühfarbe und Posca-Marker auf Leinwand",
        "artworkSurface": "Leinwand",
        "genre": "Pop Art",
        "width": {
@@ -527,7 +527,7 @@
        "image": "https://braxart23.com/braxart-fabulous-pop-art-50x70.webp",
        "description": "Eine verspielte, laute Arbeit – Ausdruck und Attitüde stehen hier im Vordergrund.",
        "artform": "Malerei",
-       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artMedium": "Montana-Sprühfarbe und Posca-Marker auf Leinwand",
        "artworkSurface": "Leinwand",
        "genre": "Pop Art",
        "width": {
@@ -559,7 +559,7 @@
        "image": "https://braxart23.com/braxart-tyler-the-creator-pop-art-50x70.webp",
        "description": "Ein Porträt von Tyler, The Creator, der Musik, Mode und visuelle Kunst für mich auf besondere Weise verbindet.",
        "artform": "Malerei",
-       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artMedium": "Montana-Sprühfarbe und Posca-Marker auf Leinwand",
        "artworkSurface": "Leinwand",
        "genre": "Pop Art",
        "width": {
@@ -591,7 +591,7 @@
        "image": "https://braxart23.com/braxart-dark-eye-pop-art-50x70.jpeg",
        "description": "Eine reduzierte, fast grafische Arbeit mit Fokus auf ein einzelnes Auge – ruhiger als viele meiner anderen Werke.",
        "artform": "Malerei",
-       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artMedium": "Montana-Sprühfarbe und Posca-Marker auf Leinwand",
        "artworkSurface": "Leinwand",
        "genre": "Pop Art",
        "width": {
@@ -617,45 +617,13 @@
       "position": 13,
       "item": {
        "@type": "VisualArtwork",
-       "@id": "https://braxart23.com/galerie.html#gambino-detail",
-       "name": "Gambino (Detailansicht)",
-       "url": "https://braxart23.com/galerie.html#gambino-detail",
-       "image": "https://braxart23.com/braxart-gambino-detail-pop-art-50x70.jpeg",
-       "description": "Eine weitere Ansicht meines Gambino-Porträts – gleiches Motiv, anderes Licht und andere Bildschärfe.",
-       "artform": "Malerei",
-       "artMedium": "Marker, Spray und Acryl auf Leinwand",
-       "artworkSurface": "Leinwand",
-       "genre": "Pop Art",
-       "width": {
-        "@type": "Distance",
-        "name": "50 cm"
-       },
-       "height": {
-        "@type": "Distance",
-        "name": "70 cm"
-       },
-       "dateCreated": "2024",
-       "creator": {
-        "@id": "https://braxart23.com/#artist"
-       },
-       "copyrightHolder": {
-        "@id": "https://braxart23.com/#artist"
-       },
-       "creditText": "Braxart (Max Pörtner)"
-      }
-     },
-     {
-      "@type": "ListItem",
-      "position": 14,
-      "item": {
-       "@type": "VisualArtwork",
        "@id": "https://braxart23.com/galerie.html#lv",
        "name": "LV",
        "url": "https://braxart23.com/galerie.html#lv",
        "image": "https://braxart23.com/braxart-lv-pop-art-50x70.jpeg",
        "description": "Eine Arbeit rund um Luxus und Markenkultur, mit typischen Elementen des Labels in meinem Stil neu zusammengesetzt.",
        "artform": "Malerei",
-       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artMedium": "Montana-Sprühfarbe, Posca-Marker und Magazin-Collage auf Leinwand",
        "artworkSurface": "Leinwand",
        "genre": "Pop Art",
        "width": {
@@ -678,7 +646,7 @@
      },
      {
       "@type": "ListItem",
-      "position": 15,
+      "position": 14,
       "item": {
        "@type": "VisualArtwork",
        "@id": "https://braxart23.com/galerie.html#marilyn-monroe-v1",
@@ -687,7 +655,39 @@
        "image": "https://braxart23.com/braxart-marilyn-monroe-v1-pop-art-60x60.webp",
        "description": "Meine erste Annäherung an Marilyn Monroe in diesem Format – Ausgangspunkt für spätere Varianten desselben Motivs.",
        "artform": "Malerei",
-       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artMedium": "Montana-Sprühfarbe und Posca-Marker auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "60 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "60 cm"
+       },
+       "dateCreated": "2025",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 15,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#audrey-hepburn",
+       "name": "Audrey Hepburn",
+       "url": "https://braxart23.com/galerie.html#audrey-hepburn",
+       "image": "https://braxart23.com/braxart-audrey-hepburn-pop-art-60x60.jpeg",
+       "description": "Ein weiteres Porträt von Audrey Hepburn, diesmal quadratisch und mit stärkerem Fokus auf Kontrast statt Farbe.",
+       "artform": "Malerei",
+       "artMedium": "Montana-Sprühfarbe und Posca-Marker auf Leinwand",
        "artworkSurface": "Leinwand",
        "genre": "Pop Art",
        "width": {
@@ -713,13 +713,13 @@
       "position": 16,
       "item": {
        "@type": "VisualArtwork",
-       "@id": "https://braxart23.com/galerie.html#audrey-hepburn",
-       "name": "Audrey Hepburn",
-       "url": "https://braxart23.com/galerie.html#audrey-hepburn",
-       "image": "https://braxart23.com/braxart-audrey-hepburn-pop-art-60x60.jpeg",
-       "description": "Ein weiteres Porträt von Audrey Hepburn, diesmal quadratisch und mit stärkerem Fokus auf Kontrast statt Farbe.",
+       "@id": "https://braxart23.com/galerie.html#kate-moss",
+       "name": "Kate Moss",
+       "url": "https://braxart23.com/galerie.html#kate-moss",
+       "image": "https://braxart23.com/braxart-kate-moss-pop-art-60x60.webp",
+       "description": "Kate Moss als Ikone der 90er-Mode-Welt – reduziert auf Linien, Kontrast und wenige gezielt eingesetzte Farbflächen.",
        "artform": "Malerei",
-       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artMedium": "Montana-Sprühfarbe und Posca-Marker auf Leinwand",
        "artworkSurface": "Leinwand",
        "genre": "Pop Art",
        "width": {
@@ -745,45 +745,13 @@
       "position": 17,
       "item": {
        "@type": "VisualArtwork",
-       "@id": "https://braxart23.com/galerie.html#kate-moss",
-       "name": "Kate Moss",
-       "url": "https://braxart23.com/galerie.html#kate-moss",
-       "image": "https://braxart23.com/braxart-kate-moss-pop-art-60x60.webp",
-       "description": "Kate Moss als Ikone der 90er-Mode-Welt – reduziert auf Linien, Kontrast und wenige gezielt eingesetzte Farbflächen.",
-       "artform": "Malerei",
-       "artMedium": "Marker, Spray und Acryl auf Leinwand",
-       "artworkSurface": "Leinwand",
-       "genre": "Pop Art",
-       "width": {
-        "@type": "Distance",
-        "name": "60 cm"
-       },
-       "height": {
-        "@type": "Distance",
-        "name": "60 cm"
-       },
-       "dateCreated": "2025",
-       "creator": {
-        "@id": "https://braxart23.com/#artist"
-       },
-       "copyrightHolder": {
-        "@id": "https://braxart23.com/#artist"
-       },
-       "creditText": "Braxart (Max Pörtner)"
-      }
-     },
-     {
-      "@type": "ListItem",
-      "position": 18,
-      "item": {
-       "@type": "VisualArtwork",
        "@id": "https://braxart23.com/galerie.html#madelyn-cline",
        "name": "Madelyn Cline",
        "url": "https://braxart23.com/galerie.html#madelyn-cline",
        "image": "https://braxart23.com/braxart-madelyn-cline-pop-art-60x60.png",
        "description": "Eines meiner neueren Porträts, entstanden mit dem inzwischen geschärften Stil zwischen Pop Art und Graffiti.",
        "artform": "Malerei",
-       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artMedium": "Montana-Sprühfarbe und Posca-Marker auf Leinwand",
        "artworkSurface": "Leinwand",
        "genre": "Pop Art",
        "width": {
@@ -806,7 +774,7 @@
      },
      {
       "@type": "ListItem",
-      "position": 19,
+      "position": 18,
       "item": {
        "@type": "VisualArtwork",
        "@id": "https://braxart23.com/galerie.html#stocks",
@@ -815,7 +783,39 @@
        "image": "https://braxart23.com/braxart-stocks-pop-art-70x100.jpg",
        "description": "Eine Arbeit über Finanzmärkte und Spekulation – Charts und Zahlen als visuelles Motiv, in meinem Stil verfremdet.",
        "artform": "Malerei",
-       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artMedium": "Montana-Sprühfarbe und Posca-Marker auf Leinwand",
+       "artworkSurface": "Leinwand",
+       "genre": "Pop Art",
+       "width": {
+        "@type": "Distance",
+        "name": "70 cm"
+       },
+       "height": {
+        "@type": "Distance",
+        "name": "100 cm"
+       },
+       "dateCreated": "2025",
+       "creator": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "copyrightHolder": {
+        "@id": "https://braxart23.com/#artist"
+       },
+       "creditText": "Braxart (Max Pörtner)"
+      }
+     },
+     {
+      "@type": "ListItem",
+      "position": 19,
+      "item": {
+       "@type": "VisualArtwork",
+       "@id": "https://braxart23.com/galerie.html#gold-brax",
+       "name": "Gold Brax",
+       "url": "https://braxart23.com/galerie.html#gold-brax",
+       "image": "https://braxart23.com/braxart-gold-brax-pop-art-70x100.jpg",
+       "description": "Der Titel spielt auf meinen Künstlernamen an – Gold steht hier für Anspruch und Ambition.",
+       "artform": "Malerei",
+       "artMedium": "Montana-Sprühfarbe und Posca-Marker auf Leinwand",
        "artworkSurface": "Leinwand",
        "genre": "Pop Art",
        "width": {
@@ -841,13 +841,13 @@
       "position": 20,
       "item": {
        "@type": "VisualArtwork",
-       "@id": "https://braxart23.com/galerie.html#gold-brax",
-       "name": "Gold Brax",
-       "url": "https://braxart23.com/galerie.html#gold-brax",
-       "image": "https://braxart23.com/braxart-gold-brax-pop-art-70x100.jpg",
-       "description": "Der Titel spielt auf meinen Künstlernamen an – Gold steht hier für Anspruch und Ambition.",
+       "@id": "https://braxart23.com/galerie.html#panzerknacker",
+       "name": "Panzerknacker",
+       "url": "https://braxart23.com/galerie.html#panzerknacker",
+       "image": "https://braxart23.com/braxart-panzerknacker-pop-art-70x100.webp",
+       "description": "Eine comichafte, augenzwinkernde Arbeit – Diebe und Beute als Motiv, umgesetzt in kräftigen Farben.",
        "artform": "Malerei",
-       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artMedium": "Montana-Sprühfarbe, Posca-Marker und Magazin-Collage auf Leinwand",
        "artworkSurface": "Leinwand",
        "genre": "Pop Art",
        "width": {
@@ -858,7 +858,7 @@
         "@type": "Distance",
         "name": "100 cm"
        },
-       "dateCreated": "2025",
+       "dateCreated": "2024",
        "creator": {
         "@id": "https://braxart23.com/#artist"
        },
@@ -873,13 +873,13 @@
       "position": 21,
       "item": {
        "@type": "VisualArtwork",
-       "@id": "https://braxart23.com/galerie.html#panzerknacker",
-       "name": "Panzerknacker",
-       "url": "https://braxart23.com/galerie.html#panzerknacker",
-       "image": "https://braxart23.com/braxart-panzerknacker-pop-art-70x100.webp",
-       "description": "Eine comichafte, augenzwinkernde Arbeit – Diebe und Beute als Motiv, umgesetzt in kräftigen Farben.",
+       "@id": "https://braxart23.com/galerie.html#mmn",
+       "name": "MMN",
+       "url": "https://braxart23.com/galerie.html#mmn",
+       "image": "https://braxart23.com/braxart-mmn-pop-art-70x100.webp",
+       "description": "Eine abstraktere Arbeit mit reduzierter Symbolik – bewusst offener für eigene Interpretation als meine porträtlastigen Werke.",
        "artform": "Malerei",
-       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artMedium": "Montana-Sprühfarbe und Posca-Marker auf Leinwand",
        "artworkSurface": "Leinwand",
        "genre": "Pop Art",
        "width": {
@@ -905,45 +905,13 @@
       "position": 22,
       "item": {
        "@type": "VisualArtwork",
-       "@id": "https://braxart23.com/galerie.html#mmn",
-       "name": "MMN",
-       "url": "https://braxart23.com/galerie.html#mmn",
-       "image": "https://braxart23.com/braxart-mmn-pop-art-70x100.webp",
-       "description": "Eine abstraktere Arbeit mit reduzierter Symbolik – bewusst offener für eigene Interpretation als meine porträtlastigen Werke.",
-       "artform": "Malerei",
-       "artMedium": "Marker, Spray und Acryl auf Leinwand",
-       "artworkSurface": "Leinwand",
-       "genre": "Pop Art",
-       "width": {
-        "@type": "Distance",
-        "name": "70 cm"
-       },
-       "height": {
-        "@type": "Distance",
-        "name": "100 cm"
-       },
-       "dateCreated": "2024",
-       "creator": {
-        "@id": "https://braxart23.com/#artist"
-       },
-       "copyrightHolder": {
-        "@id": "https://braxart23.com/#artist"
-       },
-       "creditText": "Braxart (Max Pörtner)"
-      }
-     },
-     {
-      "@type": "ListItem",
-      "position": 23,
-      "item": {
-       "@type": "VisualArtwork",
        "@id": "https://braxart23.com/galerie.html#anton",
        "name": "Anton",
        "url": "https://braxart23.com/galerie.html#anton",
        "image": "https://braxart23.com/braxart-anton-portrait-pop-art-70x100.jpeg",
        "description": "Ein Schriftzug-Porträt im Graffiti-Stil, entstanden 2025 als Auftragsarbeit.",
        "artform": "Malerei",
-       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artMedium": "Montana-Sprühfarbe und Posca-Marker auf Leinwand",
        "artworkSurface": "Leinwand",
        "genre": "Pop Art",
        "width": {
@@ -966,7 +934,7 @@
      },
      {
       "@type": "ListItem",
-      "position": 24,
+      "position": 23,
       "item": {
        "@type": "VisualArtwork",
        "@id": "https://braxart23.com/galerie.html#naomi-campbell",
@@ -975,7 +943,7 @@
        "image": "https://braxart23.com/braxart-naomi-campbell-pop-art-80x80.webp",
        "description": "Naomi Campbell in einem meiner größeren Formate – genug Fläche, um Details und Kontraste voll auszuspielen.",
        "artform": "Malerei",
-       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artMedium": "Montana-Sprühfarbe und Posca-Marker auf Leinwand",
        "artworkSurface": "Leinwand",
        "genre": "Pop Art",
        "width": {
@@ -998,7 +966,7 @@
      },
      {
       "@type": "ListItem",
-      "position": 25,
+      "position": 24,
       "item": {
        "@type": "VisualArtwork",
        "@id": "https://braxart23.com/galerie.html#money-boom",
@@ -1007,7 +975,7 @@
        "image": "https://braxart23.com/braxart-money-boom-pop-art-90x120.webp",
        "description": "Eines meiner größten Formate – Geld und Wachstum als Motiv, großflächig und in kräftigen Farben umgesetzt.",
        "artform": "Malerei",
-       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artMedium": "Montana-Sprühfarbe und Posca-Marker auf Leinwand",
        "artworkSurface": "Leinwand",
        "genre": "Pop Art",
        "width": {
@@ -1030,7 +998,7 @@
      },
      {
       "@type": "ListItem",
-      "position": 26,
+      "position": 25,
       "item": {
        "@type": "VisualArtwork",
        "@id": "https://braxart23.com/galerie.html#freedom",
@@ -1039,7 +1007,7 @@
        "image": "https://braxart23.com/braxart-freedom-pop-art-100x100.jpeg",
        "description": "Ein Werk über Freiheit als Idee – bewusst offen gehalten, damit jede*r die eigene Bedeutung hineinlegen kann.",
        "artform": "Malerei",
-       "artMedium": "Marker, Spray und Acryl auf Leinwand",
+       "artMedium": "Montana-Sprühfarbe und Posca-Marker auf Leinwand",
        "artworkSurface": "Leinwand",
        "genre": "Pop Art",
        "width": {
