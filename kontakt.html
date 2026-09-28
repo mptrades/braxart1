@@ -21,12 +21,12 @@
 .k{padding:clamp(56px,8vw,104px) 0}
 .k-in{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,5vw,72px);align-items:start}
 .k .lead{margin:18px 0 36px}
-.info{display:grid;gap:12px}
-.info a,.info div.row{display:flex;align-items:center;gap:14px;background:var(--bg-soft);border-radius:var(--radius-sm);padding:16px 18px;transition:background .25s,transform .4s var(--ease)}
-.info a:hover{background:#ebebf0;transform:translateX(3px)}
-.info i{font-style:normal;width:40px;height:40px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:var(--shadow)}
-.info small{display:block;color:var(--muted);font-size:13px}
-.info b{font-weight:600;font-size:16px;word-break:break-all}
+.info{border-top:1px solid var(--line-2)}
+.info div{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.info dt{color:var(--muted);font-size:14px}
+.info dd{font-size:16px;word-break:break-word}
+.info a{text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line-2);transition:text-decoration-color .2s}
+.info a:hover{text-decoration-color:var(--ink)}
 .form-card{background:#fff;border-radius:28px;padding:clamp(24px,4vw,44px);box-shadow:var(--shadow-lg)}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
@@ -51,7 +51,6 @@
       <li><a href="auftragsarbeiten.html">Auftragsarbeiten</a></li>
       <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
     </ul>
-    <a href="galerie.html" class="btn btn-dark">Galerie</a>
     <button class="burger" aria-label="Menü" aria-expanded="false"><span></span><span></span></button>
   </div>
 </header>
@@ -66,15 +65,15 @@
 <main class="k">
   <div class="wrap k-in">
     <div>
-      <div class="eyebrow reveal">Schreib mir</div>
-      <h1 class="h1 reveal reveal-d1">Let’s <span class="hl">talk.</span></h1>
-      <p class="lead reveal reveal-d2">Interesse an einem Werk, eine Idee für eine Auftragsarbeit oder einfach Feedback – ich antworte in der Regel innerhalb von 24 Stunden.</p>
-      <div class="info reveal reveal-d3">
-        <a href="mailto:mpoertner06@gmail.com"><i>✉️</i><span><small>E-Mail</small><b>mpoertner06@gmail.com</b></span></a>
-        <a href="https://www.instagram.com/_braxart_" target="_blank" rel="noopener"><i>📷</i><span><small>Instagram</small><b>@_braxart_</b></span></a>
-        <a href="https://www.tiktok.com/@_braxart" target="_blank" rel="noopener"><i>🎵</i><span><small>TikTok</small><b>@_braxart</b></span></a>
-        <div class="row"><i>📍</i><span><small>Standort</small><b>Kriftel / Frankfurt am Main</b></span></div>
-      </div>
+      <h1 class="h1 reveal">Kontakt</h1>
+      <p class="lead reveal reveal-d1">Du willst ein Bild kaufen, hast eine Idee für einen Auftrag oder einfach eine Frage? Schreib mir – ich lese jede Nachricht selbst und antworte meistens noch am selben Tag.</p>
+      <dl class="info reveal reveal-d2">
+        <div><dt>E-Mail</dt><dd><a href="mailto:mpoertner06@gmail.com">mpoertner06@gmail.com</a></dd></div>
+        <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/_braxart_" target="_blank" rel="noopener">@_braxart_</a></dd></div>
+        <div><dt>TikTok</dt><dd><a href="https://www.tiktok.com/@_braxart" target="_blank" rel="noopener">@_braxart</a></dd></div>
+        <div><dt>Atelier</dt><dd>Kriftel bei Frankfurt am Main</dd></div>
+        <div><dt>Abholung</dt><dd>Persönlich im Raum Frankfurt oder Versand in ganz Deutschland</dd></div>
+      </dl>
     </div>
 
     <div class="form-card reveal reveal-d2">

@@ -144,3 +144,23 @@
     });
   }
 })();
+
+/* Alter aus Geburtstag (23.11.2006) + 3D-Kippen mit der Maus */
+(function(){
+  var now=new Date(),age=now.getFullYear()-2006;
+  if(now.getMonth()<10||(now.getMonth()===10&&now.getDate()<23))age--;
+  document.querySelectorAll('[data-age]').forEach(function(el){el.textContent=age;});
+
+  if(!matchMedia('(hover:hover) and (pointer:fine)').matches||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  document.querySelectorAll('[data-tilt],.rail-item .art,.work .art,.ex .art').forEach(function(el){
+    var max=+el.dataset.tilt||8,glare=document.createElement('span');
+    glare.className='glare';el.classList.add('tilt');el.appendChild(glare);
+    el.addEventListener('pointermove',function(e){
+      var r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+      el.classList.add('tilting');
+      el.style.transform='perspective(900px) rotateX('+((.5-y)*max)+'deg) rotateY('+((x-.5)*max)+'deg)';
+      el.style.setProperty('--gx',x*100+'%');el.style.setProperty('--gy',y*100+'%');
+    });
+    el.addEventListener('pointerleave',function(){el.classList.remove('tilting');el.style.transform='';});
+  });
+})();
