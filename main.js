@@ -2,14 +2,15 @@
 (function(){
   var doc=document.documentElement;
   doc.classList.add('js');
+  var EN=doc.lang==='en';function T(de,en){return EN?en:de;}
 
   // Materialien: Symbol, Name, Kurzinfo, hervorgehoben?
   var I='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">';
   var MAT={
-    spray:[I+'<rect x="7" y="8" width="10" height="13" rx="2"/><path d="M9 8V6h6v2M11 6V4h2v2M19 5h.01M21 3h.01M21 7h.01"/></svg>','Montana-Sprühdosen','Farbflächen, Verläufe und Graffiti'],
-    posca:[I+'<path d="M15 4l5 5-10 10H5v-5L15 4z"/><path d="M13 6l5 5"/></svg>','Posca-Marker','Linien, Konturen und Details'],
-    collage:[I+'<circle cx="6" cy="7" r="2.5"/><circle cx="6" cy="17" r="2.5"/><path d="M8 8.5L20 16M8 15.5L20 8"/></svg>','Magazin-Collage','ausgeschnitten und aufgeklebt',1],
-    money:[I+'<rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6.5 9.5h.01M17.5 14.5h.01"/></svg>','Echte Dollarnoten','im Hintergrund eingearbeitet',1]
+    spray:[I+'<rect x="7" y="8" width="10" height="13" rx="2"/><path d="M9 8V6h6v2M11 6V4h2v2M19 5h.01M21 3h.01M21 7h.01"/></svg>',T('Montana-Sprühdosen','Montana spray cans'),T('Farbflächen, Verläufe und Graffiti','Colour fields, gradients and graffiti')],
+    posca:[I+'<path d="M15 4l5 5-10 10H5v-5L15 4z"/><path d="M13 6l5 5"/></svg>',T('Posca-Marker','Posca markers'),T('Linien, Konturen und Details','Lines, outlines and details')],
+    collage:[I+'<circle cx="6" cy="7" r="2.5"/><circle cx="6" cy="17" r="2.5"/><path d="M8 8.5L20 16M8 15.5L20 8"/></svg>',T('Magazin-Collage','Magazine collage'),T('ausgeschnitten und aufgeklebt','cut out and glued on'),1],
+    money:[I+'<rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6.5 9.5h.01M17.5 14.5h.01"/></svg>',T('Echte Dollarnoten','Real dollar bills'),T('im Hintergrund eingearbeitet','worked into the background'),1]
   };
 
 
@@ -49,23 +50,23 @@
 
   function buildLightbox(arts){
     var lb=document.createElement('div');
-    lb.className='lb';lb.setAttribute('role','dialog');lb.setAttribute('aria-modal','true');lb.setAttribute('aria-label','Werk-Ansicht');
+    lb.className='lb';lb.setAttribute('role','dialog');lb.setAttribute('aria-modal','true');lb.setAttribute('aria-label',T('Werk-Ansicht','Artwork view'));
     lb.innerHTML=
       '<div class="lb-stage">'+
         '<span class="lb-count"></span>'+
-        '<button class="lb-btn lb-prev" aria-label="Vorheriges Werk">‹</button>'+
+        '<button class="lb-btn lb-prev" aria-label="'+T('Vorheriges Werk','Previous piece')+'">‹</button>'+
         '<img class="lb-img" alt="">'+
-        '<button class="lb-btn lb-next" aria-label="Nächstes Werk">›</button>'+
+        '<button class="lb-btn lb-next" aria-label="'+T('Nächstes Werk','Next piece')+'">›</button>'+
       '</div>'+
       '<aside class="lb-side">'+
         '<h2 class="lb-title"></h2>'+
         '<div class="lb-meta"></div>'+
         '<p class="lb-desc"></p>'+
-        '<a class="btn btn-dark lb-ask" href="kontakt.html">Dieses Werk anfragen</a>'+
-        '<div class="lb-mat"><small>Material</small><ul></ul><p class="note"></p></div>'+
-        '<div class="lb-scale"><small>Größenvergleich (Person 1,75 m)</small><div class="lb-svg"></div></div>'+
+        '<a class="btn btn-dark lb-ask" href="kontakt.html">'+T('Dieses Werk anfragen','Enquire about this piece')+'</a>'+
+        '<div class="lb-mat"><small>'+T('Material','Materials')+'</small><ul></ul><p class="note"></p></div>'+
+        '<div class="lb-scale"><small>'+T('Größenvergleich (Person 1,75 m)','Size comparison (person 1.75 m)')+'</small><div class="lb-svg"></div></div>'+
       '</aside>'+
-      '<button class="lb-btn lb-close" aria-label="Schließen">✕</button>';
+      '<button class="lb-btn lb-close" aria-label="'+T('Schließen','Close')+'">✕</button>';
     document.body.appendChild(lb);
     var img=lb.querySelector('.lb-img'),idx=0,lastFocus=null;
 
@@ -81,8 +82,8 @@
       var meta='';
       if(a.dataset.size)meta+='<span class="chip chip-accent">'+a.dataset.size+'</span>';
       if(a.dataset.year)meta+='<span class="chip">'+a.dataset.year+'</span>';
-      meta+='<span class="chip">Handgemalt · Unikat</span>';
-      if(a.dataset.expo)meta+='<a class="chip" style="background:#e8f7ec;color:#1d7a35;font-weight:600" href="ausstellung.html">Ausgestellt in Bad Soden ›</a>';
+      meta+='<span class="chip">'+T('Handgemalt · Unikat','Hand-painted · one of a kind')+'</span>';
+      if(a.dataset.expo)meta+='<a class="chip" style="background:#e8f7ec;color:#1d7a35;font-weight:600" href="ausstellung.html">'+T('Ausgestellt in Bad Soden ›','On show in Bad Soden ›')+'</a>';
       lb.querySelector('.lb-meta').innerHTML=meta;
       lb.querySelector('.lb-desc').textContent=a.dataset.desc||'';
       lb.querySelector('.lb-ask').href='kontakt.html?werk='+encodeURIComponent(a.dataset.title+(a.dataset.size?' ('+a.dataset.size+')':''));
@@ -132,7 +133,7 @@
     var k=0.8,W=320,H=200,floor=190;          // 0,8 px pro cm
     var cx=W/2+10,cy=floor-150*k;             // Bildmitte auf 1,50 m Höhe
     var rw=w*k,rh=h*k,px=cx-rw/2-36;
-    var p='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Leinwand '+w+' mal '+h+' Zentimeter neben einer Person">'+
+    var p='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+T('Leinwand '+w+' mal '+h+' Zentimeter neben einer Person','Canvas '+w+' by '+h+' centimetres next to a person')+'">'+
       '<line x1="0" y1="'+floor+'" x2="'+W+'" y2="'+floor+'" stroke="#d2d2d7"/>'+
       '<rect x="'+(cx-rw/2)+'" y="'+(cy-rh/2)+'" width="'+rw+'" height="'+rh+'" rx="2" fill="#e8b923" fill-opacity=".25" stroke="#8a6a00" stroke-width="1.2"/>'+
       '<text x="'+cx+'" y="'+(cy+4)+'" text-anchor="middle" font-size="11" fill="#1d1d1f" font-family="-apple-system,Segoe UI,sans-serif">'+w+'×'+h+'</text>'+
@@ -146,25 +147,25 @@
   var form=document.getElementById('contactForm');
   if(form){
     var params=new URLSearchParams(location.search),q=params.get('werk');
-    if(params.get('betreff')==='auftrag'){var s=form.querySelector('#subject');if(s)s.value='Auftragsarbeit anfragen';}
+    if(params.get('betreff')==='auftrag'){var s=form.querySelector('#subject');if(s)s.selectedIndex=1;}
     if(q){
-      var sel=form.querySelector('#subject');if(sel)sel.value='Interesse an einem Werk';
+      var sel=form.querySelector('#subject');if(sel)sel.selectedIndex=0;
       var werk=form.querySelector('#werk');if(werk)werk.value=q;
-      var msg=form.querySelector('#message');if(msg&&!msg.value)msg.value='Hallo Max, ich interessiere mich für „'+q+'“. ';
+      var msg=form.querySelector('#message');if(msg&&!msg.value)msg.value=T('Hallo Max, ich interessiere mich für „'+q+'“. ','Hi Max, I’m interested in “'+q+'”. ');
     }
     form.addEventListener('submit',function(e){
       if(!window.fetch)return;
       e.preventDefault();
       var btn=form.querySelector('button[type=submit]'),status=document.getElementById('formStatus');
-      btn.disabled=true;btn.textContent='Wird gesendet …';status.textContent='';
+      btn.disabled=true;btn.textContent=T('Wird gesendet …','Sending …');status.textContent='';
       fetch(form.dataset.ajax,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)})
         .then(function(r){return r.json().then(function(j){if(!r.ok||j.success==='false'||j.success===false)throw new Error(j.message||'Fehler');return j;});})
         .then(function(){
           form.hidden=true;document.getElementById('formDone').hidden=false;
         })
         .catch(function(){
-          btn.disabled=false;btn.textContent='Nachricht senden';
-          status.innerHTML='Das hat leider nicht geklappt. Bitte versuch es nochmal oder schreib direkt an <a href="mailto:mpoertner06@gmail.com">mpoertner06@gmail.com</a>.';
+          btn.disabled=false;btn.textContent=T('Nachricht senden','Send message');
+          status.innerHTML=T('Das hat leider nicht geklappt. Bitte versuch es nochmal oder schreib direkt an ','Sorry, that didn’t work. Please try again or email ')+'<a href="mailto:mpoertner06@gmail.com">mpoertner06@gmail.com</a>.';
         });
     });
   }
