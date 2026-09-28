@@ -1,27 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://braxart23.com/</loc>
+    <lastmod>2026-09-28</lastmod>
     <priority>1.0</priority>
+    <image:image><image:loc>https://braxart23.com/braxart-naomi-campbell-pop-art-80x80.webp</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-marilyn-monroe-v1-pop-art-60x60.webp</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-gold-brax-pop-art-70x100.jpg</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-madelyn-cline-pop-art-60x60.png</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-angelina-jolie-pop-art-40x50.webp</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-kate-moss-pop-art-60x60.webp</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-audrey-hepburn-pop-art-60x60.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-tyler-the-creator-pop-art-50x70.webp</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-money-boom-pop-art-90x120.webp</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-gambino-detail-pop-art-50x70.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-audrey-hepburn-vogue-pop-art-50x70.webp</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-freedom-pop-art-100x100.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-gambino-pop-art-50x70.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://braxart23.com/galerie.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://braxart23.com/ueber.html</loc>
-    <priority>0.6</priority>
+    <lastmod>2026-09-28</lastmod>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://braxart23.com/braxart-marilyn-monroe-glam-pop-art-40x40.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-muhammad-ali-win-pop-art-40x40.webp</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-cash-gold-pop-art-40x50.webp</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-rolex-pop-art-40x50.webp</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-angelina-jolie-pop-art-40x50.webp</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-marilyn-monroe-v2-pop-art-40x50.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-gambino-pop-art-50x70.webp</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-audrey-hepburn-vogue-pop-art-50x70.webp</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-wondering-donald-pop-art-50x70.webp</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-fabulous-pop-art-50x70.webp</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-tyler-the-creator-pop-art-50x70.webp</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-dark-eye-pop-art-50x70.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-gambino-detail-pop-art-50x70.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-lv-pop-art-50x70.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-marilyn-monroe-v1-pop-art-60x60.webp</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-audrey-hepburn-pop-art-60x60.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-kate-moss-pop-art-60x60.webp</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-madelyn-cline-pop-art-60x60.png</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-stocks-pop-art-70x100.jpg</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-gold-brax-pop-art-70x100.jpg</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-panzerknacker-pop-art-70x100.webp</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-mmn-pop-art-70x100.webp</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-anton-portrait-pop-art-70x100.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-naomi-campbell-pop-art-80x80.webp</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-money-boom-pop-art-90x120.webp</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-freedom-pop-art-100x100.jpeg</image:loc></image:image>
   </url>
   <url>
     <loc>https://braxart23.com/auftragsarbeiten.html</loc>
+    <lastmod>2026-09-28</lastmod>
     <priority>0.8</priority>
+    <image:image><image:loc>https://braxart23.com/braxart-freedom-pop-art-100x100.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-anton-portrait-pop-art-70x100.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-angelina-jolie-pop-art-40x50.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://braxart23.com/ueber.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://braxart23.com/braxart-max-poertner-kuenstler.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-naomi-campbell-pop-art-80x80.webp</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-marilyn-monroe-v1-pop-art-60x60.webp</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-gold-brax-pop-art-70x100.jpg</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-rolex-pop-art-40x50.webp</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-gambino-pop-art-50x70.webp</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-stocks-pop-art-70x100.jpg</image:loc></image:image>
+    <image:image><image:loc>https://braxart23.com/braxart-kate-moss-pop-art-60x60.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://braxart23.com/kontakt.html</loc>
-    <priority>0.7</priority>
+    <lastmod>2026-09-28</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://braxart23.com/impressum.html</loc>
-    <priority>0.3</priority>
+    <lastmod>2026-09-28</lastmod>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://braxart23.com/datenschutz.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <priority>0.2</priority>
   </url>
 </urlset>
