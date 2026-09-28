@@ -389,23 +389,28 @@ document.querySelectorAll('[data-rail]').forEach(function(b){
     mobile?{root:box,threshold:.6}:{rootMargin:'-45% 0px -45% 0px'});
   steps.forEach(function(s){io.observe(s);});
   if(!mobile||reduce)return;
-  function finish(){
+  var done=false,idle=0;
+  // Erst zusammenklappen, wenn der Abschnitt ganz aus dem Bild ist und nicht gescrollt wird – so springt nichts sichtbar
+  function collapse(){
     if(!pinned)return;
     var before=o.offsetHeight;o.classList.remove('pin');pinned=false;
-    window.scrollBy(0,o.offsetHeight-before);
+    window.scrollBy({top:o.offsetHeight-before,left:0,behavior:'instant'});
     set(steps[2]);box.scrollLeft=steps[2].offsetLeft-16;
   }
+  function tryCollapse(){if(done&&pinned&&o.getBoundingClientRect().bottom<64)collapse();}
   o.classList.add('pin');pinned=true;
-  if(o.getBoundingClientRect().bottom<innerHeight*.5){finish();return;}
+  if(o.getBoundingClientRect().bottom<innerHeight*.5){done=true;collapse();return;}
   var t=0;
   window.addEventListener('scroll',function(){
-    if(!pinned||t)return;
+    if(!pinned)return;
+    clearTimeout(idle);idle=setTimeout(tryCollapse,180);
+    if(t)return;
     t=requestAnimationFrame(function(){
       t=0;var y=scrollY,down=y>lastY;lastY=y;
       var r=o.getBoundingClientRect(),total=o.offsetHeight-(innerHeight-64);
       var q=Math.min(1,Math.max(0,(64-r.top)/total));
-      var i=q<.34?0:q<.67?1:2;if(i!==cur)set(steps[i]);
-      if(q>=1&&down)finish();
+      if(!done){var i=q<.34?0:q<.67?1:2;if(i!==cur)set(steps[i]);}
+      if(q>=1&&down)done=true;
     });
   },{passive:true});
 })();
