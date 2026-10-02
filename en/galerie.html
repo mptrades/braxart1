@@ -43,6 +43,12 @@
 .work figcaption{display:flex;justify-content:space-between;gap:12px;margin-top:12px;font-size:15px}
 .work figcaption b{font-weight:600}
 .work figcaption span{color:var(--muted);white-space:nowrap}
+.st-badge{position:absolute;left:12px;top:12px;z-index:4;background:rgba(29,29,31,.82);color:#fff;font-size:12px;font-weight:600;padding:5px 11px;border-radius:999px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.st-tag{font-size:12px;font-weight:600;color:#6e6e73;background:#f0f0f2;border-radius:999px;padding:3px 9px;margin-left:auto;margin-right:10px;white-space:nowrap}
+.work:has([data-status]) .art img{filter:saturate(.85)}
+.seg .avail{margin-left:auto}
+.seg .avail[aria-pressed="true"]{background:#1d7a35;color:#fff}
+body.only-avail .work:has([data-status]),body.only-avail .group.empty-avail{display:none}
 .expo-tag{font-size:12px;font-weight:600;color:#1d7a35;background:#e8f7ec;border-radius:999px;padding:3px 9px;margin-left:auto;margin-right:10px;white-space:nowrap}
 .cta-band{margin-top:64px}
 </style>
@@ -91,6 +97,7 @@
     <button data-f="80x80" aria-pressed="false">80 × 80<small>1</small></button>
     <button data-f="90x120" aria-pressed="false">90 × 120<small>1</small></button>
     <button data-f="100x100" aria-pressed="false">100 × 100<small>1</small></button>
+    <button class="avail" type="button" aria-pressed="false">Available only</button>
   </div>
 </div>
 
@@ -109,8 +116,8 @@
     <div class="masonry">
       <figure class="work"><a class="art" id="cash-gold" href="../braxart-cash-gold-pop-art-40x50.webp" data-title="Cash Gold" data-size="40 × 50 cm" data-w="40" data-h="50" data-year="2025" data-desc="Money as a symbol, reduced to gold tones on a dark ground – more an observation than a statement."><img src="../braxart-cash-gold-pop-art-40x50.webp" alt="Cash Gold – hand-painted pop art painting by Braxart, 40 × 50 cm" loading="lazy" width="1224" height="1600"></a><figcaption><b>Cash Gold</b><span>2025</span></figcaption></figure>
       <figure class="work"><a class="art" id="rolex" href="../braxart-rolex-pop-art-40x50.webp" data-title="Rolex" data-size="40 × 50 cm" data-w="40" data-h="50" data-year="2024" data-desc="A watch as a status symbol, reworked in my style – it’s less about the brand itself than what it stands for."><img src="../braxart-rolex-pop-art-40x50.webp" alt="Rolex – hand-painted pop art painting by Braxart, 40 × 50 cm" loading="lazy" width="1358" height="1600"></a><figcaption><b>Rolex</b><span>2024</span></figcaption></figure>
-      <figure class="work"><a class="art" id="angelina-jolie" data-mat="spray,posca,money" data-note="Real dollar bills are worked into the background." href="../braxart-angelina-jolie-pop-art-40x50.webp" data-title="Angelina Jolie" data-size="40 × 50 cm" data-w="40" data-h="50" data-year="2025" data-desc="A portrait between pop culture and Hollywood glamour – real dollar bills in the background, Posca and spray on top."><img src="../braxart-angelina-jolie-pop-art-40x50.webp" alt="Angelina Jolie – hand-painted pop art portrait by Braxart, 40 × 50 cm" loading="lazy" width="1600" height="1176"></a><figcaption><b>Angelina Jolie</b><span>2025</span></figcaption></figure>
-      <figure class="work"><a class="art" id="marilyn-monroe-v2" href="../braxart-marilyn-monroe-v2-pop-art-40x50.jpeg" data-title="Marilyn Monroe V2" data-size="40 × 50 cm" data-w="40" data-h="50" data-year="2025" data-desc="A second take on Marilyn Monroe – same icon, different colour mood and framing than »Glam«."><img src="../braxart-marilyn-monroe-v2-pop-art-40x50.jpeg" alt="Marilyn Monroe V2 – hand-painted pop art painting by Braxart, 40 × 50 cm" loading="lazy" width="1575" height="1600"></a><figcaption><b>Marilyn Monroe V2</b><span>2025</span></figcaption></figure>
+      <figure class="work"><a class="art" id="angelina-jolie" data-status="private" data-mat="spray,posca,money" data-note="Real dollar bills are worked into the background." href="../braxart-angelina-jolie-pop-art-40x50.webp" data-title="Angelina Jolie" data-size="40 × 50 cm" data-w="40" data-h="50" data-year="2025" data-desc="A portrait between pop culture and Hollywood glamour – real dollar bills in the background, Posca and spray on top. A commission from my family – it hangs in our home, and the dollar bills remind me of my trip to New York."><span class="st-badge">Private collection</span><img src="../braxart-angelina-jolie-pop-art-40x50.webp" alt="Angelina Jolie – hand-painted pop art portrait by Braxart, 40 × 50 cm" loading="lazy" width="1600" height="1176"></a><figcaption><b>Angelina Jolie</b><span class="st-tag">Private collection</span><span>2025</span></figcaption></figure>
+      <figure class="work"><a class="art" id="marilyn-monroe-v2" data-status="sold" href="../braxart-marilyn-monroe-v2-pop-art-40x50.jpeg" data-title="Marilyn Monroe V2" data-size="40 × 50 cm" data-w="40" data-h="50" data-year="2025" data-desc="A second take on Marilyn Monroe – same icon, different colour mood and framing than »Glam«."><span class="st-badge">Sold</span><img src="../braxart-marilyn-monroe-v2-pop-art-40x50.jpeg" alt="Marilyn Monroe V2 – hand-painted pop art painting by Braxart, 40 × 50 cm" loading="lazy" width="1575" height="1600"></a><figcaption><b>Marilyn Monroe V2</b><span class="st-tag">Sold</span><span>2025</span></figcaption></figure>
     </div>
   </section>
 
@@ -120,8 +127,8 @@
       <figure class="work"><a class="art" id="gambino" href="../braxart-gambino-pop-art-50x70.webp" data-title="Gambino" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2024" data-desc="A portrait of Childish Gambino, an artist whose visual and musical expression inspires me."><img src="../braxart-gambino-pop-art-50x70.webp" alt="Gambino (Childish Gambino) – hand-painted pop art portrait by Braxart, 50 × 70 cm" loading="lazy" width="1358" height="1600"></a><figcaption><b>Gambino</b><span>2024</span></figcaption></figure>
       <figure class="work"><a class="art" id="audrey-hepburn-vogue" href="../braxart-audrey-hepburn-vogue-pop-art-50x70.webp" data-title="Audrey Hepburn in Vogue" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2024" data-desc="Audrey Hepburn in the style of a fashion magazine cover – elegance translated into my pop art aesthetic."><img src="../braxart-audrey-hepburn-vogue-pop-art-50x70.webp" alt="Audrey Hepburn in Vogue – hand-painted pop art painting by Braxart, 50 × 70 cm" loading="lazy" width="1600" height="1517"></a><figcaption><b>Audrey Hepburn in Vogue</b><span>2024</span></figcaption></figure>
       <figure class="work"><a class="art" id="wondering-donald" href="../braxart-wondering-donald-pop-art-50x70.webp" data-title="Wondering Donald" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2024" data-desc="A piece that brings pop culture and politics together with a wink."><img src="../braxart-wondering-donald-pop-art-50x70.webp" alt="Wondering Donald – hand-painted pop art painting by Braxart, 50 × 70 cm" loading="lazy" width="1570" height="1600"></a><figcaption><b>Wondering Donald</b><span>2024</span></figcaption></figure>
-      <figure class="work"><a class="art" id="fabulous" href="../braxart-fabulous-pop-art-50x70.webp" data-title="Fabulous" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2024" data-desc="A playful, loud piece – expression and attitude come first."><img src="../braxart-fabulous-pop-art-50x70.webp" alt="Fabulous – hand-painted pop art painting by Braxart, 50 × 70 cm" loading="lazy" width="1224" height="1600"></a><figcaption><b>Fabulous</b><span>2024</span></figcaption></figure>
-      <figure class="work"><a class="art" id="tyler-the-creator" href="../braxart-tyler-the-creator-pop-art-50x70.webp" data-title="Tyler the Creator" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2025" data-desc="A portrait of Tyler, The Creator, who connects music, fashion and visual art in a special way."><img src="../braxart-tyler-the-creator-pop-art-50x70.webp" alt="Tyler the Creator – hand-painted pop art portrait by Braxart, 50 × 70 cm" loading="lazy" width="1360" height="1600"></a><figcaption><b>Tyler the Creator</b><span>2025</span></figcaption></figure>
+      <figure class="work"><a class="art" id="fabulous" data-status="sold" href="../braxart-fabulous-pop-art-50x70.webp" data-title="Fabulous" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2024" data-desc="A playful, loud piece – expression and attitude come first."><span class="st-badge">Sold</span><img src="../braxart-fabulous-pop-art-50x70.webp" alt="Fabulous – hand-painted pop art painting by Braxart, 50 × 70 cm" loading="lazy" width="1224" height="1600"></a><figcaption><b>Fabulous</b><span class="st-tag">Sold</span><span>2024</span></figcaption></figure>
+      <figure class="work"><a class="art" id="tyler-the-creator" data-status="sold" href="../braxart-tyler-the-creator-pop-art-50x70.webp" data-title="Tyler the Creator" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2025" data-desc="A portrait of Tyler, The Creator, who connects music, fashion and visual art in a special way."><span class="st-badge">Sold</span><img src="../braxart-tyler-the-creator-pop-art-50x70.webp" alt="Tyler the Creator – hand-painted pop art portrait by Braxart, 50 × 70 cm" loading="lazy" width="1360" height="1600"></a><figcaption><b>Tyler the Creator</b><span class="st-tag">Sold</span><span>2025</span></figcaption></figure>
       <figure class="work"><a class="art" id="dark-eye" href="../braxart-dark-eye-pop-art-50x70.jpeg" data-title="Dark Eye" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2025" data-desc="A reduced, almost graphic piece focused on a single eye – calmer than many of my other works."><img src="../braxart-dark-eye-pop-art-50x70.jpeg" alt="Dark Eye – hand-painted painting by Braxart, 50 × 70 cm" loading="lazy" width="1269" height="1600"></a><figcaption><b>Dark Eye</b><span>2025</span></figcaption></figure>
       <figure class="work"><a class="art" id="lv" data-mat="spray,posca,collage" data-note="Collage of magazine cut-outs, with Scrooge McDuck painted on top in Posca and spray." href="../braxart-lv-pop-art-50x70.jpeg" data-title="LV" data-size="50 × 70 cm" data-w="50" data-h="70" data-year="2025" data-desc="A piece about luxury and brand culture, with the label’s signature elements reassembled in my style."><img src="../braxart-lv-pop-art-50x70.jpeg" alt="LV – hand-painted pop art painting by Braxart, 50 × 70 cm" loading="lazy" width="1570" height="1600"></a><figcaption><b>LV</b><span>2025</span></figcaption></figure>
     </div>
@@ -141,10 +148,10 @@
     <div class="group-head"><h2>70 × 100 cm</h2><span>Large · 5 works</span></div>
     <div class="masonry">
       <figure class="work"><a class="art" id="stocks" href="../braxart-stocks-pop-art-70x100.jpg" data-title="Stocks" data-size="70 × 100 cm" data-w="70" data-h="100" data-year="2025" data-desc="A piece about financial markets and speculation – charts and numbers as visual motifs, reworked in my style."><img src="../braxart-stocks-pop-art-70x100.jpg" alt="Stocks – hand-painted pop art painting by Braxart, 70 × 100 cm" loading="lazy" width="1270" height="1600"></a><figcaption><b>Stocks</b><span>2025</span></figcaption></figure>
-      <figure class="work"><a class="art" id="gold-brax" href="../braxart-gold-brax-pop-art-70x100.jpg" data-title="Gold Brax" data-size="70 × 100 cm" data-w="70" data-h="100" data-year="2025" data-desc="The title plays on my artist name – gold stands for standards and ambition."><img src="../braxart-gold-brax-pop-art-70x100.jpg" alt="Gold Brax – hand-painted graffiti pop art painting by Braxart, 70 × 100 cm" loading="lazy" width="1270" height="1600"></a><figcaption><b>Gold Brax</b><span>2025</span></figcaption></figure>
+      <figure class="work"><a class="art" id="gold-brax" data-status="sold" href="../braxart-gold-brax-pop-art-70x100.jpg" data-title="Gold Brax" data-size="70 × 100 cm" data-w="70" data-h="100" data-year="2025" data-desc="The title plays on my artist name – gold stands for standards and ambition."><span class="st-badge">Sold</span><img src="../braxart-gold-brax-pop-art-70x100.jpg" alt="Gold Brax – hand-painted graffiti pop art painting by Braxart, 70 × 100 cm" loading="lazy" width="1270" height="1600"></a><figcaption><b>Gold Brax</b><span class="st-tag">Sold</span><span>2025</span></figcaption></figure>
       <figure class="work"><a class="art" id="panzerknacker" data-mat="spray,posca,collage" data-note="The tank, chair and building are cut out of magazines and glued on." href="../braxart-panzerknacker-pop-art-70x100.webp" data-title="Panzerknacker" data-size="70 × 100 cm" data-w="70" data-h="100" data-year="2024" data-desc="A comic-like, tongue-in-cheek piece – thieves and loot as the subject, in bold colours."><img src="../braxart-panzerknacker-pop-art-70x100.webp" alt="Panzerknacker – hand-painted pop art painting by Braxart, 70 × 100 cm" loading="lazy" width="1269" height="1600"></a><figcaption><b>Panzerknacker</b><span>2024</span></figcaption></figure>
       <figure class="work"><a class="art" id="mmn" href="../braxart-mmn-pop-art-70x100.webp" data-title="MMN" data-size="70 × 100 cm" data-w="70" data-h="100" data-year="2024" data-desc="A more abstract piece with reduced symbolism – deliberately more open to interpretation than my portraits."><img src="../braxart-mmn-pop-art-70x100.webp" alt="MMN – hand-painted painting by Braxart, 70 × 100 cm" loading="lazy" width="1269" height="1600"></a><figcaption><b>MMN</b><span>2024</span></figcaption></figure>
-      <figure class="work"><a class="art" id="anton" href="../braxart-anton-portrait-pop-art-70x100.jpeg" data-title="Anton" data-size="70 × 100 cm" data-w="70" data-h="100" data-year="2025" data-desc="A lettering portrait in graffiti style, created in 2025 as a commission."><img src="../braxart-anton-portrait-pop-art-70x100.jpeg" alt="Anton – portrait commission by Braxart, 70 × 100 cm" loading="lazy" width="1360" height="1600"></a><figcaption><b>Anton</b><span>2025</span></figcaption></figure>
+      <figure class="work"><a class="art" id="anton" data-status="sold" href="../braxart-anton-portrait-pop-art-70x100.jpeg" data-title="Anton" data-size="70 × 100 cm" data-w="70" data-h="100" data-year="2025" data-desc="A lettering portrait in graffiti style, created in 2025 as a commission."><span class="st-badge">Sold</span><img src="../braxart-anton-portrait-pop-art-70x100.jpeg" alt="Anton – portrait commission by Braxart, 70 × 100 cm" loading="lazy" width="1360" height="1600"></a><figcaption><b>Anton</b><span class="st-tag">Sold</span><span>2025</span></figcaption></figure>
     </div>
   </section>
 
@@ -165,7 +172,7 @@
   <section class="group" data-size="100x100" id="format-100x100">
     <div class="group-head"><h2>100 × 100 cm</h2><span>Maxi · 1 work</span></div>
     <div class="masonry">
-      <figure class="work"><a class="art" id="freedom" href="../braxart-freedom-pop-art-100x100.jpeg" data-title="Freedom" data-size="100 × 100 cm" data-w="100" data-h="100" data-year="2025" data-desc="A piece about freedom as an idea – deliberately open so everyone can bring their own meaning to it."><img src="../braxart-freedom-pop-art-100x100.jpeg" alt="Freedom – large-format painting by Braxart, 100 × 100 cm" loading="lazy" width="1358" height="1600"></a><figcaption><b>Freedom</b><span>2025</span></figcaption></figure>
+      <figure class="work"><a class="art" id="freedom" data-status="sold" href="../braxart-freedom-pop-art-100x100.jpeg" data-title="Freedom" data-size="100 × 100 cm" data-w="100" data-h="100" data-year="2025" data-desc="A piece about freedom as an idea – deliberately open so everyone can bring their own meaning to it."><span class="st-badge">Sold</span><img src="../braxart-freedom-pop-art-100x100.jpeg" alt="Freedom – large-format painting by Braxart, 100 × 100 cm" loading="lazy" width="1358" height="1600"></a><figcaption><b>Freedom</b><span class="st-tag">Sold</span><span>2025</span></figcaption></figure>
     </div>
   </section>
 
@@ -199,7 +206,7 @@
 <script>
 // Format-Filter (auch per ?format=50x70 verlinkbar)
 (function(){
-  var btns=document.querySelectorAll('.seg button'),groups=document.querySelectorAll('.group');
+  var btns=document.querySelectorAll('.seg button[data-f]'),groups=document.querySelectorAll('.group');
   function apply(f){
     btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.f===f);});
     groups.forEach(function(g){
@@ -213,6 +220,12 @@
     history.replaceState(null,'',url);
     document.getElementById('gallery').scrollIntoView({behavior:'smooth'});
   });});
+  // Nur verfügbare Werke zeigen (leere Formate ausblenden)
+  var av=document.querySelector('.seg .avail');
+  av.addEventListener('click',function(){
+    var on=av.getAttribute('aria-pressed')!=='true';av.setAttribute('aria-pressed',on);document.body.classList.toggle('only-avail',on);
+    groups.forEach(function(g){var any=[].some.call(g.querySelectorAll('.art'),function(a){return !a.dataset.status;});g.classList.toggle('empty-avail',!any);});
+  });
   var f=new URLSearchParams(location.search).get('format');
   if(f&&document.querySelector('.group[data-size="'+f+'"]'))apply(f);
 })();
@@ -373,7 +386,7 @@
        "name": "Angelina Jolie",
        "url": "https://braxart23.com/galerie.html#angelina-jolie",
        "image": "https://braxart23.com/braxart-angelina-jolie-pop-art-40x50.webp",
-       "description": "A portrait between pop culture and Hollywood glamour – real dollar bills in the background, Posca and spray on top.",
+       "description": "A portrait between pop culture and Hollywood glamour – real dollar bills in the background, Posca and spray on top. A commission from my family – it hangs in our home, and the dollar bills remind me of my trip to New York.",
        "artform": "Painting",
        "artMedium": "Montana spray paint, Posca marker and real dollar bills on canvas",
        "artworkSurface": "Canvas",
