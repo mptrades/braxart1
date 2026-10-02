@@ -86,7 +86,15 @@
       if(a.dataset.expo)meta+='<a class="chip" style="background:#e8f7ec;color:#1d7a35;font-weight:600" href="ausstellung.html">'+T('Ausgestellt in Bad Soden ›','On show in Bad Soden ›')+'</a>';
       lb.querySelector('.lb-meta').innerHTML=meta;
       lb.querySelector('.lb-desc').textContent=a.dataset.desc||'';
-      lb.querySelector('.lb-ask').href='kontakt.html?werk='+encodeURIComponent(a.dataset.title+(a.dataset.size?' ('+a.dataset.size+')':''));
+      var ask=lb.querySelector('.lb-ask'),st=a.dataset.status;
+      if(st){
+        lb.querySelector('.lb-meta').insertAdjacentHTML('afterbegin','<span class="chip" style="background:#1d1d1f;color:#fff;font-weight:600">'+(st==='private'?T('Privatsammlung · nicht verkäuflich','Private collection · not for sale'):T('Verkauft','Sold'))+'</span>');
+        ask.textContent=T('Ähnliches Werk anfragen','Commission something similar');
+        ask.href='kontakt.html?betreff=auftrag&werk='+encodeURIComponent(T('Ähnlich wie ','Similar to ')+a.dataset.title);
+      }else{
+        ask.textContent=T('Dieses Werk anfragen','Enquire about this piece');
+        ask.href='kontakt.html?werk='+encodeURIComponent(a.dataset.title+(a.dataset.size?' ('+a.dataset.size+')':''));
+      }
       lb.querySelector('.lb-svg').innerHTML=scaleSVG(+a.dataset.w,+a.dataset.h);
       var mat=lb.querySelector('.lb-mat'),html='';
       (a.dataset.mat||'spray,posca').split(',').forEach(function(k,i){
@@ -149,9 +157,9 @@
     var params=new URLSearchParams(location.search),q=params.get('werk');
     if(params.get('betreff')==='auftrag'){var s=form.querySelector('#subject');if(s)s.selectedIndex=1;}
     if(q){
-      var sel=form.querySelector('#subject');if(sel)sel.selectedIndex=0;
+      var sel=form.querySelector('#subject');if(sel&&params.get('betreff')!=='auftrag')sel.selectedIndex=0;
       var werk=form.querySelector('#werk');if(werk)werk.value=q;
-      var msg=form.querySelector('#message');if(msg&&!msg.value)msg.value=T('Hallo Max, ich interessiere mich für „'+q+'“. ','Hi Max, I’m interested in “'+q+'”. ');
+      var msg=form.querySelector('#message');if(msg&&!msg.value)msg.value=params.get('betreff')==='auftrag'?T('Hallo Max, ich hätte gern eine Auftragsarbeit ('+q+'). ','Hi Max, I’d love a commission ('+q+'). '):T('Hallo Max, ich interessiere mich für „'+q+'“. ','Hi Max, I’m interested in “'+q+'”. ');
     }
     form.addEventListener('submit',function(e){
       if(!window.fetch)return;
